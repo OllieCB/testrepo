@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'JobListingModule/JobListingData'}}
+			{{> JobListingModule/JobListingModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

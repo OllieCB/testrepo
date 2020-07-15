@@ -1,0 +1,116 @@
+@import "../../../shared/styles/base/variables";
+
+.EventDetails {
+	background: $gray;
+
+	@include for-tablet-up {
+		background-image: linear-gradient(to right, $gray 50%, $purple 50%, $purple);
+		display: flex;
+	}
+
+	&__details,
+	&__actions {
+		padding: $std-padding calc((100% - 82.8125%) / 2);
+		padding-bottom: 0;
+
+		@include for-tablet-up {
+			display: inline-block;
+			padding: $std-padding 0;
+			padding-bottom: 0;
+			vertical-align: top;
+			width: 50%;
+		}
+	}
+
+	&__details {
+		background: $gray;
+
+		@include for-tablet-up {
+			padding-left: calc((100% - 720px) / 2 + 20px});
+		}
+
+		@include for-desktop-up {
+			padding-left: calc((100% - 720px) / 2);
+		}
+	}
+
+	&__actions {
+		background: $purple;
+		color: $white;
+
+		&.rte {
+			background: $white;
+			border-bottom: 1px solid $transparent-purple-solid;
+			color: inherit;
+
+			@include for-tablet-up {
+				border-left: 1px solid $transparent-purple-solid;
+			}
+		}
+
+		@include for-tablet-up {
+			padding-left: $std-padding;
+			padding-right: calc((100% - 720px) / 2 + 20px);
+		}
+
+		@include for-desktop-up {
+			padding-right: calc((100% - 720px) / 2);
+		}
+	}
+
+	&__title {
+		font-size: em(25px);
+		margin-bottom: $sm-padding;
+	}
+
+	&__signup-text,
+	&__item {
+		line-height: em(30px);
+		position: relative;
+		padding-left: em(40px);
+		margin-bottom: $sm-padding;
+	}
+
+	&__signup-text {
+		padding-left: 0;
+	}
+
+	&__bullet {
+		left: 0;
+		position: absolute;
+		top: 2px;
+		width: em(28px);
+	}
+
+	&__separator {
+		display: none;
+
+		@include for-tablet-up {
+			border-top: 1px solid $transparent-purple-solid;
+			display: block;
+			height: 0;
+			margin-bottom: $sm-padding;
+			width: calc(100% - 1.5em);
+			position: relative;
+			left: 1.5em;
+		}
+	}
+
+	&__or {
+		@include for-tablet-up {
+			position: absolute;
+			left: -1.5em;
+			top: -1px;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__cta {
+		margin-bottom: $sm-padding;
+		margin-right: $std-padding;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

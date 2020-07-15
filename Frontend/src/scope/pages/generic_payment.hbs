@@ -1,0 +1,9 @@
+{{!-- pages/content_core.hbs --}}
+
+{{#> defaultLayout title="Donation Journey"}}
+	{{#*inline "content"}}
+		{{#fetchData 'GenericPayment/GenericPaymentData'}}
+			{{> GenericPayment/GenericPayment}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

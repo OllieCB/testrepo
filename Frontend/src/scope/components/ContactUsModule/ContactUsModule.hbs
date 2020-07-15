@@ -1,0 +1,23 @@
+<div class="ContactUs {{#if (lt contacts.length 3)}}ContactUs--wrapped{{/if}} {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	{{#if (lt contacts.length 3)}}
+		<div class="wrapper">
+	{{/if}}
+	<h3 class="underline">{{title}}</h3>
+	<p class="ContactUs__text">{{text}}</p>
+
+	<ul class="ContactUs__list">
+		{{#each contacts ~}}
+			<li class="ContactUs__item">
+				<a href="{{url}}">
+					<img class="lazy" src="{{placeholder}}" data-imgs="{{img}}" alt="" />
+					<h4 class="ContactUs__label">{{label}}</h4>
+					{{#if srtValue}}<p class="srt">{{srtValue}}</p>{{/if}}
+					<p class="ContactUs__value" {{#if srtValue}}aria-hidden="true"{{/if}}>{{value}}</p>
+				</a>
+			</li>
+		{{~/each ~}}
+	</ul>
+	{{#if (lt contacts.length 3)}}
+		</div>
+	{{/if}}
+</div>

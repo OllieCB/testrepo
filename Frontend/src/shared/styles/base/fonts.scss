@@ -1,0 +1,32 @@
+@include for-mobile-only {
+	$font-path: '/fonts/';
+
+	// Regular
+	@font-face {
+		font-family: 'Hargreaves';
+		font-display: fallback;
+		src:
+			url($font-path + "Hargreaves-Regular.woff2") format("woff2"),
+			url($font-path + "Hargreaves-Regular.woff") format("woff");
+	}
+
+	// Regular - Italic
+	@font-face {
+		font-family: 'Hargreaves';
+		font-style: italic;
+		font-display: fallback;
+		src:
+			url($font-path + "Hargreaves-RegularItalic.woff2") format("woff2"),
+			url($font-path + "Hargreaves-RegularItalic.woff") format("woff");
+	}
+
+	// Bold
+	@font-face {
+		font-family: 'Hargreaves';
+		font-weight: 500;
+		font-display: fallback;
+		src:
+			url($font-path + "Hargreaves-Bold.woff2") format("woff2"),
+			url($font-path + "Hargreaves-Bold.woff") format("woff");
+	}
+}

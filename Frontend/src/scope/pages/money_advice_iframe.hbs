@@ -1,0 +1,26 @@
+{{!-- pages/article.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'HeroModule/data/articleNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ArticleInfoModule/data/ArticleNoShare'}}
+			{{> ArticleInfoModule/ArticleInfoModule}}
+		{{/fetchData}}
+
+		<div class="wrapper rte">
+			<iframe class="mas-widget-iframe" id="budget_planner-iframe" src="https://partner-tools.moneyadviceservice.org.uk/en/tools/budget-planner" scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
+		</div>
+
+		{{#fetchData 'ArticleInfoModule/data/ArticleWithShare'}}
+			{{> ArticleInfoModule/ArticleInfoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedArticleModule/data/article'}}
+			{{> RelatedArticleModule/RelatedArticleModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

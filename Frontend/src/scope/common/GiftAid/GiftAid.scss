@@ -1,0 +1,65 @@
+.GiftAid {
+	&__container {
+		padding: $sm-padding $donation-wrapper;
+
+		@include for-tablet-up {
+			padding: 0 calc(100% - (#{$container-desktop} + #{$donation-wrapper})) 0 $donation-wrapper;
+		}
+	}
+
+	&__top {
+		position: relative;
+		background: $gray;
+		border-bottom: 1px solid $transparent-purple-solid;
+		border-top: 1px solid $transparent-purple-solid;
+		padding: $sm-padding $donation-wrapper;
+
+		@include for-tablet-up {
+			padding: $sm-padding calc(100% - (#{$container-desktop} + #{$donation-wrapper})) $sm-padding $donation-wrapper;
+		}
+
+		.label-checkbox {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__text {
+		margin-bottom: $sm-padding;
+	}
+
+	&__small {
+		font-size: em(14px);
+	}
+
+	&__visual {
+		background: $purple;
+		border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+		max-width: em(300px);
+	}
+
+	&__amount {
+		background: $turquoise;
+		font-size: em(20px);
+		font-weight: 500;
+		padding: 15px 0;
+		text-align: center;
+		width: 34%;
+	}
+
+	&__img {
+		position: absolute;
+		right: $donation-wrapper;
+		height: em(38px);
+		top: $sm-padding;
+
+		@include for-tablet-up {
+			right: calc(100% - (#{$container-desktop} + #{$donation-wrapper}));
+		}
+	}
+
+	&__checkbox {
+		left: 0;
+	}
+}

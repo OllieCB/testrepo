@@ -1,0 +1,48 @@
+@import "./Item/Item";
+
+.JobBoardResults {
+	padding: 0 $std-padding;
+
+	@include for-tablet-up {
+		padding: 0 $lrg-padding 0 0;
+		min-width: 56%;
+		flex: 1;
+	}
+
+	&__matchLabel {
+		color: $dark-gray;
+		margin-bottom: $std-padding;
+	}
+
+	&__loadMore {
+		position: relative;
+		text-align: center;
+
+		&.hidden {
+			display: none;
+		}
+
+		&.loading .btn {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__spinner {
+		display: none;
+		height: em(30px);
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: em(30px);
+
+		.loading & {
+			display: block;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

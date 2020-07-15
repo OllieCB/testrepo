@@ -1,0 +1,18 @@
+.InTouch {
+	&__top {
+		padding: $sm-padding $donation-wrapper;
+
+		@include for-tablet-up {
+			padding: $sm-padding calc(100% - (#{$container-desktop} + #{$donation-wrapper})) $sm-padding $donation-wrapper;
+		}
+	}
+
+	&__small {
+		border-bottom: 1px solid $transparent-purple-solid;
+		padding: $sm-padding $donation-wrapper;
+
+		@include for-tablet-up {
+			padding: $sm-padding calc(100% - (#{$container-desktop} + #{$donation-wrapper})) $std-padding $donation-wrapper;
+		}
+	}
+}

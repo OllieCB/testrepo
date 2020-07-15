@@ -1,0 +1,19 @@
+<div style="height: 150px;"></div>
+
+<div class="container-fluid m-y-md">
+	<div class="row">
+		{{#each sections}}
+			<div class="col-sm-4">
+				<div class="h2 m-b-lg">{{title}}</div>
+
+				<ul class="list row">
+					{{#each links}}
+						<li class="list--item col-sm-6">
+							<a href="{{url}}" class="list--anchor">{{label}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/each}}
+	</div>
+</div>

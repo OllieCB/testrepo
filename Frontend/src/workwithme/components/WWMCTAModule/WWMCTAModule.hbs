@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="cta">
+		<div class="cta__clouds"><img src="{{clouds}}" alt=""></div>
+		<div class="cta__people">
+			<img src="{{ctaLeft.placeholder}}" alt="{{ctaLeft.alt}}" class="cta__people--left" data-imgs="{{ctaLeft.small}},{{ctaLeft.medium}},{{ctaLeft.large}}">
+			<img src="{{ctaRight.placeholder}}" alt="{{ctaRight.alt}}" class="cta__people--right" data-imgs="{{ctaRight.small}},{{ctaRight.medium}},{{ctaRight.large}}">
+		</div>
+
+		<div class="row align-items-center justify-content-center">
+			<div class="col-sm-8">
+				<div class="heading-block text-center">
+					<div class="heading-block__title h1 m-b-lg">{{title}}</div>
+					<div class="heading-block__sub-title p m-b-md">{{{copy}}}</div>
+				</div>
+
+				{{#if ctas}}
+					<div class="cta-list d-flex flex-wrap justify-content-center">
+						{{#each ctas}}
+							<a href="{{href}}" class="btn {{class}} p-x-xl" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+								{{label}}
+							</a>
+						{{/each}}
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
+
+

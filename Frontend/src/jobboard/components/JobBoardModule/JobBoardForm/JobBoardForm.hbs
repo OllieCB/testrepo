@@ -1,0 +1,32 @@
+<form class="JobBoardForm form js-job-board-form" action="{{submit.endpoint}}" method="post">
+    <input type="hidden" name="latitude" value="" />
+    <input type="hidden" name="longitude" value="" />
+    <div class="layout layout-flex">
+        {{#with location}}
+            <div class="lg-col-auto bottom-margin">
+                <label class="label-input">
+                    <div class="label">{{label}}</div>
+                    <input class="js-job-board-location" type="text" name="{{name}}" placeholder="{{placeholder}}" aria-describedby="useCurrent" />
+                </label>
+                <button id="useCurrent" class="JobBoardForm__current-location js-job-board-current" data-endpoint="/reverseGeocode" type="button">
+                    {{current.label}}
+                    <img class="JobBoardForm__current-icon lazy" src="{{current.placeholder}}" data-imgs="{{current.icon}}" alt="" />
+                </button>
+            </div>
+        {{/with}}
+
+        {{#with keyword}}
+            <div class="lg-col-auto bottom-margin">
+                <label class="label-input">
+                    <div class="label">{{label}}</div>
+                    <input type="text" name="{{name}}" placeholder="{{placeholder}}" />
+                </label>
+            </div>
+        {{/with}}
+    </div>
+    <div class="layout layout-flex">
+        <div class="lg-col-auto">
+            <button class="btn purple search right js-job-board-submit" type="submit">{{submit.label}}</button>
+        </div>
+    </div>
+</form>

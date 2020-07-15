@@ -1,0 +1,9 @@
+{{!-- pages/login.hbs --}}
+
+{{#> defaultLayout title="Login"}}
+	{{#*inline "content"}}
+		{{#fetchData 'LoginModule/LoginData'}}
+			{{> LoginModule/LoginModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

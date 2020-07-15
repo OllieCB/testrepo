@@ -1,0 +1,7 @@
+{{#> blankLayout title="Search"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMFormSearchModule/WWMFormSearchData'}}
+			{{> WWMFormSearchModule/WWMFormSearchModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

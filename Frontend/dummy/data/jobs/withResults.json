@@ -1,0 +1,177 @@
+{
+	"success": true,
+	"hasMatches":true,
+	"matchCount":7,
+	"pageIndex":0,
+	"matchLabel":"7 matches found",
+	"results":[
+		[
+			{
+				"type":"opportunity",
+				"title":"Events coordinator",
+				"subtitle":"5.5 miles away",
+				"items":[
+					{
+						"label":"Here East, London",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				}
+			},
+			{
+				"type":"opportunity",
+				"title":"Retail area manager",
+				"subtitle":"89.6 miles away",
+				"items":[
+					{
+						"label":"Leicestershire/Derbyshire/Nottingham areas",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/retail-area-manager-leicester"
+				}
+			}
+		],
+		[
+			{
+				"type":"opportunity",
+				"title":"Retail area manager",
+				"subtitle":"93.4 miles away",
+				"items":[
+					{
+						"label":"Bournemouth",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/retail-area-manager-bournemouth"
+				}
+			},
+			{
+				"type":"opportunity",
+				"title":"Retail area manager",
+				"subtitle":"98.9 miles away",
+				"items":[
+					{
+						"label":"Norwich",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/retail-area-manager-norwich"
+				}
+			}
+		],
+		[
+			{
+				"type":"opportunity",
+				"title":"Retail area manager",
+				"subtitle":"178.8 miles away",
+				"items":[
+					{
+						"label":"Liverpool",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/retail-area-manager-liverpool"
+				}
+			},
+			{
+				"type":"opportunity",
+				"title":"Retail area manager",
+				"subtitle":"191.5 miles away",
+				"items":[
+					{
+						"label":"Plymouth",
+						"icon":"/imgs/location.svg"
+					},
+					{
+						"label":"£30,000 - £32,000 a year",
+						"icon":"/imgs/dark-placeholder.svg"
+					},
+					{
+						"label":"20 hours per week (Monday-Friday)",
+						"icon":"/imgs/calendar.svg"
+					},
+					{
+						"label":"6 month contract",
+						"icon":"/imgs/dark-placeholder.svg"
+					}
+				],
+				"action":{
+					"label":"",
+					"url":"/jobs/jobs-at-scope/retail-area-manager-plymouth"
+				}
+			}
+		]
+	]
+}

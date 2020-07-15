@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'SocialsModule/SocialsData'}}
+			{{> SocialsModule/SocialsModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

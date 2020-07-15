@@ -1,0 +1,13 @@
+{{!-- pages/index.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'HeroModule/data/pageNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'PreviewPanelModule/PreviewPanelData'}}
+			{{> PreviewPanelModule/PreviewPanelModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

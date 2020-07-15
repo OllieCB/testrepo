@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('/fonts/icomoon.eot');
+	src: url('/fonts/icomoon.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.wwm-icon {
+	font-family: 'icomoon', sans-serif !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wwm-facebook::before {
+	content: "\e900";
+}
+
+.wwm-instagram::before {
+	content: "\e901";
+}
+
+.wwm-youtube::before {
+	content: "\e902";
+}
+
+.wwm-twitter::before {
+	content: "\e903";
+}
+
+.wwm-quote::before {
+	content: "\e904";
+}
+
+.wwm-hamburger::before {
+	content: "\e905";
+}
+
+.wwm-thumbs-down::before {
+	content: "\e906";
+}
+
+.wwm-thumbs-up::before {
+	content: "\e907";
+}
+
+.wwm-event::before {
+	content: "\e908";
+}
+
+.wwm-search::before {
+	content: "\e909";
+}
+
+.wwm-close {
+	width: 60px;
+	height: 60px;
+	background: $wwm-purple-light;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 30;
+
+	&:hover {
+		background: $wwm-purple-dark;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 40%;
+		height: 3px;
+		background: $wwm-white;
+	}
+
+	&::before {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+
+	&::after {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+}

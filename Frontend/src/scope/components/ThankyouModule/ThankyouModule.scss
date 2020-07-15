@@ -1,0 +1,50 @@
+@import "../../../shared/styles/base/variables";
+
+.Thankyou {
+	&__name {
+		font-size: 0.8em;
+	}
+
+	&__email {
+		color: $purple;
+		font-weight: 500;
+	}
+
+	&__share {
+		overflow: hidden;
+		padding: $std-padding 0 $lrg-padding 0;
+		position: relative;
+
+		&-container {
+			color: $dark-gray;
+			overflow: visible;
+			line-height: em(40px);
+		}
+
+		&-list,
+		&-item {
+			display: inline-block;
+			overflow: visible;
+			vertical-align: top;
+		}
+
+		&-list {
+			position: relative;
+		}
+
+		&-item {
+			margin-left: $sm-padding;
+			height: em(40px);
+		}
+
+		&-img {
+			height: em(40px);
+			width: em(40px);
+		}
+	}
+
+	&__back {
+		background: $gray;
+		padding: $std-padding 0;
+	}
+}

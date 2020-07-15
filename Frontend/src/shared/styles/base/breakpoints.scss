@@ -1,0 +1,31 @@
+$mobile-only: true !default;
+
+@mixin for-mobile-only {
+	@if $mobile-only {
+		@content;
+	}
+}
+
+$tablet-up: false !default;
+
+@mixin for-tablet-up {
+	@if $tablet-up {
+		@content;
+	}
+}
+
+$desktop-up: false !default;
+
+@mixin for-desktop-up {
+	@if $desktop-up {
+		@content;
+	}
+}
+
+$print: false !default;
+
+@mixin for-print {
+	@if $print {
+		@content;
+	}
+}

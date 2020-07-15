@@ -1,0 +1,13 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="EventDetails"}}
+	{{#*inline "content"}}
+		{{#fetchData 'EventDetailsModule/data/withSignUpDetails'}}
+			{{> EventDetailsModule/EventDetailsModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'EventDetailsModule/data/withoutSignUpDetails'}}
+			{{> EventDetailsModule/EventDetailsModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

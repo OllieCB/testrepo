@@ -1,0 +1,19 @@
+{{#> defaultLayout title="Home"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMHeroModule/data/video'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMStatisticsModule/WWMStatisticsData'}}
+			{{> WWMStatisticsModule/WWMStatisticsModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMIllustrationModule/WWMIllustrationData'}}
+			{{> WWMIllustrationModule/WWMIllustrationModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMCTAModule/WWMCTAData'}}
+			{{> WWMCTAModule/WWMCTAModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

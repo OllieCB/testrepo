@@ -1,0 +1,14 @@
+@import "../../../shared/styles/base/variables";
+
+.PromotedItems {
+	margin-bottom: em(30px);
+	padding: 0 $lrg-padding;
+
+	@include for-desktop-up {
+		padding: 0 $wrapper-padding;
+	}
+
+	.white {
+		color: $white;
+	}
+}

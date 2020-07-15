@@ -1,0 +1,26 @@
+<a class="SearchResult" href="{{url}}" data-searchid="{{searchId}}" data-azureuniqueid="{{azureUniqueId}}">
+	<article class="rte">
+		<h3 class="SearchResult__title {{#if internal}}SearchResult__title--internal{{/if}} underline">
+			{{#if internal}}
+				<span class="srt">{{internal}}</span>
+			{{/if}}
+			{{title}}
+		</h3>
+		<p class="SearchResult__content">{{content}}</p>
+		{{#if featuring}}
+			<p class="SearchResult__featuring">
+				<span class="SearchResult__img-container">
+					<img class="lazy" src="{{featuring.img.placeholder}}" data-imgs="{{featuring.img.url}}" alt="{{featuring.img.alt}}" />
+				</span>
+				{{featuring.text}}
+			</p>
+		{{/if}}
+		{{#if (eq category 'Advice and support')}}<div class="SearchResult__category turquoise">{{category}}</div>{{/if}}
+		{{#if (eq category 'Support services')}}<div class="SearchResult__category white-turquoise">{{category}}</div>{{/if}}
+		{{#if (eq category 'Real life stories')}}<div class="SearchResult__category light-purple">{{category}}</div>{{/if}}
+		{{#if (eq category 'Scope community')}}<div class="SearchResult__category light-white">{{category}}</div>{{/if}}
+		{{#if (eq category 'Events')}}<div class="SearchResult__category yellow">{{category}}</div>{{/if}}
+		{{#if (eq category 'Campaigns')}}<div class="SearchResult__category purple">{{category}}</div>{{/if}}
+		{{#if (eq category 'News')}}<div class="SearchResult__category white">{{category}}</div>{{/if}}
+	</article>
+</a>

@@ -1,0 +1,50 @@
+@import "../../../shared/styles/base/variables";
+
+.Socials {
+	background: $gray;
+	padding: $std-padding $lrg-padding;
+
+	@include for-desktop-up {
+		padding: $std-padding $wrapper-padding;
+	}
+
+	&__title {
+		margin-bottom: $sm-padding;
+	}
+
+	&__container {
+		&:not(:last-of-type) {
+			margin-bottom: $std-padding;
+		}
+
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__item {
+		background: $white;
+		border-radius: 5px;
+		margin-bottom: $std-padding;
+		overflow: hidden;
+		padding: $sm-padding;
+		position: relative;
+
+		@include for-tablet-up {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin-bottom: 0;
+
+			&:first-of-type {
+				margin-right: $std-padding;
+			}
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+		height: em(28px);
+		vertical-align: top;
+		width: em(28px);
+	}
+}

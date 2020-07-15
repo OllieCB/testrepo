@@ -1,0 +1,12 @@
+@import "../../../shared/styles/base/variables";
+@import "./JobBoardForm/JobBoardForm";
+@import "./JobBoardFilters/JobBoardFilters";
+@import "./JobBoardResults/JobBoardResults";
+
+.JobBoard {
+	&__container {
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+}

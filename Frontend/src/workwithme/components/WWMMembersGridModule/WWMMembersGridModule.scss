@@ -1,0 +1,30 @@
+@import "../../styles/config/config.variables";
+@import "../../styles/utils/utils.mixins";
+
+.members {
+	padding: 100px 0;
+
+	&__grid {
+		&--item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 150px;
+			height: 100px;
+			margin: $global-padding-y-md 0;
+		}
+
+		&--logo {
+			max-width: 100%;
+			max-height: 80%;
+		}
+	}
+}
+
+.logo-grid {
+	.col-lg {
+		@media (min-width: 992px) {
+			flex: 1 0 12%;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{{#> blankLayout title="Forms"}}
+	{{#*inline "content"}}
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-sm-8">
+					{{#fetchData 'WWMFormModule/data/data1'}}
+						{{> WWMFormModule/WWMFormModule}}
+					{{/fetchData}}
+
+					<br /><br />
+
+					{{#fetchData 'WWMFormModule/data/data2'}}
+						{{> WWMFormModule/WWMFormModule}}
+					{{/fetchData}}
+
+					<br /><br />
+
+					{{#fetchData 'WWMFormModule/data/data3'}}
+						{{> WWMFormModule/WWMFormModule}}
+					{{/fetchData}}
+				</div>
+			</div>
+		</div>
+	{{/inline}}
+{{/blankLayout}}

@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'SummaryModule/SummaryData'}}
+			{{> SummaryModule/SummaryModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

@@ -1,0 +1,80 @@
+<div class="hero hero__{{type}} js-hero">
+	{{#if (eq type "image")}}
+		<div class="shape shape__image">
+			<img src="{{image.placeholder}}" alt="{{image.alt}}" class="img lazy"
+				data-imgs="{{image.small}},{{image.medium}},{{image.large}}">
+
+			<svg width="100%" height="100%" class="shape__svg">
+				<path
+					d="M0,0l235.567,0.132l-200.011,200.011c0,0 -59.01,56.725 0,115.736l84.254,84.253l-119.81,0.154l0,-400.286Z" />
+				</svg>
+		</div>
+	{{else if (eq type "video")}}
+		<div class="shape shape__default shape__right"></div>
+	{{/if}}
+
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-sm-10">
+				<div class="row hero-row">
+					<div class="{{#if (eq type "image")}}col-md-6{{else}}col-lg-6{{/if}}">
+						{{#if subHeading}}
+							<h3 class="hero__subheading">{{{subHeading}}}</h3>
+						{{/if}}
+						<h1 class="hero__heading m-b-md">{{{heading}}}</h1>
+
+						<div class="hero__copy m-b-md">
+							{{{copy}}}
+						</div>
+
+						<div class="cta-list d-flex flex-wrap justify-content-between">
+							{{#if ctas.[1]}}
+								{{#each ctas}}
+									<a href="{{href}}"
+										class="btn flex-grow-1 text-center m-b-md {{#if @first}} m-r-sm {{/if}} {{class}}"
+										{{#if title}}title="{{title}}" {{/if}} {{#if target}}target="{{target}}"
+										{{/if}}>
+										{{label}}
+									</a>
+								{{/each}}
+							{{else}}
+								{{#each ctas}}
+									<a href="{{href}}"
+										class="btn text-center m-b-md {{#if @first}} m-r-sm {{/if}} {{class}}"
+										{{#if title}}title="{{title}}" {{/if}} {{#if target}}target="{{target}}"
+										{{/if}}>
+										{{label}}
+									</a>
+								{{/each}}
+							{{/if}}
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						{{#if (eq type "video")}}
+							<div class="hero__video">
+								<div class="hero__video__thumb">
+									<img src="{{video.thumbnail.placeholder}}" alt="{{video.thumbnail.alt}}"
+										class="lazy"
+										data-imgs="{{video.thumbnail.small}},{{video.thumbnail.medium}},{{video.thumbnail.large}}">
+									<div class="hero__video__transcript--toggle js-modal__open-trigger"
+										data-modal-id="hero-transcript">View transcript</div>
+								</div>
+								<div class="hero__video--trigger js-modal__open-trigger" data-modal-id="hero-video">
+								</div>
+							</div>
+
+							{{#fetchData 'WWMModalModule/data/videoData'}}
+								{{> WWMModalModule/WWMModalModule}}
+							{{/fetchData}}
+
+							{{#fetchData 'WWMModalModule/data/transcriptData'}}
+								{{> WWMModalModule/WWMModalModule}}
+							{{/fetchData}}
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

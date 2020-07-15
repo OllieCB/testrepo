@@ -1,0 +1,12 @@
+@import "../../../shared/styles/base/variables";
+
+.CallToAction {
+	&.centered {
+		text-align: center;
+	}
+
+	a:not(.link) {
+		padding-left: $lrg-padding;
+		padding-right: $lrg-padding;
+	}
+}

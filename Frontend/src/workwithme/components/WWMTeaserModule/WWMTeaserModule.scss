@@ -1,0 +1,117 @@
+@import "../../styles/config/config.variables";
+@import "../../styles/utils/utils.mixins";
+
+.teaser {
+	@media (min-width: 992px) {
+		padding-top: 60px;
+	}
+
+	&__images {
+		position: relative;
+		transform: translateY(30px);
+		min-height: calc(130px + 50vw);
+
+		@media (min-width: 576px) {
+			min-height: 380px;
+			max-width: 500px;
+			margin: auto;
+		}
+
+		@media (min-width: 992px) {
+			min-height: 530px;
+			transform: translateY(-20px);
+			max-width: none;
+		}
+	}
+
+	&__content {
+		@media (min-width: 576px) {
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+
+	&__image {
+		position: absolute;
+
+		img {
+			border: 10px solid $wwm-white;
+			border-radius: 10px;
+
+			@include box-shadow;
+
+			@media (min-width: 992px) {
+				border: 14px solid $wwm-white;
+			}
+		}
+
+		&.one {
+			max-width: 65%;
+			top: 30px;
+			right: 25px;
+
+			@media (min-width: 992px) {
+				max-width: 60%;
+				top: 20px;
+				right: 30px;
+			}
+		}
+
+		&.two {
+			right: 0;
+			max-width: 65%;
+			top: calc(77px + 18vw);
+
+			@media (min-width: 576px) {
+				top: 153px;
+			}
+
+			@media (min-width: 992px) {
+				right: 0;
+				max-width: 60%;
+				top: 202px;
+			}
+		}
+
+		&.three {
+			top: 50px;
+			left: 0;
+			max-width: 45%;
+
+			@media (min-width: 992px) {
+				top: 50px;
+				left: 60px;
+			}
+		}
+	}
+
+	&__dark {
+		background: $wwm-purple-light;
+		color: $wwm-white;
+
+		.intro,
+		.h2,
+		.p {
+			color: $wwm-white;
+		}
+	}
+
+	&__light {
+		background: $wwm-bg-light;
+	}
+
+	&__left {
+		@media (min-width: 992px) {
+			.teaser__content {
+				padding-left: 40px;
+			}
+		}
+	}
+
+	.btn {
+		@media (max-width: 576px) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

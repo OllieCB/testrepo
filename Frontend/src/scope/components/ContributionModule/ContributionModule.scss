@@ -1,0 +1,83 @@
+@import "../../../shared/styles/base/variables";
+
+.Contribution {
+	padding: 0 $lrg-padding;
+
+	@include for-desktop-up {
+		padding: 0 $wrapper-padding;
+	}
+
+	&__title-container {
+		padding: 0 $std-padding;
+
+		@include for-tablet-up {
+			padding: 0;
+		}
+	}
+
+	&__tile-container {
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__tile {
+		border-radius: 5px;
+		padding: $sm-padding;
+
+		&:first-of-type {
+			margin-bottom: $std-padding;
+		}
+
+		&.purple {
+			background: $purple;
+			color: $white;
+		}
+
+		&.gray {
+			background: $gray;
+		}
+
+		@include for-tablet-up {
+			flex-basis: 0;
+			flex-grow: 1;
+			position: relative;
+
+			&:first-of-type {
+				margin-bottom: 0;
+				margin-right: $std-padding;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: $std-padding;
+	}
+
+	&__form {
+		@include for-tablet-up {
+			position: relative;
+		}
+	}
+
+	&__input {
+		margin-bottom: $sm-padding;
+		margin-top: 0 !important;
+	}
+
+	&__submit {
+		@include for-tablet-up {
+			height: 2.5em;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&__last {
+		@include for-tablet-up {
+			position: absolute;
+			bottom: $std-padding;
+		}
+	}
+}

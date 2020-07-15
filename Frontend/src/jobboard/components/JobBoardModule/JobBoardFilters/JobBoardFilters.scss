@@ -1,0 +1,20 @@
+@import "../../../../shared/styles/base/variables";
+
+.JobBoardFilters {
+	position: relative;
+	padding: 0 $lrg-padding;
+
+	&__fieldGroup {
+		display: flex;
+
+		&-label {
+			padding: 0 10px;
+			margin-top: 10px;
+			line-height: 2.5em;
+		}
+	}
+
+	@include for-tablet-up {
+		max-width: 450px;
+	}
+}

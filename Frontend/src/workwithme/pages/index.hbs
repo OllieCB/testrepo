@@ -1,0 +1,7 @@
+{{#> defaultLayout title="WorkWithMe"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMDevHelperModule/WWMDevHelperData'}}
+			{{> WWMDevHelperModule/WWMDevHelperModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

@@ -1,0 +1,176 @@
+@import "../../../shared/styles/base/variables";
+
+.Gallery {
+	margin-bottom: 5em;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+	width: 100%;
+
+	@include for-print {
+		display: none;
+	}
+
+	@include for-desktop-up {
+		padding: 0 10%;
+
+		&::before,
+		&::after {
+			background-color: $transparent-purple;
+			content: "";
+			display: inline-block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 10%;
+			z-index: 1;
+		}
+
+		&::before {
+			left: 0;
+			box-shadow: inset -50px 0 50px -50px rgba(0, 0, 0, 0.5);
+		}
+
+		&::after {
+			right: 0;
+			box-shadow: inset 50px 0 50px -50px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	&__action {
+		background: $yellow;
+		cursor: pointer;
+		height: em(90px);
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+		transform-origin: center;
+		width: em(20px);
+		z-index: 1;
+
+		@include for-tablet-up {
+			height: em(150px);
+			width: em(40px);
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		img {
+			width: 1em;
+		}
+
+		&--next {
+			border-top-left-radius: 30px;
+			border-bottom-left-radius: 30px;
+			right: 0;
+
+			@include for-desktop-up {
+				right: 10%;
+			}
+
+			img {
+				transform: rotate(-90deg);
+			}
+		}
+
+		&:not(.Gallery__action--next) {
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			left: 0;
+
+			@include for-desktop-up {
+				left: 10%;
+			}
+
+			img {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	&__slides-container {
+		left: 0;
+		position: relative;
+		transition: left ease-in-out 0.3s;
+		transform: translate3d(0, 0, 0);
+		will-change: left;
+	}
+
+	&__slide {
+		display: inline-block;
+		overflow: hidden;
+		padding-top: 56.25%;
+		position: relative;
+		vertical-align: top;
+		width: 100%;
+	}
+
+	&__img {
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	&__counter-container {
+		bottom: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+
+		@include for-desktop-up {
+			right: 10%;
+		}
+	}
+
+	&__counter {
+		border-top-left-radius: 3em;
+		border-top-right-radius: 70%;
+		background: $gray;
+		padding: 1em 2em 0.5em 1.5em;
+		position: relative;
+		right: -10px;
+	}
+
+	&__counter-wrapper {
+		line-height: 1em;
+	}
+
+	&__count {
+		font-weight: 500;
+	}
+
+	&__caption-container {
+		bottom: -2em;
+		position: absolute;
+	}
+
+	&__caption {
+		background: $white;
+		color: $light-purple;
+		line-height: 1em;
+		padding: 0 1em;
+		display: none;
+
+		&::after {
+			background: $yellow;
+			border-top-right-radius: em(5px);
+			border-bottom-right-radius: em(5px);
+			content: "";
+			display: inline-block;
+			height: 2em;
+			position: absolute;
+			left: 0;
+			top: -0.5em;
+			width: em(7px);
+		}
+
+		&.current {
+			display: block;
+		}
+	}
+}

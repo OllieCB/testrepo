@@ -1,0 +1,56 @@
+<div class="form__fields js-fields">
+		
+		{{#each this}}
+			{{#if (eq type 'question')}}
+				<div class="layout bottom-margin question">
+					<div class="row m-t-lg">
+						<div class="col-8">
+							<h2>{{heading}}</h2>
+							<p>{{paragraph}}</p>
+						</div>
+						<div class="col-4 flex-column d-flex align-self-center">
+							<a href="" class="btn btn-secondary m-l-auto js-modal__open-trigger" data-modal-id="question" onclick="return false;">Need help?</a>
+						</div>
+			
+					</div>
+					{{> WWMModalModule/WWMModalModule}}
+				</div>
+			{{/if}}
+
+			{{#if (eq type 'text')}}
+				<div class="layout bottom-margin">
+					<label for="{{id}}">{{label}}</label>
+					<input id="{{id}}" class="form-control" type="{{type}}" name="{{id}}" aria-describedby="{{id}}err" />
+				</div>
+			{{/if}}
+
+			{{#if (eq type 'textarea')}}
+				<div class="layout bottom-margin">
+					<label for="{{id}}">{{label}}</label>
+					<textarea id="{{id}}" name="{{id}}" class="form-control" rows="5"></textarea>
+				</div>
+			{{/if}}
+
+			{{#if (eq type 'select')}}
+				<div class="layout bottom-margin">
+					<label for="{{id}}">{{label}}</label>
+					<select class="form-control" id="{{id}}">
+					{{#each options}}
+					<option>{{this}}</option>
+					{{/each}}
+					</select>
+				</div>
+			{{/if}}
+
+			{{#if (eq type 'checkbox')}}
+				<div class="layout bottom-margin checkbox-container">
+					<label for="{{id}}">{{label}}
+						<input id="{{id}}" class="form-control" type="{{type}}" name="{{id}}" aria-describedby="{{id}}err" />
+						<span class="custom"></span>
+					</label>
+				</div>
+			{{/if}}
+
+		{{/each}}
+
+</div>

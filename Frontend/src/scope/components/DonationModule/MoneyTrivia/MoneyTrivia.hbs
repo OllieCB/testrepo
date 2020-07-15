@@ -1,0 +1,7 @@
+<div class="MoneyTrivia">
+	<div class="corner-decoration top-left vertical turquoise"></div>
+	<div class="corner-decoration bottom-right horizontal yellow"></div>
+	{{#each sentences}}
+		<p class="MoneyTrivia__sentence {{#if @first}}current{{/if}} js-moneyTrivia-sentence">{{this}}</p>
+	{{/each}}
+</div>

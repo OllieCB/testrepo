@@ -1,0 +1,79 @@
+@import "../../../../styles/base/variables";
+
+.BrandBanner {
+	background: $purple;
+	padding: 30px;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+
+	@include for-tablet-up {
+		background: $gray;
+		position: relative;
+		text-align: right;
+	}
+
+	@include for-desktop-up {
+		padding: 35px;
+	}
+
+	&__logo {
+		display: none;
+
+		@include for-tablet-up {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 30px;
+			transform: translateY(-50%);
+			width: em(345px);
+
+			@include for-desktop-up {
+				width: em(360px);
+			}
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__cta {
+		display: block;
+		margin: 0 auto 1em 0;
+		width: 100%;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include for-tablet-up {
+			display: inline-block;
+			margin: 0 20px 0 0;
+			width: auto;
+
+			@include hover-cta(#{$yellow});
+
+			&.white {
+				background: $purple;
+				color: $white;
+
+				@include hover-cta(#{$light-purple});
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include for-desktop-up {
+			font-size: em(19px);
+		}
+	}
+
+	.top-left {
+		@include for-tablet-up {
+			display: none;
+		}
+	}
+}

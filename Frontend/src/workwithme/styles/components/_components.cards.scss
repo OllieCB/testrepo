@@ -1,0 +1,48 @@
+.card {
+	display: block;
+	color: $wwm-white;
+	margin-bottom: 20px;
+
+	&__top,
+	&__bottom {
+		position: relative;
+	}
+
+	&__top {
+		z-index: 2;
+		background: $wwm-purple-light;
+		padding: 25px;
+		border-radius: 10px;
+		min-height: 200px;
+	}
+
+	&__image {
+		position: absolute;
+		object-fit: cover;
+		object-position: center top;
+		border-radius: 10px;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__bottom {
+		z-index: 1;
+		background: $wwm-bg-light;
+		color: $wwm-grey-darker;
+		margin-top: -10px;
+		padding: 35px 25px 25px;
+		border-radius: 0 0 10px 10px;
+		font-weight: $font-weight-bold;
+	}
+
+	&__sub-title {
+		font-size: 19px;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-size: 20px;
+		line-height: 27px;
+		font-weight: $font-weight-heavy;
+	}
+}

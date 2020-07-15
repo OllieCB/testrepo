@@ -1,0 +1,44 @@
+<div class="layout rte">
+	<h1 class="underline">Generic payment</h1>
+</div>
+<div class="layout bottom-margin rte">
+	<p>All fields marked with an asterisk (*) are required.</p>
+</div>
+<form class="GenericPayment form js-generic-payment clearfix {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" action="{{cEndpoint}}" data-confirm="{{confirmEndpoint}}" method="post">
+	<input type="hidden" name="eId" value="b305d065-1dc3-40b6-ab80-fbc78b034d10" />
+	<input type="hidden" name="cId" value="839cb9c4-87a1-46e6-9b57-b5f5d6b66261" />
+	<input type="hidden" name="name" value="Joe Bloggs" />
+	<input type="hidden" name="address1" value="11 Curtain Rd" />
+	<input type="hidden" name="address2" value="" />
+	<input type="hidden" name="town" value="London" />
+	<input type="hidden" name="postcode" value="EC2A 3LT" />
+	<input type="hidden" name="country" value="GB" />
+
+	<div class="GenericPayment__col layout bottom-margin js-stripeElements-container">
+		<label for="{{byCard.number.id}}" class="{{#if byCard.number.required}}required{{/if}}">{{byCard.number.label}}</label>
+		<div id="{{byCard.number.id}}" class="js-card-number" data-placeholder="{{byCard.number.placeholder}}"></div>
+		<p id="{{byCard.number.errId}}" class="GenericPayment__error js-stripeElements-error">{{byCard.number.error}}</p>
+	</div>
+	<div class="layout layout-flex">
+		<div class="GenericPayment__col bottom-margin lg-col-auto js-stripeElements-container">
+			<label for="{{byCard.expiry.id}}" class="{{#if byCard.expiry.required}}required{{/if}}">{{byCard.expiry.label}}</label>
+			<div id="{{byCard.expiry.id}}" class="js-card-expiry" data-placeholder="{{byCard.expiry.placeholder}}"></div>
+			<p id="{{byCard.expiry.errId}}" class="GenericPayment__error js-stripeElements-error">{{byCard.expiry.error}}</p>
+		</div><!--
+
+		--><div class="GenericPayment__cvv GenericPayment__col StripeElements__container bottom-margin lg-col-auto js-stripeElements-container">
+			<label for="{{byCard.cvv.id}}" class="required">{{byCard.cvv.label}}</label>
+			<div id="{{byCard.cvv.id}}" class="js-card-cvc" data-placeholder="{{byCard.cvv.placeholder}}"></div>
+			<p id="{{byCard.cvv.errId}}" class="GenericPayment__error js-stripeElements-error">{{byCard.cvv.error}}</p>
+		</div>
+	</div>
+
+	<p class="GenericPayment__secure"><small>{{secureText}}</small></p>
+
+	<div class="layout">
+		<button class="GenericPayment__next btn purple js-stripeElements-submit" type="submit" data-stripe-public-key="{{stripeKey}}">
+			<img class="GenericPayment__next--spinner lazy" src="/imgs/placeholder1px.svg" data-imgs="/imgs/spinner-white.svg" alt="">
+			{{submit}}
+		</button>
+	</div>
+</form>

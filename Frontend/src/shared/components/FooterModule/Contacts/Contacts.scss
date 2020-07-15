@@ -1,0 +1,67 @@
+@import "../../../styles/base/variables";
+
+.FContacts {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $transparent-purple-solid;
+
+	&__header,
+	&__list,
+	&__item,
+	&__wrapper {
+		@include for-tablet-up {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&__title,
+	&__ltitle {
+		margin-bottom: 0.75em;
+	}
+
+	&__title {
+		font-size: em(18px);
+	}
+
+	&__list {
+		@include for-tablet-up {
+			width: calc(200% / 3);
+		}
+	}
+
+	&__header,
+	&__item {
+		margin-bottom: 30px;
+
+		@include for-tablet-up {
+			width: calc(100% / 3);
+		}
+	}
+
+	&__item {
+		padding-left: calc(40px + 0.7em);
+		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include for-tablet-up {
+			width: 50%;
+		}
+	}
+
+	&__icon {
+		height: 40px;
+		left: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+	}
+
+	&__lvalue {
+		font-size: em(21px);
+	}
+}

@@ -1,0 +1,357 @@
+@import "../../../shared/styles/base/variables";
+@import "./MoneyTrivia/MoneyTrivia";
+@import "./MoneySummary/MoneySummary";
+
+.Donation {
+	&__text {
+		margin-bottom: $std-padding;
+		max-width: $container-desktop;
+	}
+
+	&__small {
+		color: $medium-gray;
+		display: block;
+	}
+
+	&__container {
+		padding-left: $donation-wrapper;
+		padding-right: $donation-wrapper;
+
+		legend {
+			font-size: 1em;
+			font-weight: 400;
+		}
+
+		@include for-tablet-up {
+			overflow: hidden;
+		}
+	}
+
+	&__row {
+		&.hidden {
+			display: none;
+		}
+
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__col {
+		position: relative;
+
+		@include for-tablet-up {
+			align-self: flex-start;
+			flex-grow: 1;
+			flex-basis: 0;
+
+			&:not(:last-child) {
+				margin-right: $std-padding;
+			}
+		}
+
+		&--single {
+			position: relative;
+
+			@include for-tablet-up {
+				flex-grow: 1;
+			}
+		}
+	}
+
+	&__actions {
+		background: $gray;
+		padding-bottom: $std-padding;
+		padding-top: $std-padding;
+	}
+
+	&__paypal,
+	&__prev,
+	&__next {
+		@include for-tablet-up {
+			width: 33%;
+		}
+	}
+
+	&__paypal,
+	&__or,
+	.js-donation-debit,
+	.js-donation-byCard {
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&__or {
+		display: block;
+		margin: $sm-padding 0;
+		text-align: center;
+
+		@include for-tablet-up {
+			display: inline-block;
+			line-height: 2.5em;
+			margin: 0;
+			padding-left: 15%;
+			vertical-align: top;
+		}
+	}
+
+	&__paypal {
+		height: 2.5em;
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		&-img {
+			width: em(100px);
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			left: 50%;
+		}
+
+		@include for-tablet-up {
+			margin-bottom: $std-padding * 2;
+			width: 33%;
+		}
+	}
+
+	&__cards {
+		margin-bottom: $std-padding * 2;
+		overflow: visible;
+		position: relative;
+		width: 100%;
+
+		&-container {
+			bottom: -50px;
+			position: absolute;
+			left: 0;
+			text-align: center;
+			width: 100%;
+		}
+
+		@include for-tablet-up {
+			width: 33%;
+		}
+	}
+
+	&__card-icon {
+		margin-right: 40px;
+		vertical-align: middle;
+		width: em(40px);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__next {
+		border: 1px solid $purple;
+
+		&:not(.Donation__cards) {
+			float: right;
+		}
+
+		&[type=submit] {
+			text-align: center;
+
+			&::before {
+				content: url('../../scope/assets/images/padlock.svg');
+				display: inline-block;
+				margin-right: 8px;
+				width: 0.5em;
+			}
+
+			&.loading {
+				color: $purple;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		@include for-tablet-up {
+			float: right;
+		}
+
+		&--spinner {
+			display: none;
+			height: em(30px);
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: em(30px);
+
+			.loading & {
+				display: block;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__cvv {
+		position: relative;
+
+		&::after {
+			content: '';
+			background: url('../../scope/assets/images/cvv.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 1.5em;
+			width: 2em;
+			position: absolute;
+			right: $sm-padding;
+			top: calc(1.25em + 28px);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__secure {
+		font-size: em(14px);
+		margin-bottom: $std-padding;
+		position: relative;
+		text-align: center;
+
+		&::before {
+			content: url('../../scope/assets/images/padlock-dark.svg');
+			display: inline-block;
+			margin-right: 8px;
+			vertical-align: text-top;
+			height: 14px;
+			width: 0.75em;
+		}
+	}
+
+	&__error {
+		display: none;
+
+		.error & {
+			color: $red;
+			display: block;
+			font-size: em(16px);
+		}
+	}
+
+	.rte p:not(.MoneySummary__text) {
+		margin-bottom: 0;
+	}
+
+	&__background {
+		background: $gray;
+	}
+
+	.js-donation-container {
+		display: none;
+
+		&.current {
+			display: block;
+		}
+	}
+
+	.layout {
+		padding: 0;
+
+		&.bottom-margin,
+		.bottom-margin {
+			margin-bottom: $std-padding;
+		}
+	}
+
+	.Legacy .layout:not(.no-padding),
+	.Fundraising .layout:not(.no-padding) {
+		padding: 0 $donation-wrapper;
+	}
+}
+
+.DonationAmount {
+	&__frequency {
+		box-shadow: inset 0 0 0 1px $dark-gray;
+		border-radius: 5px;
+		font-size: 0;
+		margin-bottom: $std-padding;
+	}
+
+	&__frequency-label {
+		color: $dark-gray;
+		cursor: pointer;
+		display: inline-block !important;
+		font-size: 18px;
+		padding: $sm-padding 0;
+		text-align: center;
+		width: 50%;
+		border-radius: 5px 0 0 5px;
+
+		@include for-tablet-up {
+			input:focus + & {
+				@include flying-outline($purple);
+
+				box-shadow: inset 0 -5px 0 $light-purple;
+			}
+		}
+
+		&:last-of-type {
+			border-radius: 0 5px 5px 0;
+		}
+	}
+
+	&__amount-container {
+		display: flex;
+		text-align: center;
+		margin-bottom: $std-padding;
+	}
+
+	&__amount-label {
+		border: 1px solid $purple;
+		border-radius: 5px;
+		cursor: pointer;
+		flex-grow: 1;
+		font-weight: 500;
+		margin-right: 5%;
+		padding: $sm-padding 0;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		@include for-tablet-up {
+			input:focus + & {
+				@include flying-outline();
+
+				box-shadow: inset 0 -5px 0 $yellow;
+			}
+		}
+	}
+
+	&__radio {
+		opacity: 0;
+
+		&:checked {
+			& + .DonationAmount__frequency-label {
+				background: $turquoise;
+				color: $purple;
+				font-weight: 500;
+			}
+
+			& + .DonationAmount__amount-label {
+				background: $purple;
+				color: $white;
+			}
+		}
+	}
+
+	&__otherAmount {
+		appearance: textfield;
+		width: 100%;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			appearance: none;
+			margin: 0;
+		}
+	}
+}

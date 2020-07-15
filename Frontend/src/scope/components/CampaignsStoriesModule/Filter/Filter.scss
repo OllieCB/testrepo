@@ -1,0 +1,76 @@
+@import "../../../../shared/styles/base/variables";
+
+.Filter {
+	margin-bottom: $std-padding;
+
+	&--mobile {
+		&__container {
+			position: relative;
+
+			@include for-tablet-up {
+				display: none;
+			}
+		}
+
+		&__list {
+			appearance: button;
+			position: relative;
+			width: 100%;
+		}
+
+		&__item {
+			background: $white;
+			color: $purple;
+		}
+
+		&__arrow {
+			right: 1em;
+			width: 1em;
+			z-index: 1;
+		}
+	}
+
+	&--desktop {
+		&__list {
+			display: none;
+
+			@include for-tablet-up {
+				border: 1px solid $transparent-purple-solid;
+				border-radius: 5px;
+				display: flex;
+			}
+		}
+
+		&__item {
+			@include for-tablet-up {
+				border-left: 1px solid $transparent-purple-solid;
+				flex-grow: 1;
+				text-align: center;
+				transition: background 0.3s;
+
+				&:first-child {
+					border-left: 0;
+				}
+
+				&:hover {
+					background: $gray;
+				}
+			}
+
+			&.current {
+				background: $purple;
+				color: $white;
+			}
+		}
+
+		&__button {
+			padding: $sm-padding 0;
+			width: 100%;
+
+			@include for-tablet-up {
+				background: transparent;
+				cursor: pointer;
+			}
+		}
+	}
+}

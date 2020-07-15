@@ -1,0 +1,64 @@
+@import "../../../styles/base/variables";
+
+.FNewsletter {
+	margin-bottom: 30px;
+
+	@include for-tablet-up {
+		display: inline-block;
+		padding-left: 8%;
+		vertical-align: top;
+		width: 50%;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		position: relative;
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	&__wrapper {
+		position: relative;
+
+		@include for-tablet-up {
+			max-width: 500px;
+		}
+	}
+
+	&__input,
+	&__submit {
+		height: em(45px);
+		border-radius: em(22.5px);
+	}
+
+	&__input {
+		color: $purple;
+		margin-bottom: 1em;
+		padding: 0.5em 2em 0.5em 1em;
+		width: 100%;
+
+		@include for-tablet-up {
+			margin: 0;
+		}
+
+		&::placeholder {
+			color: $medium-gray;
+			opacity: 1;
+		}
+	}
+
+	&__submit {
+		margin: 0;
+		padding: 0 2em;
+
+		@include for-tablet-up {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}

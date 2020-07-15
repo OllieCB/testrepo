@@ -1,0 +1,17 @@
+<section class="Partners {{#if bottomMargin}}bottom-margin{{/if}}{{#if topMargin}}top-margin{{/if}}">
+	<h3 class="Partners__title underline">{{title}}</h3>
+	<ul class="Partners__list">
+		{{#each services}}
+			<li class="Partners__item">
+				<a class="Partners__img-container" href="{{url}}">
+					<img class="Partners__img" src="{{img.url}}" alt="{{img.alt}}">
+				</a>
+			</li>
+		{{~/each}}
+	</ul>
+	{{#if cta}}
+		<div class="Partners__cta">
+			<a class="btn purple" href="{{cta.url}}">{{cta.label}}</a>
+		</div>
+	{{/if}}
+</section>

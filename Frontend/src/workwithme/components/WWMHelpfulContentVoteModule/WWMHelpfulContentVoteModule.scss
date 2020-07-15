@@ -1,0 +1,27 @@
+@import "../../styles/config/config.variables";
+
+.helpful-content-vote {
+	p {
+		color: $wwm-grey-darker;
+	}
+
+	@media (max-width: 576px) {
+		&__body {
+			margin-bottom: $margin-lg;
+		}
+	}
+
+	.wwm-icon {
+		background-color: $wwm-bg-light;
+		border-radius: 50%;
+		color: $wwm-purple-light;
+		font-size: 36px;
+		font-weight: $font-weight-bold;
+		margin: 0 0.08em;
+		padding: 0.3em;
+
+		&:hover {
+			background: linear-gradient(0deg, $wwm-grey-light 5%, $wwm-bg-light 85%);
+		}
+	}
+}

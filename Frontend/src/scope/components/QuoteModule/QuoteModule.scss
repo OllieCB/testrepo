@@ -1,0 +1,96 @@
+@import "../../../shared/styles/base/variables";
+
+.Quote {
+	overflow: hidden;
+	padding: em(60px) 0 em(45px) 0;
+	position: relative;
+	line-height: em(30px);
+
+	&__quote,
+	&__cite {
+		padding: 0 em(21px, 18px);
+		max-width: 82.8125%;
+		margin: 0 auto;
+
+		@include for-tablet-up {
+			padding: 0 em(40px, 21px);
+			max-width: em(720px, 21px);
+		}
+	}
+
+	&__quote {
+		color: $dark-gray;
+		font-size: em(21px);
+		padding: 0 em(21px, 21px);
+		position: relative;
+		margin-bottom: $std-padding;
+
+		@include for-tablet-up {
+			padding: 0 em(40px, 21px);
+		}
+
+		&::before,
+		&::after {
+			color: $purple;
+			font-size: rem(45px);
+			position: absolute;
+			font-weight: 700;
+
+			@include for-tablet-up {
+				font-size: rem(65px);
+			}
+		}
+
+		&::before {
+			content: "“";
+			top: -0.25em;
+			left: 0;
+		}
+
+		&::after {
+			content: "”";
+			bottom: -0.5em;
+			right: 0;
+		}
+	}
+
+	&__cite {
+		color: $purple;
+		display: block;
+		font-weight: 500;
+
+		@include for-tablet-up {
+			padding: 0 em(40px, 18px);
+			max-width: em(720px, 18px);
+		}
+	}
+
+	&.purple {
+		background-color: $purple;
+
+		.Quote {
+			&__quote {
+				color: $white;
+
+				&::before,
+				&::after {
+					color: $turquoise;
+				}
+			}
+
+			&__cite {
+				color: $yellow;
+			}
+		}
+	}
+
+	.corner-decoration.yellow {
+		height: 3em;
+		bottom: 3em;
+
+		@include for-tablet-up {
+			bottom: 0;
+			height: 90px;
+		}
+	}
+}

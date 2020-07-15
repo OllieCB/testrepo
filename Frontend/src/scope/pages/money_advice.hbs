@@ -1,0 +1,26 @@
+{{!-- pages/article.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'HeroModule/data/articleNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ArticleInfoModule/data/ArticleNoShare'}}
+			{{> ArticleInfoModule/ArticleInfoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'MoneyAdviceModule/MoneyAdviceData'}}
+			{{> MoneyAdviceModule/MoneyAdviceModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ArticleInfoModule/data/ArticleWithShare'}}
+			{{> ArticleInfoModule/ArticleInfoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedArticleModule/data/article'}}
+			{{> RelatedArticleModule/RelatedArticleModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

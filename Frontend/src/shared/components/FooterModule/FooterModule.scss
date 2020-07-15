@@ -1,0 +1,60 @@
+@import "../../styles/base/variables";
+@import "./Contacts/Contacts";
+@import "./Links/Links";
+@import "./Newsletter/Newsletter";
+@import "./Socials/Socials";
+
+.Footer {
+	background-color: $purple;
+	color: $white;
+	position: relative;
+
+	&__wrapper {
+		padding: 50px 15px;
+
+		@include for-tablet-up {
+			padding: 50px 50px 0;
+		}
+	}
+
+	&__title {
+		font-size: em(35px);
+		margin-bottom: 50px;
+	}
+
+	&__logo {
+		height: em(32px, 35px);
+
+		@include for-tablet-up {
+			height: em(37px, 35px);
+		}
+
+		@include for-desktop-up {
+			height: em(41px, 35px);
+		}
+	}
+
+	.title {
+		color: $yellow;
+		font-weight: 500;
+	}
+
+	&__decoration-container {
+		height: em(125px);
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateY(-50%);
+		width: 12px;
+
+		.corner-decoration {
+			height: em(125px);
+			transform: none;
+		}
+	}
+
+	@include for-print {
+		display: none;
+	}
+}

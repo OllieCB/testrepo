@@ -1,0 +1,17 @@
+{{#> defaultLayout title="Join"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/join-image'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#> contentColumn}}
+			{{#*inline "content"}}
+				{{#fetchData 'WWMFormModule/data/data3'}}
+					{{> WWMFormModule/WWMFormModule}}
+				{{/fetchData}}
+			{{/inline}}
+		{{/contentColumn}}
+
+	{{/inline}}
+{{/defaultLayout}}

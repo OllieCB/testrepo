@@ -1,0 +1,51 @@
+<nav id="nav" class="MainNavigation" tabindex="-1">
+	<ul class="MainNavigation__list" role="list">
+		{{#each links}}
+			<li class="MainNavigation__item {{#if mobileOnly}}MainNavigation__item-mobile{{/if}}">
+				<div class="null_left"></div>
+				{{#if children}}
+					<div class="MainNavigation__subwrapper js-dropdown-parent">
+						<button
+							id="navHandle-{{@index}}"
+							class="MainNavigation__handle js-dropdown-handle"
+							aria-haspopup="true"
+							aria-expanded="false"
+							aria-controls="navSublist-{{@index}}"
+						 >
+							{{#if prefixIcon}}
+								<img class="MainNavigation__prefix-icon lazy" src="{{placeholder}}" data-imgs="{{prefixIcon}}" alt="" />
+							{{/if}}
+							{{label}}
+							{{#if postfixIcon}}
+								<img class="MainNavigation__postfix-icon MainNavigation__postfix-icon--handle lazy" src="{{placeholder}}" data-imgs="{{postfixIcon}}" alt="" />
+							{{/if}}
+						</button>
+						<ul
+							id="navSublist-{{@index}}"
+							class="MainNavigation__sublist js-dropdown"
+							aria-labelledby="navHandle-{{@index}}"
+							role="list"
+						>
+							{{#each children}}
+								<li class="MainNavigation__subitem">
+									<a class="MainNavigation__link MainNavigation__link--sub" href="{{url}}">{{label}}</a>
+								</li>
+							{{/each}}
+						</ul>
+					</div>
+				{{else}}
+					<a class="MainNavigation__link {{#if current}}current{{/if}}" href="{{url}}">
+						{{#if prefixIcon}}
+							<img class="MainNavigation__prefix-icon lazy" src="{{placeholder}}" data-imgs="{{prefixIcon}}" alt="" />
+						{{/if}}
+						{{label}}
+						{{#if postfixIcon}}
+							<img class="MainNavigation__postfix-icon link lazy" src="{{placeholder}}" data-imgs="{{postfixIcon}}" alt="" />
+						{{/if}}
+					</a>
+				{{/if}}
+				<div class="null_right"></div>
+			</li>
+		{{/each}}
+	</ul>
+</nav>

@@ -1,0 +1,38 @@
+<div class="wrapper">
+	<div class="HelpfulContent js-helpfulContent {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" aria-live="polite">
+		<p class="HelpfulContent__text">{{label}}</p>
+
+		<div class="HelpfulContent__btn-container">
+			{{#each buttons}}
+				<button class="HelpfulContent__btn js-helpful-btn" data-endpoint="{{endpoint}}" type="button">{{label}}</button>
+			{{/each}}
+		</div>
+		<div class="HelpfulContent__yes">
+			<p>{{{response.yes.message}}}</p>
+			<a href="{{response.yes.link}}" rel="nofollow" target="_blank" aria-describedby="new-window-0" class="HelpfulContent__cta btn link purple">{{{response.yes.label}}}</a>
+		</div>
+		<div class="HelpfulContent__no">
+			<p>{{{response.no.message}}}</p>
+			<a href="{{response.no.link}}" rel="nofollow" target="_blank" aria-describedby="new-window-0" class="HelpfulContent__cta btn link purple">{{{response.no.label}}}</a>
+		</div>
+		
+		<div class="HelpfulContent HelpfulContent--fixed hidden js-helpful-fixed js-helpfulContent" aria-hidden="true">
+			<p class="HelpfulContent__text">{{label}}</p>
+
+			<div class="HelpfulContent__btn-container">
+				{{#each buttons}}
+					<button class="HelpfulContent__btn js-helpful-btn" data-endpoint="{{endpoint}}" aria-label="{{ariaLabel}}" type="button">{{label}}</button>
+				{{/each}}
+			</div>
+			<div class="HelpfulContent__yes">
+				<p>{{{response.yes.message}}}</p>
+				<a href="{{response.yes.link}}" rel="nofollow" target="_blank" aria-describedby="new-window-0" class="HelpfulContent__cta btn link purple">{{{response.yes.label}}}</a>
+			</div>
+			<div class="HelpfulContent__no">
+				<p>{{{response.no.message}}}</p>
+				<a href="{{response.no.link}}" rel="nofollow" target="_blank" aria-describedby="new-window-0" class="HelpfulContent__cta btn link purple">{{{response.no.label}}}</a>
+			</div>
+			<button class="close"><img class="lazy" src="/imgs/transparent1px.png" data-imgs="/imgs/close.svg" alt="" aria-label="Press escape to close popup." /></button>
+		</div>
+	</div>
+</div>

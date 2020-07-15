@@ -1,0 +1,146 @@
+@import "../../../shared/styles/base/variables";
+
+.OpportunityFinder {
+	&__wrapper {
+		padding: 0 $lrg-padding;
+
+		@include for-desktop-up {
+			padding: 0 $wrapper-padding;
+		}
+	}
+
+	&__title {
+		color: $white;
+		background: $purple;
+		overflow: hidden;
+		padding: $sm-padding $lrg-padding $std-padding;
+		position: relative;
+	}
+
+	&__form {
+		background: $gray;
+		margin-bottom: $std-padding;
+		padding: $std-padding 0;
+	}
+
+	&__fields {
+		display: none;
+		margin: 0 auto $sm-padding auto;
+		width: calc(100% - 2 * #{$lrg-padding});
+	}
+
+	&__field {
+		border-bottom: 1px solid $transparent-purple-solid;
+		margin-bottom: $sm-padding;
+	}
+
+	&__legend {
+		font-size: 1em;
+		font-weight: 400;
+		margin-bottom: $sm-padding;
+	}
+
+	&__overlay-back,
+	&__overlay-submit {
+		@include for-tablet-up {
+			display: none;
+		}
+	}
+
+	&__less,
+	&__more {
+		display: inline-block;
+		height: 2.5em;
+		padding-right: 1.5em;
+		position: relative;
+
+		&::after {
+			content: url('../../shared/assets/images/arrow.svg');
+			height: 1em;
+			width: em(14px);
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__less {
+		display: none;
+
+		&::after {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	.layout {
+		padding: 0 $lrg-padding;
+	}
+
+	&.open {
+		.OpportunityFinder {
+			&__fields {
+				background: $gray;
+				display: block;
+				height: 100%;
+				left: 0;
+				overflow: auto;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 999;
+				padding: $lrg-padding;
+
+				label {
+					margin-bottom: $sm-padding;
+				}
+
+				.layout {
+					padding: 0;
+				}
+			}
+
+			&__overlay-back {
+				border-bottom: 1px solid $transparent-purple-solid;
+				margin-bottom: $std-padding;
+				padding-bottom: $sm-padding;
+				width: 100%;
+
+				img {
+					height: 1em;
+					transform: rotate(90deg);
+					vertical-align: top;
+				}
+			}
+
+			@include for-tablet-up {
+				&__fields {
+					overflow: visible;
+					position: static;
+					padding: 0;
+					width: calc(100% - 2 * #{$lrg-padding});
+
+					.layout {
+						&-flex {
+							flex-wrap: wrap;
+						}
+					}
+
+					.lg-col-auto {
+						flex-basis: calc(25% - #{$sm-padding} * 4 / 3);
+						flex-shrink: 0;
+						flex-grow: 0;
+					}
+				}
+
+				&__more {
+					display: none;
+				}
+
+				&__less {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

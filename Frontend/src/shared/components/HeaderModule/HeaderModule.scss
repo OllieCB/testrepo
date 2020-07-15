@@ -1,0 +1,36 @@
+@import "../../styles/base/variables";
+@import "./Overlay/TopBar/TopBar";
+@import "./Overlay/BrandBanner/BrandBanner";
+@import "./Overlay/MainNavigation/MainNavigation";
+@import "./Overlay/LoginButton/LoginButton";
+
+.HeaderModule {
+	text-decoration: none;
+
+	&__mobile-overlay {
+		background-color: $white;
+		display: none;
+		overflow-y: scroll;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+
+		@include for-tablet-up {
+			display: block;
+			position: static;
+			overflow-y: visible;
+		}
+
+		&.opened {
+			display: block;
+			z-index: 99999;
+		}
+	}
+
+	@include for-print {
+		display: none;
+	}
+}

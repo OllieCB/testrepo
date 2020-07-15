@@ -1,0 +1,118 @@
+@import "../../styles/config/config.variables";
+$wwm-purple-light-faded: $wwm-purple-light + unquote("5e");
+
+.news-grid {
+	padding: 50px 0;
+	color: $wwm-black;
+	overflow: hidden;
+
+	@media screen and (min-width: 768px) {
+		padding: 100px 0;
+	}
+
+	.card {
+		&__title {
+			color: $wwm-purple-light;
+			font-size: 22px;
+
+			&--white {
+				color: $wwm-white;
+			}
+		}
+
+		&__sub-title {
+			font-size: 20px;
+		}
+
+		&__copy {
+			line-height: 22px;
+		}
+
+		&__bottom {
+			padding: 45px 35px 35px;
+		}
+
+		&__top {
+			color: $wwm-white;
+		}
+
+		&__info {
+			font-size: $font-sm;
+		}
+
+		&__date {
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	&.equal-height {
+		.card {
+			margin: 0;
+			height: 100%;
+			background: $wwm-bg-light;
+			border-radius: 10px;
+		}
+	}
+
+	&__grid {
+		@supports (display: grid) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-gap: 30px 30px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			grid-template-columns: repeat(3, minmax(300px, 1fr));
+		}
+
+		&--item {
+			&.featured__item {
+				@media screen and (min-width: 1000px) {
+					grid-column: span 2;
+				}
+
+				&--lg {
+					@media screen and (min-width: 1000px) {
+						grid-column: span 2;
+					}
+
+					@media screen and (min-width: 1200px) {
+						grid-column: span 3;
+
+						.card {
+							display: flex;
+							flex: auto;
+
+							.card {
+								&__top {
+									width: 100%;
+									max-width: 450px;
+									flex-basis: auto;
+									flex-grow: 1;
+									flex-shrink: 0;
+								}
+
+								&__bottom {
+									margin-top: 0;
+									width: 100%;
+									margin-left: -10px;
+									min-height: 350px;
+								}
+
+								&__title {
+									font-size: $font-xxl;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.container-fluid {
+			padding: 0;
+		}
+	}
+}

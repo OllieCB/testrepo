@@ -1,0 +1,19 @@
+<fieldset class="GiftAid rte js-giftAid"> 
+	<legend class="srt">{{title}}</legend>
+	<div class="GiftAid__top" tabindex="0">
+		<h3 class="underline" aria-hidden="true">{{title}}</h3>
+		<img class="GiftAid__img" src="{{icon}}" alt="" />
+		<div class="js-giftaid-fundraising">
+			<div class="GiftAid__text">{{{text}}}</div>
+			<label class="label-checkbox">
+				<input class="GiftAid__checkbox" type="checkbox" name="giftAid" aria-describedby="giftAidSmallId">
+				<span class="custom"></span>
+				{{label}}
+			</label>
+			<div id="giftAidSmallId" class="GiftAid__small">{{{small}}}</div>
+		</div>
+		<div class="hidden-input js-giftaid-legacy">
+			<div class="GiftAid__text">{{{legacyText}}}</div>
+		</div>
+	</div>
+</fieldset>

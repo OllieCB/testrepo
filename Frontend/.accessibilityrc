@@ -1,0 +1,9 @@
+{
+	accessibilityLevel: "WCAG2AA",
+	reportLevels": {
+		notice: false,
+		warning: true,
+		error: true
+	}
+}
+

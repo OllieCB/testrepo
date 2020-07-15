@@ -1,0 +1,21 @@
+{{#> defaultLayout title="News"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/news'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMNewsGridModule/data/WWMNewsPageData'}}
+			{{> WWMNewsGridModule/WWMNewsGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMNewsData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMCTAModule/WWMCTAData'}}
+			{{> WWMCTAModule/WWMCTAModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

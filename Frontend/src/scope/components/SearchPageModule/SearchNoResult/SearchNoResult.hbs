@@ -1,0 +1,14 @@
+<div class="SearchNoResult">
+	<p class="SearchNoResult__content">{{content}}</p>
+
+	<div class="SearchNoResult__list">
+		<div class="SearchNoResult__label">{{searchForLabel}}</div>
+		<ul>
+			{{#each searchTerms}}
+				<li class="SearchNoResult__item">
+					<a class="btn transparent-purple" href="{{url}}">{{label}}</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

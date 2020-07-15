@@ -1,0 +1,61 @@
+<div class="footer js-footer">
+	<div class="footer__main">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-sm-10">
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="footer__main__heading">Make disability your business</h3>
+							<h4 class="footer__main__subheading">Powered by</h4>
+							<img class="logos" src="{{footer.main.left_image}}" alt="">
+						</div>
+						
+						<div class="col-md-6">
+							<div class="row">
+								{{#each footer.main.columns}}
+									<div class="col-6 col-sm-4 m-b-sm {{#if @last}}social-icons m-x-sm-auto text-center text-sm-left{{/if}}">
+										<h6 class="nav__list__heading">{{heading}}</h6>
+
+										<ul class="nav__list {{#if icon_list}}nav__list--icons{{/if}}">
+											{{#each links}}
+												<li>
+													<a href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+														{{#if icon}}
+															<i class="wwm-icon {{icon}}"></i>
+														{{else}}
+															{{label}}
+														{{/if}}
+													</a>
+												</li>
+											{{/each}}
+										</ul>
+									</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__copyright">
+		<div class="container-fluid">
+			<div class="row flex-column-reverse flex-lg-row">
+				<div class="footer__copyright__text col-lg-4 text-center text-lg-left">
+					<p>{{footer.copyright.copyright}}</p>
+				</div>
+
+				<div class="col-lg-8 text-right">
+					<nav class="footer__copyright__nav">
+						<ul class="nav__list list-inline">
+							{{#each footer.copyright.links}}
+								<li class="nav__list--item"><a href="{{url}}" class="nav__list--anchor {{class}}">{{label}}</a></li>
+							{{/each}}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

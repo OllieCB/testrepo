@@ -1,0 +1,127 @@
+{{!-- handlebars does not support elseif but these should make use of it --}}
+<div class="Hero Hero--{{#if (eq type 'page')
+		}}page{{/if}}{{#if (eq type 'donation')
+		}}donation{{/if}}{{#if (eq type 'article')
+		}}article{{/if}}{{#if (eq type 'campaign-stories')
+		}}campaign-stories{{/if}}{{#if (eq type 'sided')
+		}}sided{{/if}}{{#if (eq type 'homepage')
+		}}homepage{{/if}}
+		{{#if video}}js-hero-video{{/if}}
+		{{#unless transcript}}
+			{{#if bottomMargin}}bottom-margin{{/if}}
+		{{/unless}}
+		{{#if topMargin}}top-margin{{/if}}
+	" data-id="{{video.id}}">
+	<div class="Hero__container">
+		<div class="Hero__img-container">
+			<img class="Hero__img lazy thumb" src="{{background.placeholder}}" data-imgs="{{background.smallUrl}},{{background.mediumUrl}},{{background.url}}" alt="" aria-hidden="true" />
+		</div>
+
+		{{!-- Page & Donation Hero --}}
+		{{#if (or
+			(eq type 'page')
+			(eq type 'donation')
+		)}}
+			<div class="corner-decoration top-right vertical turquoise"></div>
+			<div class="Hero__title-container">
+				<h1 class="Hero__title">{{title}}</h1>
+			</div>
+		{{/if}}
+
+		{{!-- Article Hero --}}
+		{{#if (eq type 'article')}}
+			<div class="corner-decoration top-right horizontal purple"></div>
+			<div class="Hero__decoration-container">
+				<div class="corner-decoration bottom-left vertical yellow"></div>
+			</div>
+		{{/if}}
+
+		{{!-- Campaign Hero --}}
+		{{#if (eq type 'campaign-stories')}}
+			<div class="corner-decoration top-right horizontal yellow"></div>
+			<div class="wrapper">
+				<div class="Hero__category Hero__category--{{#if (eq category.name 'campaigns')
+					}}campaigns{{/if}}{{#if (eq category.name 'stories')
+					}}stories{{/if}}{{#if (eq category.name 'news')
+					}}news{{/if}}{{#if (eq category.name 'inside')
+					}}inside{{/if}}">{{category.label}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+
+	{{#if video}}
+		<div class="Hero__video-container">
+			<button class="Hero__video-handle js-player-handle" aria-label="play video">
+				<span class="icon-container-tall">
+					<img class="v-center" src="{{video.handle}}" alt="">
+				</span>Play
+			</button>
+			<div class="Hero__video-player js-video-container"></div>
+		</div>
+	{{/if}}
+
+	{{!-- Homepage Hero --}}
+	{{#if (eq type 'homepage')}}
+		<section class="Hero__ribbon">
+			<h2 class="underline">{{title}}</h2>
+			<a class="btn purple" href="{{cta.url}}">{{cta.label}}</a>
+		</section>
+	{{/if}}
+
+	{{!-- Sided Hero --}}
+	{{#if (eq type 'sided')}}
+		<section class="Hero__tab Hero__tab--{{side}} {{color}}">
+			<h2 class="underline">{{title}}</h2>
+			<p class="Hero__tab-text">{{text}}</p>
+			<a class="btn
+				{{#if (eq color 'purple')}}turquoise{{/if}}
+				{{#if (eq color 'yellow')}}purple{{/if}}
+			" href="{{cta.url}}">{{cta.label}}</a>
+		</section>
+	{{/if}}
+</div>
+
+{{#if (eq type 'article')}}
+	{{#if transcript}}
+		<div class="Accordion--hero-video js-accordion {{#if bottomMargin}}bottom-margin{{/if}}">
+			{{#with transcript}}
+				{{> AccordionModule/Accordion single="true"}}
+			{{/with}}
+		</div>
+	{{/if}}
+
+	<div class="Hero--article__title wrapper rte">
+		<h1>{{title}}</h1>
+	</div>
+{{/if}}
+
+{{#if (eq category.name 'campaigns')}}
+	<div class="Hero__summary rte">
+		<div class="wrapper">
+			<h1 class="Hero__summary-title underline">{{category.summary.title}}</h1>
+			<p class="Hero__summary-text">{{category.summary.text}}</p>
+			{{#each category.summary.ctas}}
+				<a class="Hero__cta btn purple" href="{{url}}">{{label}}
+					<span class="icon-container-long">
+						<img class="v-center" src="{{arrow}}" alt="">
+					</span>
+				</a>
+			{{/each}}
+		</div>
+	</div>
+{{/if}}
+
+
+{{#if (or
+	(eq type 'page')
+	(eq type 'donation')
+)}}
+	{{#if transcript}}
+		<div class="Accordion--hero-video js-accordion {{#if bottomMargin}}bottom-margin{{/if}}">
+			{{#with transcript}}
+				{{> AccordionModule/Accordion single="true"}}
+			{{/with}}
+		</div>
+	{{/if}}
+{{/if}}

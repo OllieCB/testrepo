@@ -1,0 +1,150 @@
+@import "../../../shared/styles/base/variables";
+@import "./SearchResult/SearchResult";
+@import "./SearchNoResult/SearchNoResult";
+
+.SearchPage {
+	&__header {
+		color: $white;
+		background: $purple;
+	}
+
+	&__form {
+		background: $gray;
+		border-bottom: 1px solid $transparent-purple-solid;
+	}
+
+	&__header,
+	&__filters {
+		padding: $std-padding $lrg-padding;
+
+		@include for-tablet-up {
+			padding: $std-padding $wrapper-padding;
+		}
+	}
+
+	&__title {
+		margin-bottom: $sm-padding;
+	}
+
+	&__search-container {
+		color: $purple;
+	}
+
+	&__combobox {
+		z-index: 2;
+	}
+
+	&__search {
+		margin-top: 0 !important;
+		margin-bottom: $sm-padding;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__submit {
+		margin-bottom: $sm-padding;
+		height: 2.5em;
+	}
+
+	&__select {
+		display: block;
+		margin-bottom: $sm-padding;
+
+		@include for-tablet-up {
+			margin-right: $std-padding;
+
+			&.label-input {
+				margin-bottom: 0;
+			}
+		}
+
+		select {
+			margin-top: 0 !important;
+		}
+	}
+
+	&__checkbox {
+		color: $white !important;
+		margin-bottom: $sm-padding;
+	}
+
+	&__submitContainer--top {
+		display: none;
+
+		@include for-tablet-up {
+			display: block;
+		}
+	}
+
+	&__submitContainer--bottom {
+		@include for-tablet-up {
+			display: none;
+		}
+	}
+
+	&__loadMore {
+		margin-bottom: $std-padding;
+		margin-top: $std-padding;
+		position: relative;
+		text-align: center;
+
+		&.hidden {
+			display: none;
+		}
+
+		&.loading .btn {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__spinner {
+		display: none;
+		height: em(30px);
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: em(30px);
+
+		.loading & {
+			display: block;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__typeahead {
+		position: absolute;
+		background: $white;
+		border: 1px solid $medium-gray;
+		margin-top: -1.25em;
+		padding-top: 1.25em;
+		min-width: 240px;
+		z-index: 1;
+
+		&.hidden {
+			display: none;
+		}
+
+		li {
+			cursor: pointer;
+			padding: 0.5em 2em 0.5em 1em;
+			display: block;
+			min-height: 2.5em;
+			line-height: 1.5em;
+			width: 100%;
+			overflow: hidden;
+
+			&.active {
+				background: $gray;
+			}
+		}
+	}
+
+	.layout {
+		padding: 0;
+	}
+}

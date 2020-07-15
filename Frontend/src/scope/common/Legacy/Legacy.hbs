@@ -1,0 +1,19 @@
+<div class="Legacy js-legacy {{#if donation}}hidden-input{{/if}}">
+    <fieldset class="layout no-padding bordered-fields js-legacy-question js-donation-item">
+		<legend class="lead-label {{#if required}}required{{/if}}">{{label}}</legend>
+		{{#each options}}
+			<label>
+				<input type="radio" name="{{name}}" value="{{value}}" {{#unless ../donation}}required{{/unless}} aria-describedby="{{err.id}}" />
+				<span class="custom"></span>
+				{{label}}
+			</label>
+		{{/each}}
+		<p id="{{err.id}}" class="Donation__error layout">{{err.msg}}</p>
+	</fieldset>
+	<div class="top-margin bottom-margin js-legacy-info hidden-input">
+		<div class="layout">
+			<label>{{more.label}}</label>
+			<textarea name="{{more.name}}"></textarea>
+		</div>
+	</div>
+</div>

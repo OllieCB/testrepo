@@ -1,0 +1,231 @@
+<div class="Donation js-donation" tabindex="-1">
+	{{#fetchData 'StepTrackModule/StepTrackData'}}
+		{{> StepTrackModule/StepTrackModule}}
+	{{/fetchData}}
+
+	<form class="form js-stripeElements-form" action="{{mEndpoint}}" data-debit="{{mEndpoint}}" data-card="{{cEndpoint}}" data-confirm="{{confirmEndpoint}}" method="post">
+		<input type="hidden" name="return" value="{{return}}" />
+		<input type="hidden" name="costCentreCode" value="{{costCentreCode}}" />
+		{{#with amount}}
+			<div class="DonationAmount current js-donation-container">
+				{{#with moneySummary}}
+					{{> ./MoneySummary/MoneySummary}}
+				{{/with}}
+
+				<div class="Donation__container">
+					<p class="Donation__text underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					{{#with frequency}}
+						<fieldset>
+							<legend class="srt">Payment frequency</legend>
+							<div class="DonationAmount__frequency js-donation-frequency">
+								{{#each items}}
+									<input class="DonationAmount__radio" id="{{id}}" type="radio" name="{{../name}}" value="{{value}}" {{#if checked}}checked{{/if}} />
+									<label class="DonationAmount__frequency-label" for="{{id}}">{{label}}</label>
+								{{/each}}
+							</div>
+						</fieldset>
+					{{/with}}
+
+					{{#with amount}}
+						<fieldset class="DonationAmount__amount">
+							<legend class="srt">Payment amount</legend>
+							<div class="DonationAmount__amount-container">
+								{{#each items}}
+									<input class="DonationAmount__radio" id="{{id}}" type="radio" name="{{../name}}" value="{{debit.value}}" data-debit-value="{{debit.value}}" data-card-value="{{card.value}}" {{#if checked}}checked{{/if}} />
+									<label class="DonationAmount__amount-label js-donation-amount" for="{{id}}"><span class="js-donation-debit">{{debit.label}}</span><span class="js-donation-byCard hidden">{{card.label}}</span></label>
+								{{/each}}
+							</div>
+						</fieldset>
+
+						{{#with ../otherAmount}}
+							<div class="Donation__row">
+								<div class="Donation__col bottom-margin js-donation-item">
+									<label>
+										<div class="label">{{label}}</div>
+										<input class="DonationAmount__otherAmount js-imask" data-imask="eyJtYXNrIjoio251bSIsImJsb2NrcyI6eyJudW0iOnsibWFzayI6Ik51bWJlciIsInRob3VzYW5kc1NlcGFyYXRvciI6IiwiLCJyYWRpeCI6Ii4iLCJwYWRGcmFjdGlvbmFsWmVyb3MiOjF9fX0=" type="text" inputmode="numeric" name="{{name}}" placeholder="{{placeholder}}" aria-describedby="{{errId}}" pattern="£[1-9][0-9,]*\.\d{2}" />
+									</label>
+									<p id="{{errId}}" class="Donation__error">{{error}}</p>
+								</div>
+							</div>
+						{{/with}}
+					{{/with}}
+				</div>
+
+				{{#with ../moneyTrivia}}
+					{{> ./MoneyTrivia/MoneyTrivia}}
+				{{/with}}
+
+				<div class="Donation__actions Donation__container">
+					<button class="Donation__paypal hidden btn yellow js-donation-paypal" type="button" data-base-url="{{paypal.baseUrl}}" data-business="{{paypal.business}}" data-return={{paypal.return}}>
+						<img class="Donation__paypal-img lazy" src="{{placeholder}}" data-imgs="{{paypal.url}}" alt="{{paypal.alt}}" />
+					</button>
+					<span class="Donation__or hidden js-donation-or">or</span>
+					<button class="Donation__next Donation__cards btn link purple js-donation-next" type="button"><span class="js-donation-debit">{{debit.label}}</span><span class="hidden js-donation-byCard">{{byCard.label}}</span>
+						<div class="Donation__cards-container js-donation-byCard hidden">
+							{{#each byCard.icons}}
+								<img class="Donation__card-icon lazy" src="{{placeholder}}" data-imgs="{{url}}" alt="{{alt}}" />
+							{{/each}}
+						</div>
+					</button>
+				</div>
+			</div>
+		{{/with}}
+		{{#with details}}
+			<div class="DonationDetails js-donation-container">
+				<fieldset class="Donation__container">
+					<legend class="Donation__text underline">
+						Please enter your details
+						<small class="Donation__small">* Mandatory</small>
+					</legend>
+					<div class="Donation__row">
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if firstName.required}}required{{/if}}">{{firstName.label}}</div>
+								<input type="text" name="firstName" placeholder="{{firstName.placeholder}}" autocomplete="given-name" {{#if firstName.required}}required{{/if}} aria-describedby="{{firstName.errId}}">
+							</label>
+							<p id="{{firstName.errId}}" class="Donation__error">{{firstName.error}}</p>
+						</div>
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if lastName.required}}required{{/if}}">{{lastName.label}}</div>
+								<input type="text" name="lastName" placeholder="{{lastName.placeholder}}" autocomplete="family-name" {{#if lastName.required}}required{{/if}} aria-describedby="{{lastName.errId}}">
+							</label>
+							<p id="{{lastName.errId}}" class="Donation__error">{{lastName.error}}</p>
+						</div>
+					</div>
+					<div class="Donation__row">
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if email.required}}required{{/if}}">{{email.label}}</div>
+								<input type="text" name="email" type="email" placeholder="{{email.placeholder}}" autocomplete="email" {{#if email.required}}required{{/if}} aria-describedby="{{email.errId}}">
+							</label>
+							<p id="{{email.errId}}" class="Donation__error">{{email.error}}</p>
+						</div>
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if phone.required}}required{{/if}}">{{phone.label}}</div>
+								<input type="text" inputmode="tel" name="phone" placeholder="{{phone.placeholder}}" autocomplete="tel-national" {{#if phone.required}}required{{/if}} aria-describedby="{{phone.errId}}">
+							</label>
+							<p id="{{phone.errId}}" class="Donation__error">{{phone.error}}</p>
+						</div>
+					</div>
+
+					{{#fetchData 'PostcodeLookup/PostcodeLookupData'}}
+						{{> PostcodeLookup/PostcodeLookupModule donation="true"}}
+					{{/fetchData}}
+
+					<div class="Donation__row">
+						<div class="Donation__col--single bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if countries.required}}required{{/if}}">{{countries.label}}</div>
+								<select name="country" {{#if countries.required}}required{{/if}} autocomplete="country-name" aria-describedby="{{countries.errId}}">
+									{{#each countries.items}}
+									<option value="{{value}}">{{label}}</option>
+									{{/each}}
+								</select>
+							</label>
+							<p id="{{countries.errId}}" class="Donation__error">{{countries.error}}</p>
+						</div>
+					</div>
+				</fieldset>
+				<div class="Donation__container Donation__actions">
+					<button class="Donation__prev btn transparent-purple back js-donation-prev" type="button">{{back}}</button>
+					<button class="Donation__next btn purple link js-donation-next" type="button">{{next}}</button>
+				</div>
+			</div>
+			{{/with}}
+			{{#with card}}
+			<div class="DonationCard js-donation-container">
+				<fieldset class="Donation__container">
+					<legend class="Donation__text underline">
+						Please enter your payment details
+						<small class="Donation__small">* Mandatory</small>
+					</legend>
+					<div class="Donation__row js-donation-debit">
+						<div class="Donation__col--single bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if debit.name.required}}required{{/if}}">{{debit.name.label}}</div>
+								<input type="text" name="accName" placeholder="{{debit.name.placeholder}}" {{#if debit.name.required}}required{{/if}} aria-describedby="{{debit.name.errId}}">
+							</label>
+							<p id="{{debit.name.errId}}" class="Donation__error">{{debit.name.error}}</p>
+						</div>
+					</div>
+					<div class="Donation__row js-donation-debit">
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if debit.sortcode.required}}required{{/if}}">{{debit.sortcode.label}}</div>
+								<input class="js-imask" data-imask="eyJtYXNrIjoiMDAtMDAtMDAifQ==" type="text" name="sortcode" placeholder="{{debit.sortcode.placeholder}}" pattern="\d{2}-\d{2}-\d{2}" {{#if debit.sortcode.required}}required{{/if}} aria-describedby="{{debit.sortcode.errId}}" inputmode="numeric">
+							</label>
+							<p id="{{debit.sortcode.errId}}" class="Donation__error">{{debit.sortcode.error}}</p>
+						</div>
+						<div class="Donation__col bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if debit.number.required}}required{{/if}}">{{debit.number.label}}</div>
+								<input type="text" name="accNumber" placeholder="{{debit.number.placeholder}}" pattern="[0-9]*" inputmode="numeric" maxlength="8" {{#if debit.number.required}}required{{/if}} aria-describedby="{{debit.number.errId}}">
+							</label>
+							<p id="{{debit.number.errId}}" class="Donation__error">{{debit.number.error}}</p>
+						</div>
+					</div>
+					<div class="Donation__row js-donation-debit">
+						<div class="Donation__col--single bottom-margin js-donation-item">
+							<label>
+								<div class="label {{#if debit.number.required}}required{{/if}}">{{debit.number.label}}</div>
+								<select name="debitDay" aria-describedby="{{debit.number.errId}}" required>
+									{{#each debit.day}}
+										<option value="{{value}}">{{label}}</option>
+									{{/each}}
+								</select>
+							</label>
+							<p id="{{debit.number.errId}}" class="Donation__error">{{debit.number.error}}</p>
+						</div>
+					</div>
+					<div class="Donation__row js-donation-byCard hidden">
+						<div class="Donation__col--single bottom-margin js-donation-item js-stripeElements-container">
+							<label class="{{#if byCard.number.required}}required{{/if}}">{{byCard.number.label}}</label>
+							<div id="{{byCard.number.id}}" class="js-card-number" data-placeholder="{{byCard.number.placeholder}}"></div>
+							<p id="{{byCard.number.errId}}" class="Donation__error js-stripeElements-error">{{byCard.number.error}}</p>
+						</div>
+					</div>
+					<div class="Donation__row js-donation-byCard hidden">
+						<div class="Donation__col bottom-margin js-donation-item js-stripeElements-container">
+							<label class="{{#if byCard.expiry.required}}required{{/if}}">{{byCard.expiry.label}}</label>
+							<div id="{{byCard.expiry.id}}" class="js-card-expiry" data-placeholder="{{byCard.expiry.placeholder}}"></div>
+							<p id="{{byCard.expiry.errId}}" class="Donation__error js-stripeElements-error">{{byCard.number.error}}</p>
+						</div>
+						<div class="Donation__cvv Donation__col bottom-margin js-donation-item js-stripeElements-container">
+							<label class="{{#if byCard.cvv.required}}required{{/if}}">{{byCard.cvv.label}}</label>
+							<div id="{{byCard.cvv.id}}" class="js-card-cvc" data-placeholder="{{byCard.cvv.placeholder}}"></div>
+							<p id="{{byCard.cvv.errId}}" class="Donation__error js-stripeElements-error">{{byCard.cvv.error}}</p>
+						</div>
+					</div>
+					<p class="Donation__secure"><small>{{secureText}}</small></p>
+				</fieldset>
+
+				{{#with legacy}}
+					{{> Legacy/Legacy donation='true'}}
+				{{/with}}
+
+				{{#with giftAid}}
+					{{> GiftAid/GiftAid}}
+				{{/with}}
+
+				{{#with fundraising}}
+					{{> Fundraising/Fundraising donation='true'}}
+				{{/with}}
+
+				{{#with contacts}}
+					{{> InTouch/InTouch}}
+				{{/with}}
+
+				<div class="Donation__container Donation__actions">
+					<button class="Donation__prev btn transparent-purple back js-donation-prev" type="button">{{back}}</button>
+					<button class="Donation__next btn purple js-donation-submit js-stripeElements-submit" type="submit" data-stripe-public-key="{{stripeKey}}">
+						<img class="Donation__next--spinner lazy" src="/imgs/placeholder1px.svg" data-imgs="/imgs/spinner-white.svg" alt="">
+						{{next}}
+					</button>
+				</div>
+			</div>
+		{{/with}}
+	</form>
+</div>

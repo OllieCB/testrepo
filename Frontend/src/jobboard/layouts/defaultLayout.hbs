@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-gb">
+	<head>
+		<!-- Set the viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set character encoding -->
+        <meta charset="utf-8">
+
+        <!-- Set meta description -->
+        <meta name="description" content="Scope exists to make this country a place where disabled people have the same opportunities as everyone else. Until then, we’ll be here.">
+
+        <!-- Set favicon -->
+        <link rel="icon" type="image/jpg" href="/imgs/favicon.png">
+
+        <!-- Chrome for Android theme color -->
+        <meta name="theme-color" content="#340458">
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NXWPN7G');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- <!&#45;&#45; Add to homescreen for Chrome on Android &#45;&#45;> -->
+        <!-- <meta name="mobile&#45;web&#45;app&#45;capable" content="yes"> -->
+        <!-- <meta name="application&#45;name" content="Scope"> -->
+        <!-- <link rel="icon" sizes="192x192" href="#"> -->
+        <!--  -->
+        <!-- <!&#45;&#45; Add to homescreen for Safari on iOS &#45;&#45;> -->
+        <!-- <meta name="apple&#45;mobile&#45;web&#45;app&#45;capable" content="yes"> -->
+        <!-- <meta name="apple&#45;mobile&#45;web&#45;app&#45;status&#45;bar&#45;style" content="black"> -->
+        <!-- <meta name="apple&#45;mobile&#45;web&#45;app&#45;title" content="Scope"> -->
+        <!-- <link rel="apple&#45;touch&#45;icon" href="#"> -->
+        <!--  -->
+        <!-- <!&#45;&#45; Tile for Win8 &#45;&#45;> -->
+        <!-- <meta name="msapplication&#45;TileColor" content="#340458"> -->
+        <!-- <meta name="msapplication&#45;TileImage" content="images/touch/icon&#45;192x192.png"> -->
+
+        <!-- Request styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 56.25em)" href="/css/styles-tablet.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 75em)" href="/css/styles-desktop.css"/>
+        <link rel="stylesheet" type="text/css" media="print" href="/css/print.css"/>
+		<!-- Set title -->
+		<title>{{#if title}}{{title}}{{/if}}</title>
+	</head>
+	<body>
+		<div class="fixed-container">
+			{{#fetchSharedData 'CookieBannerModule/CookieBannerData'}}
+				{{> CookieBannerModule/CookieBannerModule}}
+			{{/fetchSharedData}}
+		</div>
+
+		{{#fetchSharedData 'AccessNavModule/AccessNavData'}}
+			{{> AccessNavModule/AccessNavModule}}
+		{{/fetchSharedData}}
+
+		<div class="container">
+			{{#> header}}
+				{{#fetchData 'HeaderModule/HeaderData'}}
+					{{> HeaderModule/HeaderModule}}
+				{{/fetchData}}
+			{{/header}}
+
+			<main id="main" tabindex="-1">
+				{{#> content}}
+					Optional default content
+				{{/content}}
+			</main>
+
+			{{#> footer}}
+				{{#fetchSharedData 'FooterModule/FooterData'}}
+					{{> FooterModule/FooterModule}}
+				{{/fetchSharedData}}
+			{{/footer}}
+		</div>
+
+		<div class="srt">
+            <span id="new-window-0">Opens in a new window</span>
+            <span id="new-window-1">Opens an external site</span>
+            <span id="new-window-2">Opens an external site in a new window</span>
+        </div>
+
+
+		<script src="/js/main.js"></script>
+	</body>
+</html>

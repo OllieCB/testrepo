@@ -1,0 +1,161 @@
+@import "../../../shared/styles/base/variables";
+
+.PageItem {
+	margin-bottom: em(30px);
+
+	@include for-tablet-up {
+		display: flex;
+	}
+
+	&__internal {
+		height: 2.5em;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: scaleX(-1);
+		width: 2.5em;
+	}
+
+	&__content {
+		position: relative;
+		padding: $sm-padding $sm-padding;
+	}
+
+	&__title {
+		.PageItem__item:not(.promoted) & {
+			margin-bottom: $std-padding;
+
+			@include for-tablet-up {
+				margin-bottom: 0.4em;
+			}
+		}
+	}
+
+	&__item {
+		background: $gray;
+		border-radius: 5px;
+		display: block;
+		margin: 0 0 em(30px);
+		overflow: hidden;
+		position: relative;
+		transition: box-shadow 0.2s linear;
+
+		@include for-tablet-up {
+			margin: 0 em(30px) 0 0;
+			flex-basis: calc(50% - #{em(30px)} / 2);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:focus,
+			&:hover {
+				box-shadow: inset 0 -5px 0 $light-purple;
+
+				.PageItem__title {
+					color: $light-purple;
+				}
+			}
+		}
+
+		&.promoted {
+			background: $purple;
+
+			&:focus,
+			&:hover {
+				box-shadow: inset 0 -5px 0 $yellow;
+
+				.PageItem__title {
+					color: $gray;
+				}
+			}
+
+			h3,
+			.PageItem__content {
+				color: $white;
+			}
+		}
+	}
+
+	&__visual {
+		background: $purple;
+		overflow: hidden;
+		padding-top: 56.25%;
+		position: relative;
+
+		@include for-print {
+			display: none;
+		}
+	}
+
+	&__img {
+		height: 100%;
+
+		@include for-tablet-up {
+			transition: transform 0.15s ease-out;
+		}
+	}
+
+	&__type {
+		border-top-right-radius: 2.25em;
+		bottom: 0;
+		font-weight: 500;
+		left: 0;
+		line-height: 1em;
+		padding: em(15px);
+		padding-right: 1.5em;
+		position: absolute;
+
+		&--story {
+			color: $white;
+			background: $purple;
+		}
+
+		&--inside,
+		&--event {
+			background: $yellow;
+		}
+
+		&--campaign {
+			background: $turquoise;
+		}
+
+		&--news {
+			background: $white;
+		}
+	}
+
+	&__text {
+		.PageItem__item:not(.promoted):not(&--no-hide) & {
+			display: none;
+
+			@include for-tablet-up {
+				display: block;
+			}
+		}
+	}
+
+	&__link {
+		position: absolute;
+		bottom: $sm-padding;
+	}
+
+	&__event-item {
+		line-height: em(30px);
+		margin-bottom: $sm-padding;
+		padding-left: em(40px);
+		position: relative;
+	}
+
+	&__event-img-container {
+		display: inline;
+		height: em(30px);
+		vertical-align: top;
+
+		img {
+			left: 0;
+			position: absolute;
+			width: 1.8em;
+		}
+	}
+}

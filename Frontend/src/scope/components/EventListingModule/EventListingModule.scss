@@ -1,0 +1,20 @@
+@import "../../../shared/styles/base/variables";
+@import "./Search/Search";
+
+.Event-listing {
+	&__wrapper {
+		padding: 0 $lrg-padding;
+
+		@include for-desktop-up {
+			padding: 0 $wrapper-padding;
+		}
+	}
+
+	&__title {
+		color: $white;
+		background: $purple;
+		overflow: hidden;
+		padding: $sm-padding $lrg-padding $std-padding;
+		position: relative;
+	}
+}

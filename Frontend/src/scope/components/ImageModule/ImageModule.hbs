@@ -1,0 +1,10 @@
+<div class="Image {{#if caption}}Image--caption{{/if}} {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<div class="Image__container">
+		<img class="lazy" src="{{placeholder}}" data-imgs="{{smallUrl}},{{mediumUrl}},{{img}}" alt="{{alt}}" />
+	</div>
+	{{#if caption}}
+		<div class="Image__caption-container">
+			<p class="Image__caption v-center">{{caption}}</p>
+		</div>
+	{{/if}}
+</div>

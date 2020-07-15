@@ -1,0 +1,11 @@
+<section class="Accordion {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}} js-accordion">
+	<div class="wrapper">
+		<h3 class="Accordion__title underline">{{title}}</h3>
+	</div>
+
+	<ul class="Accordion__list">
+		{{#each items}}
+			{{> ./Accordion}}
+		{{/each}}
+	</ul>
+</section>

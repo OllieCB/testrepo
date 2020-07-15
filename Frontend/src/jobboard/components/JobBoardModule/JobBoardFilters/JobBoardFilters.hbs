@@ -1,0 +1,29 @@
+<div class="JobBoardFilters form">
+    <div class="lg-col-auto bottom-margin">
+        <label for="companies">{{company.label}}</label>
+        <select id="companies" class="lg-col-auto js-companies" name="company">
+            {{#each company.options}}
+            <option value="{{value}}">{{option}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="lg-col-auto bottom-margin">
+        <label for="employmentTypes">{{contract.label}}</label>
+        <select id="employmentTypes" class="lg-col-auto js-employment-types" name="employmentType">
+            {{#each contract.options}}
+            <option value="{{value}}">{{option}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="lg-col-auto bottom-margin">
+        <label for="salaryLower">{{salary.label}}</label>
+        <div class="JobBoardFilters__fieldGroup">
+            <div><input id="salaryLower" class="js-salary-lower js-imask" data-imask="eyJtYXNrIjoio251bSIsImJsb2NrcyI6eyJudW0iOnsibWFzayI6Ik51bWJlciIsInRob3VzYW5kc1NlcGFyYXRvciI6IiwiLCJzY2FsZSI6MH19fQ==" type="text" inputmode="numeric" name="salaryLower" placeholder="£4,000" pattern="£[1-9][0-9,]*"></div>
+            <label class="JobBoardFilters__fieldGroup-label" for="salaryUpper">To</label>
+            <div><input id="salaryUpper" class="js-salary-upper js-imask" data-imask="eyJtYXNrIjoio251bSIsImJsb2NrcyI6eyJudW0iOnsibWFzayI6Ik51bWJlciIsInRob3VzYW5kc1NlcGFyYXRvciI6IiwiLCJzY2FsZSI6MH19fQ==" type="text" inputmode="numeric" name="salaryUpper" placeholder="£20,000" pattern="£[1-9][0-9,]*"></div>
+        </div>
+    </div>
+    <label class="label-checkbox lg-col-auto bottom-margin">
+        <input class="js-only-recommended" type="checkbox" name="onlyRecommended" value="{{recommended.status}}">
+        <span class="custom"></span> {{recommended.label}}</label>
+</div>

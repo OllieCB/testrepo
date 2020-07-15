@@ -1,0 +1,33 @@
+{
+	"sections": [
+		{
+			"title": null,
+			"items": [
+				{
+					"type": "link",
+					"label": "Self-employment: pros and cons",
+					"text": "Lorem ipsum dolor sit amet content dolor",
+					"url": "/content_core_result.html"
+				},
+				{
+					"type": "link",
+					"label": "Trying self-employment",
+					"text": "Lorem ipsum dolor sit amet content dolor",
+					"url": "/content_core_result.html"
+				},
+				{
+					"type": "link",
+					"label": "Self-employment and benefits",
+					"text": "Lorem ipsum dolor sit amet content dolor",
+					"url": "/content_core_result.html"
+				},
+				{
+					"type": "link",
+					"label": "Getting ready for self-employment",
+					"text": "Lorem ipsum dolor sit amet content dolor",
+					"url": "/content_core_result.html"
+				}
+			]
+		}
+	]
+}

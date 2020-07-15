@@ -1,0 +1,25 @@
+{{#> defaultLayout title="Join"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/join-video'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserThreeData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMContentGridData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserFourData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMCTAModule/WWMCTAData'}}
+			{{> WWMCTAModule/WWMCTAModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

@@ -1,0 +1,364 @@
+@import "../../../shared/styles/base/variables";
+
+.Hero {
+	padding-top: calc(9 / 16 * 100%);
+	position: relative;
+
+	&__container {
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&__img,
+	&__img-container {
+		position: absolute;
+	}
+
+	&__img-container {
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+		width: 100%;
+	}
+
+	&__img {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: filter 0.5s;
+		height: 100%;
+
+		@include for-tablet-up {
+			height: auto;
+			width: 100%;
+		}
+
+		&.thumb {
+			filter: blur(20px);
+		}
+	}
+
+	&--homepage,
+	&--sided {
+		.Hero {
+			padding-top: 0;
+
+			&__container {
+				height: auto;
+				padding-top: calc(9 / 16 * 100%);
+
+				@include for-tablet-up {
+					padding-top: calc(9 / 21 * 100%);
+				}
+			}
+		}
+	}
+
+	@include for-tablet-up {
+		padding-top: calc(9 / 21 * 100%);
+		transition: padding-top 0.3s;
+
+		&.playing {
+			padding-top: calc(9 / 16 * 100%);
+		}
+	}
+
+	&--donation {
+		@include for-tablet-up {
+			padding-top: calc(7 / 26 * 100%);
+		}
+	}
+
+	&__title-container {
+		background: $yellow;
+		border-top-right-radius: 6.5em;
+		bottom: -$std-padding;
+		padding: em($std-padding) 0 em($std-padding*2) em($lrg-padding);
+		position: absolute;
+		z-index: 1;
+	}
+
+	&__title {
+		font-size: em(25px);
+		font-weight: 500;
+		padding-right: 2em;
+
+		@include for-tablet-up {
+			font-size: em(41px);
+		}
+	}
+
+	&--page,
+	&--donation {
+		.top-right {
+			top: 1em;
+		}
+	}
+
+	&--article {
+		.Hero__container {
+			overflow: visible;
+		}
+
+		.top-right {
+			padding-top: 20px;
+			background-clip: content-box;
+			right: 0;
+		}
+
+		.Hero__decoration-container {
+			bottom: 1em;
+			height: 150px;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			transform: translateY(50%);
+			width: 10px;
+
+			.bottom-left {
+				height: 150px;
+				transform: none;
+			}
+		}
+
+		&__title {
+			margin-bottom: em(10px);
+		}
+	}
+
+	&__category {
+		bottom: 0;
+		border-top-left-radius: 1.5em;
+		border-top-right-radius: 1.5em;
+		font-weight: 500;
+		padding: 0.5em 1em;
+		position: absolute;
+		z-index: 1;
+
+		&--campaigns {
+			background: $turquoise;
+		}
+
+		&--stories {
+			background: $white;
+		}
+
+		&--news {
+			color: $white;
+			background: $purple;
+		}
+
+		&--inside {
+			background: $yellow;
+		}
+	}
+
+	&__summary {
+		background: $gray;
+		margin-bottom: em(30px);
+		padding: $std-padding 0;
+	}
+
+	&__cta {
+		// TODO Rethink buttons
+		display: block;
+		padding-left: 1.25em;
+		padding-right: 1em;
+		margin-bottom: 1em;
+
+		@include for-tablet-up {
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 1em;
+		}
+
+		&.btn {
+			text-decoration: none;
+		}
+
+		&:last-child {
+			background: $gray;
+			border: 1px solid $purple;
+			color: $purple;
+		}
+
+		.icon-container-long {
+			// TODO rethink buttons
+			margin-right: 0;
+			float: right;
+
+			@include for-tablet-up {
+				float: none;
+				margin-left: 1em;
+			}
+		}
+	}
+
+	&__ribbon {
+		background: $yellow;
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 40px;
+		margin-top: em(-50px);
+		padding: $std-padding;
+		position: relative;
+		width: calc(100% - #{$std-padding / 2});
+		z-index: 1;
+		max-width: em(700px);
+
+		h2 {
+			font-size: em(25px);
+
+			&.underline::after {
+				background: $purple;
+			}
+		}
+
+		@include for-tablet-up {
+			bottom: $std-padding;
+			border-radius: 5px 225px 20px 5px / 5px 210px 130px 5px;
+			left: $std-padding;
+			margin: 0;
+			position: absolute;
+			width: em(500px);
+
+			h2 {
+				font-size: em(35px);
+			}
+		}
+	}
+
+	&__tab {
+		border-radius: 5px;
+		margin: em(-40px) auto 0;
+		padding: $std-padding $std-padding $lrg-padding;
+		position: relative;
+		width: calc(100% - #{$std-padding});
+		z-index: 3;
+
+		h2 {
+			font-size: em(25px);
+		}
+
+		@include for-tablet-up {
+			border-radius: 0 0 50% 53% / 0 0 52% 9%;
+			margin-top: 0;
+			position: absolute;
+			top: 0;
+			width: em(400px);
+
+			h2 {
+				font-size: em(35px);
+			}
+
+			&--left {
+				left: $lrg-padding;
+				right: auto;
+			}
+
+			&--right {
+				left: auto;
+				right: $lrg-padding;
+			}
+		}
+
+		&.yellow {
+			background-color: $yellow;
+
+			.underline::after {
+				background: $purple;
+			}
+		}
+
+		&.purple {
+			background-color: $purple;
+			color: $white;
+		}
+
+		&-text {
+			display: none;
+
+			@include for-tablet-up {
+				display: block;
+				margin-bottom: $sm-padding;
+				max-height: calc(6 * #{em(30px)});
+				min-height: calc(3 * #{em(30px)});
+				overflow: hidden;
+			}
+		}
+	}
+
+	&__video-container {
+		background: rgba($turquoise, 0.6);
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		button:focus {
+			outline-color: $yellow;
+		}
+	}
+
+	&__video-handle {
+		// TODO make standard buttons
+		background: $purple;
+		border-radius: 2em;
+		color: $white;
+		cursor: pointer;
+		font-weight: 500;
+		left: 50%;
+		padding: 1em 2em;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		.playing & {
+			display: none;
+		}
+	}
+
+	&__video-player {
+		position: relative;
+		z-index: 2;
+	}
+
+	@include for-print {
+		display: none;
+	}
+}
+
+.Accordion--hero-video {
+	@include for-print {
+		display: none;
+	}
+
+	@include for-tablet-up {
+		border-bottom: 1px solid $transparent-purple-solid;
+		max-width: 100%;
+		padding: 0 calc((100% - 40em) / 2);
+	}
+
+	.Accordion {
+		&__item {
+			border: 0;
+			overflow: visible;
+
+			&:first-child {
+				border-top: 0;
+				margin-top: 0;
+			}
+
+			.wrapper {
+				max-width: 100%;
+				width: auto;
+			}
+		}
+	}
+}

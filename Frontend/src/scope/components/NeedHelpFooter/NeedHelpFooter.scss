@@ -1,0 +1,50 @@
+.NeedHelp {
+	background: $purple;
+	display: block;
+	overflow: hidden;
+	padding: $sm-padding 0;
+	position: relative;
+	text-align: center;
+
+	&__sentence {
+		color: $white;
+	}
+
+	&__label {
+		color: $yellow;
+		font-weight: 500;
+	}
+
+	&__number {
+		color: $white;
+		display: block;
+		font-size: em(14px);
+		position: relative;
+		margin: 14px auto 0;
+		padding-top: 14px;
+		text-align: center;
+
+		&::before {
+			background-color: $yellow;
+			content: "";
+			display: block;
+			height: 4px;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			transform: translateX(-50%);
+			width: 20px;
+		}
+	}
+
+	.corner-decoration {
+		&.turquoise {
+			width: 55px;
+		}
+
+		&.yellow {
+			height: 40px;
+			width: 47px;
+		}
+	}
+}

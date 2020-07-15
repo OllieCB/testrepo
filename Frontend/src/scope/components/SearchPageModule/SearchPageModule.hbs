@@ -1,0 +1,51 @@
+<section class="SearchPage js-search-page" data-match-count="{{matchCount}}" data-search="dev-scope-local-as2" data-index="site-search-master-index-110" data-search-key="C91B987C79F105995DE5C80F6A121AE8">
+	<div class="srt js-more-count" aria-atomic="true" aria-live="polite"></div>
+	<form class="SearchPage__form form js-search-page-form" action="{{submit.endpoint}}" method="post">
+		<div class="SearchPage__header">
+			<h1 id="search-page-title" class="SearchPage__title underline">{{title}}</h1>
+			<div class="SearchPage__search-container">
+				<div class="layout layout-flex">
+					<div class="SearchPage__combobox lg-col-auto" role="combobox" aria-expanded="false" aria-owns="searchPageSuggestions" aria-haspopup="listbox">
+						<input class="SearchPage__search" aria-labelledby="search-page-title" type="text" name="query" placeholder="{{search.placeholder}}" autocomplete="off" aria-autocomplete="list" aria-controls="searchPageSuggestions" aria-activedescendant />
+					</div>
+					<div class="lg-col-auto layout-flex">
+						<label class="SearchPage__select label-input lg-col-auto">
+							<select name="{{filter.name}}">
+								{{#each filter.options}}
+									<option value="{{value}}">{{label}}</option>
+								{{/each}}
+							</select>
+						</label>
+						<div class="lg-col-fixed bottom {{#if internal.isActive}}SearchPage__submitContainer--top{{/if}}">
+							<button class="SearchPage__submit btn turquoise search js-search-page-submit" type="submit">{{submit.label}}</button>
+						</div>
+					</div>
+				</div>
+				{{#if internal.isActive}}
+				<div class="layout layout-flex">
+					<div class="lg-col-auto">
+						<label class="SearchPage__checkbox label-checkbox">
+							<input type="checkbox" name="onlyInternal" value="true">
+							<span class="custom"></span>{{internal.label}}
+						</label>
+					</div>
+					<div class="lg-col-fixed bottom SearchPage__submitContainer--bottom">
+						<button class="SearchPage__submit btn turquoise search js-search-page-submit" type="submit">{{submit.label}}</button>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+			<div class="SearchPage__matchcount js-search-page-match-label" aria-live="polite" aria-atomic="true"></div>
+		</div>
+	</form>
+
+	<div class="SearchPage__wrapper">
+		<div class="SearchPage__featuredResult js-search-page-featured-result"></div>
+		<div class="js-search-page-results"></div>
+
+		<div class="SearchPage__loadMore hidden js-search-page-loadMore" data-msg="{{spinner.msg}}">
+			<button class="btn transparent-purple loadMore" type="button">Load more results</button>
+			<img class="PageItemListing__spinner lazy" src="{{spinner.placeholder}}" data-imgs="{{spinner.url}}" alt=""/>
+		</div>
+	</div>
+</section>

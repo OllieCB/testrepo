@@ -1,0 +1,32 @@
+<div class="Fundraising js-fundraising {{#if donation}}hidden-input{{/if}}">
+	<fieldset class="layout no-padding bordered-fields js-fundraising-question js-donation-item">
+		<legend class="lead-label {{#if required}}required{{/if}}">{{label}}</legend>
+		{{#each options}}
+			<label>
+				<input type="radio" name="{{name}}" value="{{value}}" {{#unless ../donation}}required{{/unless}} aria-describedby="{{err.id}}" />
+				<span class="custom"></span>
+				{{label}}
+			</label>
+		{{/each}}
+		<p id="{{err.id}}" class="Donation__error layout">{{err.msg}}</p>
+	</fieldset>
+
+	<div class="top-margin js-fundraising-info hidden-input">
+		<div class="layout bottom-margin js-donation-item">
+			<label>
+				<div class="label {{#if how.required}}required{{/if}}">{{how.label}}</div>
+				<select name="{{how.name}}" aria-describedby="{{how.errId}}">
+					<option value="" disabled selected>--</option>
+					{{#each how.options}}
+						<option value="{{value}}">{{label}}</option>
+					{{/each}}
+				</select>
+			</label>
+			<p id="{{how.errId}}" class="Donation__error">{{how.error}}</p>
+		</div>
+		<div class="layout">
+			<label>{{more.label}}</label>
+			<textarea name="{{more.name}}"></textarea>
+		</div>
+	</div>
+</div>

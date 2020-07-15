@@ -1,0 +1,11 @@
+<div class="logo-grid {{#if smallerLogos}}logo-grid__smaller{{/if}}">
+	<div class="p-x-sm row align-items-center justify-content-center">
+		{{#each logos}}
+			<div class="col-4 col-sm-3 col-lg justify-content-center d-flex">
+				<a href="#" class="logo-grid__item">
+					<img src="{{url}}" alt="" class="logo-grid__logo">
+				</a>
+			</div>
+		{{/each}}
+	</div>
+</div>

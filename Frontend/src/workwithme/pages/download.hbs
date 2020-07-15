@@ -1,0 +1,7 @@
+{{#> blankLayout title="Download"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMDownloadModule/WWMDownloadData'}}
+			{{> WWMDownloadModule/WWMDownloadModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

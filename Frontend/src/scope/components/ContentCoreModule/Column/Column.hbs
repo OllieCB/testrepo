@@ -1,0 +1,34 @@
+<section class="ContentCore__column js-contentCore-column">
+	<div class="js-contentCore-column-inner">
+		{{#unless firstColumn}}
+			<button class="ContentCore__back btn transparent-purple back js-contentCore-back" type="button">Back</button>
+		{{/unless}}
+		{{#each sections}}
+			{{#if title}}
+				<div class="ContentCore__title">
+					<div class="corner-decoration top-right horizontal turquoise"></div>
+					<h3 class="underline">{{title}}</h3>
+				</div>
+			{{/if}}
+			<ul class="js-contentCore-list">
+				{{#each items}}
+					<li class="ContentCore__item js-contentCore-item">
+						<a class="ContentCore__anchor" href="{{url}}" title="{{label}}" {{#if endpoint}}data-endpoint="{{endpoint}}"{{/if}} {{#if (eq type 'link')}}data-enabled="true"{{else}}aria-haspopup="true" aria-expanded="false"{{/if}}>
+							{{#if internal}}
+								<img class="ContentCore__internal lazy" src="{{../internal.placeholder}}" data-imgs="{{../internal.url}}" alt="">
+								<img class="ContentCore__internal ContentCore__internal--light lazy" src="{{../internal.placeholder}}" data-imgs="{{../internal.urlLight}}" alt="">
+							{{/if}}
+							<div class="{{#if text}}ContentCore__label--special{{/if}}">{{label}}</div>
+							{{#if text}}
+								<p class="ContentCore__text">{{text}}</p>
+							{{/if}}
+							{{#if (eq type link)}}
+								<span></span>
+							{{/if}}
+						</a>
+					</li>
+				{{/each}}
+			</ul>
+		{{/each}}
+	</div>
+</section>

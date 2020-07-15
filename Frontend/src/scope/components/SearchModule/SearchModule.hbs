@@ -1,0 +1,16 @@
+<div class="Search js-search {{#if color}}Search--{{color}}{{/if}} {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<div class="wrapper">
+		<h1 class="Search__title underline" id="search-title">{{title}}</h1>
+		{{#if text}}
+			<div class="rte bottom-margin">
+				<p>{{text}}</p>
+			</div>
+		{{/if}}
+		<form class="Search__form js-search-form" action="{{endpoint}}" method="get" data-search="dev-scope-local-as2" data-index="site-search-master-index-110" data-search-key="C91B987C79F105995DE5C80F6A121AE8">
+			<div class="Search__combobox lg-col-auto" role="combobox" aria-expanded="false" aria-owns="searchSuggestions" aria-haspopup="listbox">
+				<input class="Search__input" aria-labelledby="search-title" type="text" name="query" placeholder="{{placeholder}}" autocomplete="off" aria-autocomplete="list" aria-controls="searchSuggestions" aria-activedescendant />
+			</div>
+			<button class="Search__submit btn {{#unless (eq color "light")}}turquoise{{/unless}} {{#if (eq color "light")}}purple{{/if}} search" type="submit">{{submit.label}}</button>
+		</form>
+	</div>
+</div>

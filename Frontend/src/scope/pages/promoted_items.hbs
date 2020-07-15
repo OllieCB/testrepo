@@ -1,0 +1,11 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{> BackgroundModule/BackgroundModule}}
+
+		{{#fetchData 'PromotedItemsModule/PromotedItemsData'}}
+			{{> PromotedItemsModule/PromotedItemsModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

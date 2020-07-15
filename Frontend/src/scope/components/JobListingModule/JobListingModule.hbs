@@ -1,0 +1,46 @@
+<section class="JobListing js-jobs-listing {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-match-count="{{matchCount}}">
+	{{#with title}}
+		{{> TitleBannerModule/TitleBannerModule}}
+	{{/with}}
+	<form class="JobListing__form form js-jobs-form" action="{{submit.endpoint}}" method="post">
+		<input type="hidden" name="latitude" value="" />
+		<input type="hidden" name="longitude" value="" />
+		<div class="JobListing__top">
+			<div class="layout layout-flex">
+				{{#with location}}
+					<div class="lg-col-auto bottom-margin">
+						<label class="label-input">
+							<div class="label">{{label}}</div>
+							<input class="js-jobs-location" type="text" name="{{name}}" placeholder="{{placeholder}}" aria-describedby="useCurrent" />
+						</label>
+						<button id="useCurrent" class="JobListing__current-location js-jobs-current" data-endpoint="/reverseGeocode" type="button">
+							{{current.label}}
+							<img class="JobListing__current-icon lazy" src="{{current.placeholder}}" data-imgs="{{current.icon}}" alt="" />
+						</button>
+					</div>
+				{{/with}}
+
+				{{#with type}}
+					<label class="label-input lg-col-auto bottom-margin">
+						<div class="label">{{label}}</div>
+						<select name="{{name}}">
+							{{#each options}}
+								<option value="{{value}}">{{label}}</option>
+							{{/each}}
+						</select>
+					</label>
+				{{/with}}
+			</div>
+
+			<div class="layout layout-flex">
+				<div class="lg-col-auto">
+					<button class="btn purple search right js-jobs-submit" type="submit">{{submit.label}}</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	{{#with data}}
+		{{> PageItemListing/PageItemListing}}
+	{{/with}}
+</section>

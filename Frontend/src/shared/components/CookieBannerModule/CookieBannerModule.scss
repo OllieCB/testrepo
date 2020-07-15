@@ -1,0 +1,68 @@
+@import "../../styles/base/variables";
+@import "../../../workwithme/styles/config/config.variables";
+
+.CookieBanner {
+	background: $purple;
+	overflow: hidden;
+	padding: $sm-padding $sm-padding $sm-padding $std-padding;
+	position: relative;
+	width: 100%;
+
+	&__container {
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__button {
+		display: block;
+		margin-left: auto;
+		margin-right: 0;
+		padding-left: em(60px);
+
+		&::before {
+			content: url(../../shared/assets/images/close-dark.svg);
+			display: inline-block;
+			position: absolute;
+			left: 1.1em;
+			vertical-align: top;
+			width: 1em;
+			height: 1em;
+		}
+
+		@include for-tablet-up {
+			align-self: flex-end;
+			flex-grow: 0;
+			white-space: nowrap;
+		}
+	}
+
+	&__text {
+		color: $gray;
+		margin-bottom: $sm-padding;
+		margin-right: $sm-padding;
+
+		@include for-tablet-up {
+			margin-bottom: 0;
+			flex-grow: 1;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	&__ribbon {
+		background: $yellow;
+		border-radius: 0 20px 20px 0;
+		height: calc(100% - 6px);
+		left: -30px;
+		position: absolute;
+		top: 3px;
+		width: 40px;
+	}
+
+	&.hidden {
+		display: none;
+	}
+}

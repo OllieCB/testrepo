@@ -1,0 +1,177 @@
+{
+	"items": [
+		[
+			{
+				"promoted": true,
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories3.jpg",
+					"mediumUrl": "imgs/stories3.jpg",
+					"url": "imgs/stories3.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Running",
+				"title": "Hackney half marathon",
+				"content": "Run through the vibrant streets of east London",
+				"action": {
+					"label": "Run the marathon",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Sunday 20 May",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "London",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories4.jpg",
+					"mediumUrl": "imgs/stories4.jpg",
+					"url": "imgs/stories4.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Cycling",
+				"title": "Create a title here one line",
+				"content": "Cycle the length of the Pyrenees from the Atlantic to the Mediteranean",
+				"action": {
+					"label": "Subscribe",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Sat 8 Sept - Sun 16 Sept 2018",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "France",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories5.jpg",
+					"mediumUrl": "imgs/stories5.jpg",
+					"url": "imgs/stories5.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Treks and hikes",
+				"title": "The Machu Picchu trek for Scope",
+				"content": "Take park in an experience of a lifetime, the Machu Picchu Trek",
+				"action": {
+					"label": "Subscribe",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "TBC",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "Peru",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			}
+		],
+		[
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories7.jpg",
+					"mediumUrl": "imgs/stories7.jpg",
+					"url": "imgs/stories7.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Special events",
+				"title": "10 year of inspirations dinner",
+				"content": "Take park in an experience of a lifetime, the Machu Picchu Trek",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Thursday 15 Nov 2018",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "The National History Museum",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories8.jpg",
+					"mediumUrl": "imgs/stories8.jpg",
+					"url": "imgs/stories8.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Triathlons",
+				"title": "Ironman any distance",
+				"content": "Cycle the length of the Pyrenees from the Atlantic to the Mediteranean",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Specific event",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "Any",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories6.jpg",
+					"mediumUrl": "imgs/stories6.jpg",
+					"url": "imgs/stories6.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "event",
+				"label": "Skydiving",
+				"title": "Skydive for Scope for free",
+				"content": "Why not tick a skydive off your bucket list? This is truly an experience you will never forget!",
+				"action": {
+					"label": "Subscribe",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "All year round",
+						"icon": "/imgs/calendar.svg"
+					},
+					{
+						"label": "Various",
+						"icon": "/imgs/location.svg"
+					}
+				]
+			}
+		]
+	]
+}

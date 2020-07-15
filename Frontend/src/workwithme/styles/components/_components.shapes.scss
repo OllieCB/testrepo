@@ -1,0 +1,96 @@
+.shape {
+	z-index: 1;
+
+	& + .container-fluid {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__right {
+		right: 0;
+	}
+
+	&__default {
+		position: absolute;
+		z-index: 1;
+		height: 100vh;
+		border-radius: 80px;
+		background: $wwm-white;
+		overflow: hidden;
+		transform: rotate(-45deg) translate(48%, 33%);
+		width: 100%;
+		min-width: 476px;
+	}
+
+	&__illustration {
+		top: 100px;
+		left: -25vw;
+		width: 400px;
+		height: 400px;
+		padding: 0;
+		margin: 0;
+		border-radius: 70px;
+		z-index: -1;
+		background: $wwm-bg-light;
+
+		@media (min-width: 420px) {
+			top: 130px;
+			left: -14vw;
+		}
+
+		@media (min-width: 768px) {
+			top: 0;
+			left: -25vw;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		max-width: 800px;
+		height: 100%;
+
+		@media (max-width: 768px) {
+			position: relative;
+			width: 98%;
+			height: 284px;
+			margin: -100px auto 30px;
+		}
+
+		.img {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			object-fit: cover;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: -1px;
+			width: 100%;
+			height: 100%;
+			fill: $wwm-bg-light;
+
+			path {
+				transform: translateY(-1px) scale(1.4);
+
+				@media (max-width: 1200px) {
+					transform: translateY(-1px) scale(1.45);
+				}
+
+				@media (max-width: 992px) {
+					transform: translateY(-1px) scale(1.65);
+				}
+
+				@media (max-width: 768px) {
+					transform: translateY(-105px) scale(1);
+				}
+			}
+		}
+	}
+}

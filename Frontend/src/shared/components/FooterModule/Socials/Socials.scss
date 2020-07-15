@@ -1,0 +1,58 @@
+@import "../../../styles/base/variables";
+
+.FSocials {
+	background: rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 1em;
+	position: relative;
+	text-align: center;
+
+	&__title,
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__title {
+		font-size: 0;
+		position: absolute;
+	}
+
+	&__icon {
+		height: em(40px);
+		width: em(40px);
+	}
+
+	&__item {
+		margin-right: 10%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__number {
+		display: block;
+		font-size: em(14px);
+		position: relative;
+		margin: 14px auto 0;
+		padding-top: 14px;
+		text-align: center;
+
+		&::before {
+			background-color: $yellow;
+			content: "";
+			display: block;
+			height: 4px;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			transform: translateX(-50%);
+			width: 20px;
+		}
+	}
+
+	.corner-decoration {
+		height: em(125px);
+	}
+}

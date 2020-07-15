@@ -1,0 +1,11 @@
+<section class="Event-listing js-eventListing {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-match-count="{{matchCount}}" data-load-more="{{loadMoreEndpoint}}">
+	{{#with title}}
+		{{> TitleBannerModule/TitleBannerModule}}
+	{{/with}}
+
+	{{#with form}}
+		{{> ./Search/Search}}
+	{{/with}}
+
+	{{> PageItemListing/PageItemListing twoLevels="true"}}
+</section>

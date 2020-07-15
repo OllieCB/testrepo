@@ -1,0 +1,6 @@
+<section class="RelatedArticle {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" role="region" aria-label="{{title}}">
+	<h2 class="RelatedArticle__title underline">{{title}}</h2>
+	{{#with stories}}
+		{{> PageItemModule/PageItemModule}}
+	{{/with}}
+</section>

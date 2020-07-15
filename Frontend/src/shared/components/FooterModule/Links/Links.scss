@@ -1,0 +1,33 @@
+@import "../../../styles/base/variables";
+
+.FLinks {
+	border-bottom: 1px solid $transparent-purple-solid;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+
+	@include for-tablet-up {
+		border-right: 1px solid $transparent-purple-solid;
+		border-bottom: 0;
+		display: inline-block;
+		padding-bottom: 0;
+		padding-right: 16%;
+		vertical-align: top;
+		width: 50%;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		position: relative;
+	}
+
+	&__item {
+		display: inline-block;
+		height: 2em;
+		margin-bottom: 1em;
+		padding-right: 1em;
+		text-decoration: underline;
+		width: 50%;
+		vertical-align: top;
+	}
+}

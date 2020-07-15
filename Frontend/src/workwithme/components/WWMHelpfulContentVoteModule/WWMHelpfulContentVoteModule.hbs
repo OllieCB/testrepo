@@ -1,0 +1,17 @@
+<div class="wrapper">
+	<div class="container-fluid">
+		<div class="helpful-content-vote js-helpfulContent text-center p-x-md m-y-xl">
+			<div class="heading-block__title h6 m-b-md">
+				{{title}}
+			</div>
+			<p class="helpful-content-vote__body m-b-md">{{content}}</p>
+			<div class="row justify-content-center">
+				{{#each buttons}}
+					<div data-endpoint="{{endpoint}}" aria-label="{{ariaLabel}}"
+						class="wwm-icon {{buttonIconClass}} js-helpful-btn">
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

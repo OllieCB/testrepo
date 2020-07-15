@@ -1,0 +1,27 @@
+.SearchNoResult {
+	border-bottom: 1px solid $transparent-purple-solid;
+	padding: $std-padding $lrg-padding;
+	transition: box-shadow 0.2s linear;
+
+	@include for-tablet-up {
+		padding: $std-padding $wrapper-padding;
+	}
+
+	&__content {
+		color: $dark-gray;
+		margin-bottom: $std-padding;
+	}
+
+	&__list {
+		font-weight: 500;
+	}
+
+	&__label {
+		margin-bottom: $sm-padding;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-right: $sm-padding;
+	}
+}

@@ -1,0 +1,13 @@
+{{#> blankLayout title="Heros"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMHeroModule/data/video'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		<div style="height: 100px;"></div>
+
+		{{#fetchData 'WWMHeroModule/data/image'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

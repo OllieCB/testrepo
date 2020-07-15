@@ -1,0 +1,57 @@
+<div class="EventDetails bottom-margin {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<div class="EventDetails__details">
+		{{#with details}}
+			<h3 class="EventDetails__title underline">{{title}}</h3>
+			<ul>
+				{{#each list}}
+					<li class="EventDetails__item">
+						<img class="EventDetails__bullet lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="" />
+						{{#if srtText}}
+							<span class="srt">{{srtText}}</span>
+							<span aria-hidden="true">{{text}}</span>
+						{{else}}
+							{{text}}
+						{{/if}}
+					</li>
+				{{/each}}
+			</ul>
+		{{/with}}
+	</div>
+	<div class="EventDetails__actions {{#if richText}}rte{{/if}}">
+		{{#with signup}}
+			<h3 class="EventDetails__title underline">{{title}}</h3>
+			{{#if list}}
+				<ul>
+					{{#each list}}
+						<li class="EventDetails__item">
+							<img class="EventDetails__bullet lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="" />
+							{{#if srtText}}
+								<span class="srt">{{srtText}}</span>
+								<span aria-hidden="true">{{text}}</span>
+							{{else}}
+								{{text}}
+							{{/if}}
+						</li>
+					{{/each}}
+				</ul>
+			{{/if}}
+			{{#each ctas}}
+				{{#if (eq @index 1)}}
+					<p class="EventDetails__separator">
+						<span class="EventDetails__or">or</span>
+					</p>
+				{{/if}}
+				<a class="EventDetails__cta btn link {{#if (eq @index 0)}}turquoise{{else}}transparent{{/if}}" href="{{url}}">{{label}}</a>
+			{{/each}}
+			{{#unless list}}
+				<p class="EventDetails__signup-text">{{text}}</p>
+			{{/unless}}
+		{{/with}}
+		{{#with richText}}
+			<h3 class="EventDetails__title underline">{{title}}</h3>
+			<div>
+				{{{content}}}
+			</div>
+		{{/with}}
+	</div>
+</div>

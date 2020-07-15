@@ -1,0 +1,45 @@
+@import "../../../styles/base/variables";
+
+.Navbar {
+	position: relative;
+	background-color: $gray;
+
+	&__logo,
+	&__handle {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__logo {
+		font-size: em(35px);
+		line-height: 1em;
+		padding: 0 15px;
+		width: calc(100% - #{em(120px, 35px)});
+
+		img {
+			height: em(36px, 35px);
+		}
+	}
+
+	&__handle {
+		@include gradient-purple();
+
+		color: $white;
+		font-weight: 500;
+		padding: em(21px) 0 em(21px) 20px;
+		width: em(120px);
+
+		.icon-container-long {
+			width: 1.85em;
+
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	@include for-tablet-up {
+		display: none;
+	}
+}

@@ -1,0 +1,7 @@
+{{#> blankLayout title="Statistics"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMStatisticsModule/WWMStatisticsData'}}
+			{{> WWMStatisticsModule/WWMStatisticsModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

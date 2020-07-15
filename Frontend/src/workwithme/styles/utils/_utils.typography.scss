@@ -1,0 +1,158 @@
+.list-inline {
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.f-w-normal {
+	font-weight: $font-weight-normal !important;
+}
+
+@media (min-width: 576px) {
+	.text-sm-left {
+		text-align: left !important;
+	}
+
+	.text-sm-right {
+		text-align: right !important;
+	}
+
+	.text-sm-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.text-md-left {
+		text-align: left !important;
+	}
+
+	.text-md-right {
+		text-align: right !important;
+	}
+
+	.text-md-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.text-lg-left {
+		text-align: left !important;
+	}
+
+	.text-lg-right {
+		text-align: right !important;
+	}
+
+	.text-lg-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.text-xl-left {
+		text-align: left !important;
+	}
+
+	.text-xl-right {
+		text-align: right !important;
+	}
+
+	.text-xl-center {
+		text-align: center !important;
+	}
+}
+
+h1,
+.h1 {
+	font-size: 45px;
+	font-weight: $font-weight-heavy;
+	color: $wwm-red;
+}
+
+h2,
+.h2 {
+	font-size: 39px;
+	font-weight: $font-weight-heavy;
+	color: $wwm-purple-light;
+}
+
+h3,
+.h3 {
+	font-size: 39px;
+	font-weight: $font-weight-heavy;
+	color: $wwm-purple-light;
+	line-height: 50px;
+}
+
+h4,
+.h4 {
+	font-size: 28px;
+	font-weight: $font-weight-heavy;
+	color: $wwm-purple-light;
+}
+
+h5,
+.h5 {
+	font-size: 24px;
+	font-weight: $font-weight-bold;
+	color: $wwm-grey-darker;
+}
+
+h6,
+.h6 {
+	font-size: 20px;
+	font-weight: $font-weight-bold;
+	color: $wwm-purple-light;
+}
+
+.p {
+	font-size: 16px;
+	color: $wwm-grey-darker;
+	font-weight: $font-weight-bold;
+	line-height: 22px;
+}
+
+.intro {
+	font-size: 18px;
+	font-weight: $font-weight-bold;
+	color: $wwm-grey-darker;
+	line-height: 24px;
+
+	a {
+		color: $wwm-purple-light;
+		text-decoration: none;
+
+		@include transition;
+
+		&:hover {
+			color: $wwm-black;
+		}
+	}
+}
+
+.heading-block {
+	margin: $global-margin-y-md 0;
+
+	&__title + .heading-block__sub-title {
+		margin-top: $global-margin-y-xs;
+	}
+
+	.dark {
+		color: $wwm-black;
+	}
+}

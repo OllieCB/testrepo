@@ -1,0 +1,116 @@
+{
+	"stories": [
+		[
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories3.jpg",
+					"mediumUrl": "imgs/stories3.jpg",
+					"url": "imgs/stories3.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "inside",
+				"label": "Inside Scope",
+				"title": "Our new stories and campaigns hubs",
+				"content": "Do you love a good story? Enjoy our brand new hub.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories4.jpg",
+					"mediumUrl": "imgs/stories4.jpg",
+					"url": "imgs/stories4.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "news",
+				"label": "News and politics",
+				"title": "Christmas title",
+				"content": "Some text here, I’d say no more than three lines, we have a whole page on tap.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories5.jpg",
+					"mediumUrl": "imgs/stories5.jpg",
+					"url": "imgs/stories5.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "story",
+				"label": "Real life stories",
+				"title": "Why do you support Scope?",
+				"content": "We met Anthony, who ran the London Marathon for Scope.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			}
+		],
+		[
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories6.jpg",
+					"mediumUrl": "imgs/stories6.jpg",
+					"url": "imgs/stories6.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "story",
+				"label": "Real life stories",
+				"title": "Young disabled",
+				"content": "You support young disabled people to live the life they choose.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories7.jpg",
+					"mediumUrl": "imgs/stories7.jpg",
+					"url": "imgs/stories7.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "campaign",
+				"label": "Campaigns",
+				"title": "Things that people say never go away",
+				"content": "We met Anthony, who ran the London Marathon for Scope.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			},
+			{
+				"img": {
+					"placeholder": "imgs/transparent1px.png",
+					"smallUrl": "imgs/stories8.jpg",
+					"mediumUrl": "imgs/stories8.jpg",
+					"url": "imgs/stories8.jpg",
+					"alt": "Some other alt text"
+				},
+				"corners": null,
+				"type": "news",
+				"label": "News and politics",
+				"title": "Title one line",
+				"content": "Some text here, I’d say no more than three lines, we have a whole page on tap.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				}
+			}
+		]
+	]
+}

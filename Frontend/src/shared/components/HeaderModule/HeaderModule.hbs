@@ -1,0 +1,23 @@
+<header class="HeaderModule js-header">
+	{{#with navbar}}
+		{{> ./Navbar/Navbar}}
+	{{/with}}
+	<div class="HeaderModule__mobile-overlay js-nav-overlay" id="main-navigation" tabindex="-1">
+
+		{{#with topbar}}
+			{{> ./Overlay/TopBar/TopBar}}
+		{{/with}}
+
+		{{#with brandBanner}}
+			{{> ./Overlay/BrandBanner/BrandBanner}}
+		{{/with}}
+
+		{{#with mainNavigation}}
+			{{> ./Overlay/MainNavigation/MainNavigation}}
+		{{/with}}
+
+		{{#with loginButton}}
+			{{> ./Overlay/LoginButton/LoginButton}}
+		{{/with}}
+	</div>
+</header>

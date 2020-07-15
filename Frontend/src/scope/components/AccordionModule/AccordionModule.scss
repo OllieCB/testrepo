@@ -1,0 +1,86 @@
+@import "../../../shared/styles/base/variables";
+
+.Accordion {
+	&__item {
+		border-bottom: 1px solid $transparent-purple-solid;
+		cursor: pointer;
+		min-height: calc(#{$sm-padding} * 2 + #{em(30px)});
+		overflow: hidden;
+		padding: $sm-padding 0;
+		position: relative;
+
+		.wrapper {
+			position: relative;
+			padding-left: calc(#{em(28px)} + #{$sm-padding});
+		}
+
+		&-title {
+			margin-bottom: 0 !important;
+		}
+
+		&-text {
+			display: none;
+		}
+
+		&.expanded {
+			height: auto;
+
+			.close {
+				display: block;
+			}
+
+			.open {
+				display: none;
+			}
+
+			.Accordion__item-title {
+				margin-bottom: $sm-padding;
+			}
+
+			.Accordion__item-text {
+				display: block;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		&:first-child {
+			border-top: 1px solid $transparent-purple-solid;
+			margin-top: $sm-padding;
+		}
+
+		&-toggle {
+			background: none;
+			cursor: pointer;
+			height: em(28px);
+			line-height: 0;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			width: em(28px);
+
+			&.close {
+				display: none;
+			}
+		}
+
+		.corner-decoration {
+			height: em(30px);
+			width: em(35px);
+			top: $sm-padding;
+			border-top-right-radius: em(5px);
+			border-bottom-right-radius: em(5px);
+			transform: none;
+
+			@include for-tablet-up {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: $sm-padding;
+	}
+}

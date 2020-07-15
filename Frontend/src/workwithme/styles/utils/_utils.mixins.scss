@@ -1,0 +1,30 @@
+@mixin transition($transition: all 0.5s ease) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin box-shadow {
+	box-shadow: 0 9px 44px 0 transparentize($wwm-purple-light, 0.84);
+}
+
+@mixin pattern-bg {
+	position: relative;
+	z-index: 1;
+	background-color: $wwm-purple-light;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		background-image: url('/imgs/pattern.png');
+		background-size: auto;
+		background-repeat: repeat;
+		opacity: 0.05;
+	}
+}

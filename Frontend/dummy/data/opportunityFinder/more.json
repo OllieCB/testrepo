@@ -1,0 +1,136 @@
+{
+	"query": "q=value",
+	"results": [
+		[
+			{
+				"type": "opportunity",
+				"title": "Attitudes towards disability",
+				"subtitle": "Part time",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+			},
+			{
+				"type": "opportunity",
+				"title": "Why I encourage talking about mental health at work",
+				"subtitle": "Part time",
+				"content": "Not only can stressful work environments impact on your mental health, if you don’t feel supported, it makes things even harder.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+
+			}
+		],
+		[
+			{
+				"type": "opportunity",
+				"title": "Attitudes towards disability",
+				"subtitle": "Part time",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+
+			},
+			{
+				"type": "opportunity",
+				"title": "Why I encourage talking about mental health at work",
+				"subtitle": "Part time",
+				"content": "Not only can stressful work environments impact on your mental health, if you don’t feel supported, it makes things even harder.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+
+			}
+		],
+		[
+			{
+				"type": "opportunity",
+				"title": "Attitudes towards disability",
+				"subtitle": "Part time",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+
+			},
+			{
+				"type": "opportunity",
+				"title": "Why I encourage talking about mental health at work",
+				"subtitle": "Part time",
+				"content": "Not only can stressful work environments impact on your mental health, if you don’t feel supported, it makes things even harder.",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "London",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "Distance approx 39.15 miles",
+						"icon": "imgs/distance.svg"
+					}
+				]
+
+			}
+		]
+	]
+}

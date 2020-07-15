@@ -1,0 +1,17 @@
+@import "../../../../shared/styles/base/variables";
+
+.Event-Search {
+	background: $gray;
+	overflow: hidden;
+	padding: $std-padding 0;
+	position: relative;
+	margin-bottom: $std-padding;
+
+	&__button-container {
+		text-align: right;
+	}
+
+	.layout {
+		padding: 0 $lrg-padding;
+	}
+}

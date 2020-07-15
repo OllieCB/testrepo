@@ -1,0 +1,17 @@
+<div class="TitleBanner">
+	<div class="TitleBanner__title">
+		<h1 class="underline">{{title}}</h1>
+	</div>
+	{{#if aside}}
+		<div class="TitleBanner__aside">
+			{{#if aside.text}}
+			<p class="TitleBanner__aside-text">{{aside.text}}</p>
+			{{/if}}
+			{{#if aside.img}}
+			<div class="TitleBanner__aside-img">
+				<img class="lazy" src="{{aside.img.placeholder}}" data-imgs="{{aside.img.url}}" alt="{{aside.img.alt}}" />
+			</div>
+			{{/if}}
+		</div>
+	{{/if}}
+</div>

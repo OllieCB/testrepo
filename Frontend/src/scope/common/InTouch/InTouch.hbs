@@ -1,0 +1,17 @@
+<fieldset class="InTouch rte">
+	<legend class="srt">{{title}}</legend>
+	<div class="InTouch__top" tabindex="0">
+		<h3 class="underline" aria-hidden="true">{{title}}</h3>
+		<div>{{{text}}}</div>
+	</div>
+	<div class="bordered-fields">
+		{{#each options}}
+			<label class="field-label">
+				<input type="checkbox" name="{{name}}" value="{{value}}">
+				<span class="custom"></span>
+				{{label}}
+			</label>
+		{{/each}}
+	</div>
+	<div class="InTouch__small" tabindex="0">{{{small}}}</div>
+</fieldset>

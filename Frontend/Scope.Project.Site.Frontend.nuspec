@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Scope.Project.Site.Frontend</id>
+    <title>Scope.Project.Site.Frontend</title>
+    <version>1.0.0</version>
+    <authors>Aqueduct</authors>
+    <owners>Aqueduct</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package specification for Scope Frontend-only package</description>
+  </metadata>
+  <files>
+    <file src="dist\**" target=""/>
+  </files>
+</package>

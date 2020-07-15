@@ -1,0 +1,6 @@
+<section class="PromotedItems {{#if bottomMargin}}bottom-margin{{/if}}{{#if topMargin}}top-margin{{/if}}">
+	<h2 class="underline {{#if whiteTitle}}white{{/if}}">{{title}}</h2>
+	{{#with items}}
+		{{> PageItemModule/PageItemModule}}
+	{{/with}}
+</section>

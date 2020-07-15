@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'ContributionModule/ContributionData'}}
+			{{> ContributionModule/ContributionModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

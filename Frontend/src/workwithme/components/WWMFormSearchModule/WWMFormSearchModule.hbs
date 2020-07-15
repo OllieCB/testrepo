@@ -1,0 +1,82 @@
+<div class="form__search js-form-search">
+	<div class="form__search--top">
+		<div class="container-fluid">
+			<div class="row sm-gutters">
+				<div class="col-md-6">
+					<div class="form__search--input">
+						<input type="text" class="form__search--field" placeholder="Search">
+						<button class="form__search--submit btn btn-primary">Search</button>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form__search--filters">
+						<div data-toggle-list="topics" class="form__search--filter">Topics&nbsp;<div
+								class="filter-count" data-count="0">0</div>
+						</div>
+						<div data-toggle-list="sectors" class="form__search--filter">Sector&nbsp;<div
+								class="filter-count" data-count="0">0</div>
+						</div>
+						<div data-toggle-list="types" class="form__search--filter">Type&nbsp;<div class="filter-count"
+								data-count="0">0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form__search--bottom">
+		<div class="form__search--toggle-list" id="topics">
+			<div class="container-fluid">
+				{{#each topics}}
+					<div class="form__search--toggle" data-filter-type="topics" data-filter="{{slug}}">{{label}}</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="form__search--toggle-list" id="sectors">
+			<div class="container-fluid">
+				{{#each sectors}}
+					<div class="form__search--toggle" data-filter-type="sectors" data-filter="{{slug}}">{{label}}</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="form__search--toggle-list" id="types">
+			<div class="container-fluid">
+				{{#each types}}
+					<div class="form__search--toggle" data-filter-type="types" data-filter="{{slug}}">{{label}}</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form__search--results m-b-lg">
+	<div class="container-fluid">
+		<div class="row sm-gutters">
+			{{#each articles}}
+				<div class="col-sm-3">
+					<a href="{{link}}" title="{{title}}" class="card" data-topic="{{topic.slug}}"
+						data-sectors="{{sectors}}" data-type="{{type}}">
+						<div class="card__top">
+							<div class="card__sub-title">{{topic.label}}</div>
+							<div class="card__title">{{title}}</div>
+						</div>
+
+						<div class="card__bottom">
+							{{people}} people found this useful
+						</div>
+					</a>
+				</div>
+			{{/each}}
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<button class="btn btn-secondary m-b-xl">See more</button>
+			</div>
+		</div>
+	</div>
+</div>

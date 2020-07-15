@@ -1,0 +1,17 @@
+<section class="Socials {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<h3 class="Socials__title underline">{{title}}</h3>
+
+	<div class="Socials__container">
+		{{#each cards ~}}
+			<div class="Socials__item rte">
+				<h4 class="underline">
+					<img class="Socials__icon" src="{{icon.url}}" alt="{{icon.alt}}" />
+					{{title}}
+				</h4>
+				<p>{{{text}}}</p>
+
+				<div class="corner-decoration horizontal bottom-right {{color}}"></div>
+			</div>
+		{{~/each}}
+	</div>
+</section>

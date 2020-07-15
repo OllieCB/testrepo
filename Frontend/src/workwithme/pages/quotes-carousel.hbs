@@ -1,0 +1,9 @@
+{{#> blankLayout title="Quotes Carousel"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMQuotesCarouselData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/blankLayout}}

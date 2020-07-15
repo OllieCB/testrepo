@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'ShopFinderModule/ShopFinderData'}}
+			{{> ShopFinderModule/ShopFinderModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

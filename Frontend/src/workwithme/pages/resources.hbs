@@ -1,0 +1,21 @@
+{{#> defaultLayout title="Resources"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/resources'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMFormSearchModule/WWMFormSearchData'}}
+			{{> WWMFormSearchModule/WWMFormSearchModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMResourcesGridData2'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMCTAModule/WWMCTAData'}}
+			{{> WWMCTAModule/WWMCTAModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

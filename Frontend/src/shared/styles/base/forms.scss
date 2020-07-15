@@ -1,0 +1,381 @@
+@import 'variables';
+
+.form {
+	.hidden-input {
+		display: none;
+	}
+
+	label { // stylelint-disable-line
+		display: block;
+		position: relative;
+
+		a {
+			color: $light-purple;
+			text-decoration: underline;
+		}
+	}
+
+	.label-checkbox {
+		color: $dark-gray;
+		cursor: pointer;
+		line-height: em(30px);
+		padding-left: 2em;
+		position: relative;
+
+		.custom,
+		input {
+			left: 0;
+			top: 6px;
+		}
+	}
+
+	select { // stylelint-disable-line
+		appearance: none;
+		font-size: 1em;
+		line-height: 1.5em;
+		background: url(../../shared/assets/images/arrow.svg) right 1em center / 0.85em no-repeat $white;
+	}
+
+	input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+	select { // stylelint-disable-line
+		border: 1px solid $medium-gray;
+		border-radius: 2.5em;
+		padding: 0.5em 2em 0.5em 1em;
+		appearance: none;
+		height: 2.5em;
+		margin-top: 10px;
+		width: 100%;
+
+		&::placeholder {
+			color: $medium-gray;
+			opacity: 1;
+		}
+	}
+
+	.StripeElement {
+		border: 1px solid $medium-gray;
+		border-radius: 2.5em;
+		padding: 0.6em 2em 0.4em 1em;
+		height: 2.5em;
+		margin-top: 10px;
+		width: 100%;
+
+		&--focus {
+			@include flying-outline();
+		}
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		cursor: pointer;
+		position: absolute;
+
+		& + .custom::after {
+			content: "";
+		}
+
+		& + .custom {
+			cursor: pointer;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: white;
+			display: block;
+			margin-right: 10px;
+			border: 1px solid $medium-gray;
+			border-radius: 3px;
+			z-index: 1;
+		}
+
+		&:checked + .custom {
+			background: $purple;
+		}
+
+		&:checked + .custom::after {
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 6px;
+			border-bottom: 2px solid $white;
+			border-left: 2px solid $white;
+			transform: rotate(-45deg);
+			transform-origin: center;
+			position: absolute;
+			z-index: 2;
+			top: 4px;
+			left: 4px;
+		}
+
+		@include for-tablet-up {
+			&:hover + .custom::after {
+				content: "";
+				display: inline-block;
+				width: 10px;
+				height: 6px;
+				border-bottom: 2px solid $white;
+				border-left: 2px solid $white;
+				transform: rotate(-45deg);
+				transform-origin: center;
+				position: absolute;
+				z-index: 2;
+				top: 4px;
+				left: 4px;
+			}
+
+			&:hover:not(:checked) + .custom::after {
+				border-bottom: 2px solid $transparent-purple-solid;
+				border-left: 2px solid $transparent-purple-solid;
+			}
+
+			&:focus + .custom {
+				@include flying-outline();
+			}
+		}
+	}
+
+	input[type=radio] {
+		& + .custom { // stylelint-disable-line
+			border-radius: 50%;
+			box-shadow: 0 0 0 3px $white;
+		}
+
+		&:checked + .custom::after {
+			background: $white;
+			border-radius: 50%;
+			height: 10px;
+		}
+
+		@include for-tablet-up {
+			&:hover + .custom::after {
+				background: $white;
+				border-radius: 50%;
+				height: 10px;
+			}
+
+			&:hover:not(:checked) + .custom::after {
+				background: $transparent-purple-solid;
+			}
+		}
+	}
+
+	textarea {
+		border-radius: 5px;
+		font-size: em(18px);
+		font-family: inherit;
+		line-height: em(30px);
+		margin-top: 10px;
+		padding: 5px 10px;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.error {
+		input:not([type=radio]):not([type=checkbox]),
+		select,
+		.StripeElement {
+			border: 1px solid $red;
+		}
+
+		label {
+			color: $red;
+			position: relative;
+
+			&::before {
+				content: url('../../scope/assets/images/error.svg');
+				height: 1em;
+				width: 1em;
+				position: absolute;
+				top: 0;
+				right: $sm-padding;
+			}
+		}
+	}
+
+	.required::after {
+		content: "*";
+	}
+
+	.bordered-fields {
+		input, .custom { // stylelint-disable-line
+			left: $donation-wrapper;
+		}
+
+		.lead-label {
+			border-top: 1px solid $transparent-purple-solid;
+			font-weight: 400;
+			font-size: 1em;
+			margin-bottom: 0;
+			padding: $sm-padding $donation-wrapper;
+			width: 100%;
+		}
+
+		label {
+			border-top: 1px solid $transparent-purple-solid;
+			padding: $sm-padding $donation-wrapper $sm-padding calc(#{$donation-wrapper} + 2em);
+
+			&:last-of-type {
+				border-bottom: 1px solid $transparent-purple-solid;
+			}
+		}
+
+		&.error {
+			.lead-label {
+				padding: $sm-padding calc(#{$donation-wrapper} + 2 * #{$sm-padding}) $sm-padding $donation-wrapper;
+			}
+
+			label {
+				&::before {
+					content: '';
+				}
+			}
+
+			legend {
+				color: $red;
+				position: relative;
+
+				&::before {
+					content: url('../../scope/assets/images/error.svg');
+					height: 1em;
+					width: 1em;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: calc(#{$donation-wrapper} + #{$sm-padding});
+				}
+			}
+		}
+	}
+
+	.file-label {
+		align-items: center;
+		background-color: $white;
+		border-radius: 1.25em;
+		border: 1px solid #767676;
+		cursor: pointer;
+		display: flex;
+		height: 2.5em;
+		margin-top: 10px;
+
+		&__trigger {
+			background: #340458;
+			border-radius: 1.25em;
+			color: white;
+			display: inline-block;
+			font-weight: 500;
+			line-height: 2.5em;
+			margin-right: 1em;
+			padding: 0 1em 0 3em;
+		}
+
+		&__text {
+			color: $medium-gray;
+			flex: 1;
+		}
+	}
+
+	.file-upload {
+		position: relative;
+
+		&.error {
+			.file-label {
+				border-color: $red;
+
+				&::before {
+					content: none;
+				}
+			}
+		}
+
+		input[type=file] {
+			&:focus {
+				outline: none;
+
+				& ~ .file-label {
+					@include flying-outline();
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		margin-left: $donation-wrapper;
+	}
+
+	//
+	// Sitecore validation classes
+	//
+
+	.input-validation-error {
+		border: 1px solid $red !important;
+
+		& + div select {
+			border: 1px solid $red !important;
+		}
+	}
+
+	.field-validation-error {
+		color: $red;
+		display: block;
+		font-size: em(16px);
+		margin-top: 5px;
+	}
+
+	.bordered-fields { // stylelint-disable-line
+		.field-validation-error {
+			padding: 0 $donation-wrapper;
+		}
+	}
+}
+
+.Postcode {
+	&__manual-addr {
+		background: 0;
+		cursor: pointer;
+		font-weight: 500;
+		padding: 0;
+		height: 2.5em;
+		text-decoration: underline;
+
+		@include for-tablet-up {
+			.hidden-input ~ & {
+				transform: translateY(50%);
+			}
+		}
+	}
+
+	&__addr-list-container {
+		@include for-tablet-up {
+			max-width: calc(50% - #{$std-padding} / 2);
+		}
+	}
+
+	&__addr-list-inner {
+		border: 1px solid $transparent-purple-solid;
+		border-radius: 25px;
+		overflow: hidden;
+		margin-top: 10px;
+	}
+
+	&__addr-list-label {
+		line-height: 1;
+	}
+
+	&__addr-list {
+		height: 15em;
+		overflow: auto;
+		width: calc(100% + 10px);
+
+		li {
+			cursor: pointer;
+			line-height: 30px;
+			overflow: hidden;
+			padding: 0 $sm-padding;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.selected {
+			background-color: $transparent-purple-solid;
+		}
+	}
+}

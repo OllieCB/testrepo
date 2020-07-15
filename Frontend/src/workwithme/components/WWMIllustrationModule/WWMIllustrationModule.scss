@@ -1,0 +1,25 @@
+@import "../../styles/config/config.variables";
+@import "../../styles/utils/utils.mixins";
+
+.illustration {
+	.heading-block__sub-title {
+		max-width: 580px;
+		margin: auto;
+	}
+
+	&--container {
+		margin-bottom: 2em;
+
+		@media (min-width: 568px) {
+			margin-bottom: 1em;
+		}
+
+		@media (min-width: 768px) {
+			margin-bottom: 2em;
+		}
+
+		@media (min-width: 992px) {
+			margin-bottom: 3em;
+		}
+	}
+}

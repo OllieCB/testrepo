@@ -1,0 +1,15 @@
+{{!-- pages/content_core.hbs --}}
+
+{{#> defaultLayout title="Content Core"}}
+	{{#*inline "header"}}
+		{{#fetchSharedData 'HeaderModule/HeaderData'}}
+			{{> HeaderModule/HeaderModule}}
+		{{/fetchSharedData}}
+	{{/inline}}
+
+	{{#*inline "content"}}
+		{{#fetchData 'ContentCoreModule/ContentCoreData'}}
+			{{> ContentCoreModule/ContentCoreModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

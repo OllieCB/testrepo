@@ -1,0 +1,80 @@
+@import "../../../shared/styles/base/variables";
+
+.ContactUs {
+	background: $gray;
+	padding: $std-padding $lrg-padding;
+	position: relative;
+	overflow: hidden;
+
+	@include for-tablet-up {
+		padding: $std-padding $wrapper-padding;
+	}
+
+	&--wrapped {
+		padding: $std-padding 0;
+	}
+
+	&__list {
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__item {
+		margin-bottom: $sm-padding;
+		padding-left: calc(40px + 0.7em);
+		position: relative;
+
+		@include for-tablet-up {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin-bottom: 0;
+			margin-right: $sm-padding;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		a {
+			display: block;
+		}
+
+		img {
+			height: 40px;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 40px;
+		}
+	}
+
+	&__label {
+		font-weight: 500;
+		color: $light-purple;
+	}
+
+	&__text,
+	&__value {
+		color: $dark-gray;
+	}
+
+	&__text {
+		margin-bottom: $std-padding;
+	}
+
+	&__value {
+		line-height: 1em;
+	}
+
+	.wrapper {
+		max-width: 100%;
+		padding: 0 $lrg-padding;
+
+		@include for-tablet-up {
+			max-width: $container;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+<section class="Services {{#if bottomMargin}}bottom-margin{{/if}}{{#if topMargin}}top-margin{{/if}}">
+	<h3 class="Services__title underline">{{title}}</h3>
+	<ul class="Services__list">
+		{{#each services}}
+			<li class="Services__item">
+				<div class="Services__img-container">
+					<img class="Services__img" src="{{img.url}}" alt="{{img.alt}}">
+				</div>
+				<div class="Services__content-container rte">
+					<h4 class="Services__content-title underline">{{title}}</h4>
+					<p class="Services__content-text">{{text}}</p>
+				</div>
+			</li>
+		{{~/each}}
+	</ul>
+	{{#if cta}}
+		<div class="Services__cta">
+			<a class="btn purple" href="{{cta.url}}">{{cta.label}}</a>
+		</div>
+	{{/if}}
+</section>

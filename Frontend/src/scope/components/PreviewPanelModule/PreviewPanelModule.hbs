@@ -1,0 +1,11 @@
+<section class="PreviewPanel {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<h2 class="PreviewPanel__title underline">{{title}}</h2>
+	<p class="PreviewPanel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<div class="PreviewPanel__items">
+		{{#each previews}}
+			{{#with this}}
+				{{> PageItemModule/PageItemModule}}
+			{{/with}}
+		{{/each}}
+	</div>
+</section>

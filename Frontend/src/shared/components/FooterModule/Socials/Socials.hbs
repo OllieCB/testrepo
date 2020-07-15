@@ -1,0 +1,12 @@
+<section class="FSocials">
+	<h2 class="FSocials__title">Socials</h2>
+	<ul class="FSocials__list">
+		{{#each socials}}
+			<li class="FSocials__item">
+				<a href="{{url}}"><img class="FSocials__icon lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="{{label}}"></a>
+			</li>
+		{{/each}}
+	</ul>
+	<small class="FSocials__number">{{registeredCharity}}</small>
+	<div class="corner-decoration bottom-left yellow vertical"></div>
+</section>

@@ -1,0 +1,48 @@
+.CookieBanner {
+	color: red;
+	background: $wwm-purple-light;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__text {
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+
+	a {
+		color: $white;
+	}
+
+	&__button {
+		position: relative;
+		background-color: #fff;
+		color: #340458;
+		background-image: radial-gradient($wwm-bg-light 0, $wwm-bg-light 50%, transparent 0, transparent 100%);
+		background-repeat: no-repeat;
+		background-size: 250% 500%;
+		background-position: -50% 25%;
+		font-weight: $font-weight-normal;
+		cursor: pointer;
+		height: 45px;
+		line-height: 45px;
+		padding: 0 15px 0 40px;
+		border: none;
+
+		@include transition(background-position 0.3s ease);
+
+		&:hover {
+			background-position: 50% 25%;
+		}
+
+		&::after {
+			width: 18px;
+			height: 18px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

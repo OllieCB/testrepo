@@ -1,0 +1,29 @@
+<div class="ArticleInfo {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<div class="wrapper">
+		<div class="ArticleInfo__field author">
+			<span class="icon-container-tall">
+				<img class="lazy" src="{{who.placeholder}}" data-imgs="{{who.icon}}" alt="">
+			</span>
+			<a href="{{who.url}}" aria-label="Written by {{who.author}}">{{who.author}}</a>
+		</div>
+		<div class="ArticleInfo__field">
+			<span class="icon-container-tall">
+				<img class="lazy" src="{{when.placeholder}}" data-imgs="{{when.icon}}" alt="">
+			</span>{{when.time}}
+		</div>
+		{{#if share}}
+			<div class="ArticleInfo__field">
+				{{share.label}}:
+				<ul class="ArticleInfo__share-list">
+					{{#each share.sites}}
+						<li class="ArticleInfo__share-item">
+							<a class="ArticleInfo__share-link" href="{{url}}">
+								<img class="ArticleInfo__share-icon lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="{{label}}">
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/if}}
+	</div>
+</div>

@@ -1,0 +1,7 @@
+{{#> blankLayout title="News Grid"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMNewsGridModule/data/WWMNewsGridData'}}
+			{{> WWMNewsGridModule/WWMNewsGridModule}}
+		{{/fetchData}}
+	{{/inline}}
+	{{/blankLayout}}

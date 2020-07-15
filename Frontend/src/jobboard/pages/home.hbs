@@ -1,0 +1,14 @@
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'TitleBannerModule/data/TitleBannerModule'}}
+			{{> TitleBannerModule/TitleBannerModule}}
+		{{/fetchData}}
+		{{#fetchData 'HeroModule/data/HeroModule'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+		{{#fetchData 'JobBoardModule/data/JobBoardModule'}}
+			{{> JobBoardModule/JobBoardModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

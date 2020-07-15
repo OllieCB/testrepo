@@ -1,0 +1,20 @@
+.MoneyTrivia {
+	background: $purple;
+	overflow: hidden;
+	padding: $std-padding;
+	position: relative;
+	text-align: center;
+
+	&__sentence {
+		color: $white;
+
+		&:not(.current) {
+			display: none;
+		}
+
+		&.hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}

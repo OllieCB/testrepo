@@ -1,0 +1,24 @@
+<section class="Contribution {{#if bottomMargin}}bottom-margin{{/if}}{{#if topMargin}}top-margin{{/if}}">
+	<div class="Contribution__title-container">
+		<h3 class="underline">{{title}}</h3>
+	</div>
+	<div class="Contribution__tile-container">
+		{{#with donationTile}}
+			<div class="Contribution__tile purple">
+				<h3 class="underline">{{title}}</h3>
+				<p class="Contribution__text">{{content}}</p>
+				<a class="Contribution__last btn white" href="{{cta.url}}">{{cta.label}}</a>
+			</div>
+		{{/with}}
+		{{#with charityTile}}
+			<div class="Contribution__tile gray">
+				<h3 class="underline">{{title}}</h3>
+				<p class="Contribution__text">{{content}}</p>
+				<form class="Contribution__form form" action="{{input.endpoint}}" method="get">
+					<input class="Contribution__input" type="text" name="charity" placeholder="{{input.placeholder}}" aria-label="{{input.placeholder}}" />
+					<button class="Contribution__submit btn purple search" type="submit">{{input.btnLabel}}</button>
+				</form>
+			</div>
+		{{/with}}
+	</div>
+</section>

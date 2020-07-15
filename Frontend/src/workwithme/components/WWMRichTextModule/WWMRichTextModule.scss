@@ -1,0 +1,115 @@
+@import "../../styles/config/config.variables";
+
+.rte {
+	color: $wwm-grey-darker;
+
+	@include for-desktop-up {
+		font-size: em(19px);
+	}
+
+	@include for-print {
+		font-size: em(18px);
+	}
+
+	p {
+		line-height: 1.75em;
+		margin-bottom: em(20px);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		color: $wwm-purple-light;
+		font-weight: 500;
+		text-decoration: underline;
+
+		&.btn {
+			text-decoration: none;
+		}
+	}
+
+	img {
+		max-width: 100%;
+
+		@include for-print {
+			display: none;
+		}
+	}
+
+	ul {
+		list-style: disc inside;
+	}
+
+	ol {
+		list-style: decimal inside;
+	}
+
+	ol,
+	ul {
+		line-height: 1.75em;
+		margin: $margin-sm 0;
+		padding-left: 1.2em;
+		list-style-position: outside;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $wwm-purple-dark;
+		font-weight: $font-weight-bold;
+		line-height: em(22px);
+	}
+
+	h1,
+	h2,
+	h3 {
+		position: relative;
+	}
+
+	h1 {
+		font-size: em(35px);
+		margin-bottom: em(10px, 35px);
+	}
+
+	h2 {
+		font-size: em(30px);
+		margin-bottom: em(10px, 30px);
+	}
+
+	h3 {
+		font-size: em(25px);
+		margin-bottom: em(10px, 25px);
+	}
+
+	h4 {
+		line-height: em(30px);
+	}
+
+	table {
+		width: 100%;
+		max-width: 100%;
+		border-collapse: collapse;
+
+		td,
+		th {
+			border: 4px solid $wwm-white;
+			line-height: em(30px);
+			padding: 15px $padding-sm;
+			text-align: left;
+		}
+
+		td {
+			background: $wwm-grey-dark;
+			overflow: hidden;
+		}
+
+		th {
+			background: rgba($wwm-purple-dark, 0.15);
+			color: $wwm-purple-dark;
+			font-weight: $font-weight-bold;
+		}
+	}
+}

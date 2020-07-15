@@ -1,0 +1,14 @@
+{{#fetchData 'SearchModule/data/dark'}}
+	{{> SearchModule/SearchModule}}
+{{/fetchData}}
+
+{{#fetchData 'BreadcrumbModule/BreadcrumbData'}}
+	{{> BreadcrumbModule/BreadcrumbModule}}
+{{/fetchData}}
+
+<div class="ContentCore js-contentCore">
+	
+	<div class="corner-decoration top-right horizontal yellow"></div>
+	{{> ./Column/Column firstColumn="true"}}
+	<p class="ContentCore__guide">{{guide}}</p>
+</div>

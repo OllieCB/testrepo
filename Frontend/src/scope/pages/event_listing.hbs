@@ -1,0 +1,9 @@
+{{!-- pages/index.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'EventListingModule/EventListingData'}}
+			{{> EventListingModule/EventListingModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

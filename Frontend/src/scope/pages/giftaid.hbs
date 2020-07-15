@@ -1,0 +1,15 @@
+{{!-- pages/article.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'GiftAidTransitionModule/GiftAidTransitionData'}}
+			{{> GiftAidTransitionModule/GiftAidTransitionModule}}
+		{{/fetchData}}
+	{{/inline}}
+
+	{{#*inline "footer"}}
+		{{#fetchData 'NeedHelpFooter/NeedHelpData'}}
+			{{> NeedHelpFooter/NeedHelpFooter}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

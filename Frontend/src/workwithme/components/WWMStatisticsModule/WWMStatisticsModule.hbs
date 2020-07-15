@@ -1,0 +1,26 @@
+<div class="statistics">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-lg-4">
+				<div class="statistics__illustration">
+					<img src="{{illustration.url}}" alt="{{illustration.alt}}">
+				</div>
+			</div>
+
+			<div class="col-lg-8">
+				<div class="statistics__list">
+					<div class="row">
+						{{#each stats}}
+							<div class="col-sm-6 col-lg-4 p-x-0 m-x-auto">
+								<div class="statistics__item">
+									<div class="statistics__item--title">{{title}}</div>
+									<div class="statistics__item--content">{{content}}</div>
+								</div>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

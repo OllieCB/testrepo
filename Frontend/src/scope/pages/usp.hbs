@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'USPModule/USPData'}}
+			{{> USPModule/USPModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

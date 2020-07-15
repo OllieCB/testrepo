@@ -1,0 +1,13 @@
+{{!-- pages/gallery.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'ImageModule/data/withCaption'}}
+			{{> ImageModule/ImageModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ImageModule/data/noCaption'}}
+			{{> ImageModule/ImageModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

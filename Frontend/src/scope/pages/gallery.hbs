@@ -1,0 +1,9 @@
+{{!-- pages/gallery.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'GalleryModule/GalleryData'}}
+			{{> GalleryModule/GalleryModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

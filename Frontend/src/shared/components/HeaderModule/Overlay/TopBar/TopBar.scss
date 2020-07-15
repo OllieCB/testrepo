@@ -1,0 +1,321 @@
+@import "../../../../styles/base/variables";
+
+.TopBar {
+	border-bottom: 1px solid $transparent-purple-solid;
+
+	&__links {
+		display: none;
+	}
+
+	&__user {
+		display: block;
+		height: 100%;
+
+		button {
+			height: 100%;
+			padding-left: $sm-padding;
+			width: 100%;
+		}
+	}
+
+	&__user-container {
+		background-color: $gray;
+		display: inline-block;
+		height: em(60px);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		vertical-align: top;
+		width: calc(100% - #{em(120px)});
+		white-space: nowrap;
+
+		.light-icon {
+			display: none;
+		}
+
+		@include for-tablet-up {
+			height: auto;
+		}
+	}
+
+	&__user-dropdown-container {
+		display: none;
+	}
+
+	&__close-handle {
+		@include gradient-purple();
+
+		color: $white;
+		display: inline-block;
+		font-weight: 500;
+		margin-left: auto;
+		margin-right: 0;
+		padding: em(21px) 0 em(21px) 20px;
+		width: em(120px);
+
+		.icon-container-long {
+			position: absolute;
+			margin: 0;
+			right: 1em;
+		}
+	}
+
+	&__search {
+		border-right: 1px solid $transparent-purple-solid;
+		position: relative;
+
+		label {
+			color: $medium-gray;
+			left: 0;
+			padding: em(21px) 40px em(21px) 30px;
+			width: 100%;
+
+			&::after {
+				content: "...";
+			}
+		}
+
+		input {
+			background-color: $white;
+			border-top: 1px solid $transparent-purple-solid;
+			padding: em(16px) 40px em(16px) 30px;
+			width: 100%;
+
+			&:focus + label,
+			&:valid + label {
+				display: none;
+			}
+		}
+
+		img {
+			width: 1.25em;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&--combobox {
+			height: 100%;
+		}
+
+		&--typeahead {
+			position: absolute;
+			background: $white;
+			border: 1px solid $medium-gray;
+			border-top: none;
+			z-index: 99999;
+			min-width: 240px;
+
+			&.hidden {
+				display: none;
+			}
+
+			li {
+				cursor: pointer;
+				padding: 0.5em 2em 0.5em 1em;
+				display: block;
+				min-height: 2.5em;
+				line-height: 1.5em;
+				width: 100%;
+				overflow: hidden;
+
+				&.active {
+					background: $gray;
+				}
+			}
+		}
+
+		@include for-tablet-up {
+			flex-grow: 0;
+			width: em(150px);
+
+			.search-open & {
+				flex-grow: 1;
+				z-index: 5;
+			}
+		}
+	}
+
+	&__arrow {
+		display: none;
+	}
+
+	@include for-tablet-up {
+		display: flex;
+		height: em(60px);
+
+		&.search-open::after {
+			background: $transparent-purple;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 4;
+		}
+
+		&__links,
+		&__search {
+			border-left: 1px solid $transparent-purple-solid;
+			transition: ease-out 0.3s;
+		}
+
+		&__links {
+			display: inline-block;
+			flex-grow: 1;
+			padding: 1em 30px;
+			order: 1;
+
+			a {
+				margin-right: 1.5em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.search-open & {
+				flex-grow: 0;
+			}
+		}
+
+		&__search {
+			order: 2;
+
+			input {
+				border-bottom: 0;
+				border-top: 0;
+				height: 100%;
+
+				&:focus {
+					outline: 2px solid $turquoise;
+				}
+			}
+
+			label {
+				color: $purple;
+				cursor: text;
+				padding: em(18.5px) 40px em(18.5px) 30px;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&:focus {
+				box-shadow: inset 0 0 0 3px $outline;
+				outline: none;
+
+				input {
+					background: transparent;
+				}
+			}
+		}
+
+		&__user-dropdown {
+			padding: $sm-padding;
+
+			&-container {
+				background: $purple;
+				bottom: 0;
+				display: none;
+				overflow: hidden;
+				position: absolute;
+				right: 0;
+				transform: translateY(100%);
+				z-index: 3;
+			}
+		}
+
+		&__arrow {
+			display: inline-block;
+			height: 1em;
+			position: absolute;
+			right: $sm-padding;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: transform linear 0.2s;
+		}
+
+		&__user-container {
+			@include gradient-purple();
+
+			order: 3;
+			overflow: visible;
+			position: relative;
+			width: auto;
+			transition: box-shadow 0.2s linear;
+
+			.light-icon {
+				display: inline-block;
+			}
+
+			.dark-icon {
+				display: none;
+			}
+
+			&.opened,
+			&:hover,
+			&:focus {
+				box-shadow: inset 0 -5px 0 $yellow;
+			}
+
+			&.opened,
+			&:hover {
+				& .TopBar__user-dropdown-container {
+					display: block;
+				}
+
+				.TopBar__arrow {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+
+		&__user {
+			color: $white;
+			outline-offset: -3px;
+			position: relative;
+
+			button {
+				cursor: pointer;
+				padding: 0 $lrg-padding;
+			}
+		}
+
+		&__login {
+			display: block;
+		}
+
+		&__close-handle {
+			display: none;
+		}
+	}
+
+	&__search-submit {
+		background: transparent;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: em(55px);
+
+		.search-open &,
+		&:focus {
+			background-color: $turquoise;
+		}
+
+		@include for-tablet-up {
+			cursor: pointer;
+			transition: background-color 0.3s;
+
+			&:focus {
+				outline: 2px solid $purple;
+			}
+		}
+	}
+}

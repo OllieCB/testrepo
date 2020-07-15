@@ -1,0 +1,9 @@
+{{!-- pages/pageVideo.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'SearchPageModule/SearchPageData'}}
+			{{> SearchPageModule/SearchPageModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

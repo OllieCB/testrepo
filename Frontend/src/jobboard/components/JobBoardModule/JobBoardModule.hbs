@@ -1,0 +1,13 @@
+<section class="JobBoard js-job-board {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-match-count="{{matchCount}}">
+	{{#with form}}
+		{{> ./JobBoardForm/JobBoardForm}}
+	{{/with}}
+	<div class="JobBoard__container">
+		{{#with filters}}
+			{{> JobBoardFilters/JobBoardFilters}}
+		{{/with}}
+		{{#with data}}
+			{{> JobBoardResults/JobBoardResults}}
+		{{/with}}
+	</div>
+</section>

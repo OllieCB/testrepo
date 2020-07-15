@@ -1,0 +1,13 @@
+{{!-- pages/index.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'SearchModule/data/light'}}
+			{{> SearchModule/SearchModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'NotFoundModule/NotFoundData'}}
+			{{> NotFoundModule/NotFoundModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

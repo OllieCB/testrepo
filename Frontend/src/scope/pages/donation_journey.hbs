@@ -1,0 +1,19 @@
+{{!-- pages/content_core.hbs --}}
+
+{{#> defaultLayout title="Donation Journey"}}
+	{{#*inline "content"}}
+		{{#fetchData 'HeroModule/data/donationNoVideo'}}
+			{{> HeroModule/HeroModule bottomMargin=false}}
+		{{/fetchData}}
+
+		{{#fetchData 'DonationModule/DonationData'}}
+			{{> DonationModule/DonationModule}}
+		{{/fetchData}}
+	{{/inline}}
+
+	{{#*inline "footer"}}
+		{{#fetchData 'NeedHelpFooter/NeedHelpData'}}
+			{{> NeedHelpFooter/NeedHelpFooter}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

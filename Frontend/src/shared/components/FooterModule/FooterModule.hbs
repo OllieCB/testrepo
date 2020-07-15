@@ -1,0 +1,26 @@
+<footer class="Footer js-footer">
+	<div class="Footer__decoration-container">
+		<div class="corner-decoration top-right turquoise vertical"></div>
+	</div>
+	<div class="Footer__wrapper">
+		<div class="Footer__title">
+			<img class="Footer__logo lazy" src="{{logo.placeholder}}" data-imgs="{{logo.url}}" alt="{{logo.alt}}">
+		</div>
+
+		{{#with contact}}
+			{{> ./Contacts/Contacts}}
+		{{/with}}
+
+		<div class="Footer__links-news">
+			{{#with links}}
+				{{> ./Links/Links}}
+			{{/with}}
+
+			{{#with subscription}}
+				{{> ./Newsletter/Newsletter}}
+			{{/with}}
+		</div>
+	</div>
+
+	{{> ./Socials/Socials}}
+</footer>

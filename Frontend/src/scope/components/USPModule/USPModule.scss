@@ -1,0 +1,63 @@
+@import "../../../shared/styles/base/variables";
+
+.USP {
+	padding: 0 $lrg-padding;
+
+	@include for-tablet-up {
+		padding: 0 $wrapper-padding;
+	}
+
+	&__container {
+		background: $purple;
+		border-radius: 5px;
+		padding: $lrg-padding 0;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__text {
+		color: $white;
+	}
+
+	&__close {
+		color: $yellow;
+		font-weight: 500;
+	}
+
+	&__left-corner,
+	&__right-corner {
+		display: block;
+		position: absolute;
+		height: 3em;
+		width: 3em;
+
+		@include for-tablet-up {
+			height: 7.5em;
+			width: 7.5em;
+		}
+
+		@include for-desktop-up {
+			height: 10em;
+			width: 10em;
+		}
+	}
+
+	&__left-corner {
+		left: 0;
+		top: 0;
+		transform: rotate(180deg);
+
+		path {
+			fill: $turquoise;
+		}
+	}
+
+	&__right-corner {
+		bottom: 0;
+		right: 0;
+
+		path {
+			fill: $yellow;
+		}
+	}
+}

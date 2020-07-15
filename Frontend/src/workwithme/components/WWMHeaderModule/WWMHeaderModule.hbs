@@ -1,0 +1,42 @@
+<div class="header js-header">
+
+	<nav class="mobile-nav js-mobile-close" id="mobile-nav">
+		<a class="hamburger" href="#">
+		<i class="wwm-icon wwm-close" aria-hidden="true"></i></a>
+					<ul class="nav__list p-t-xl">
+						<h2>Menu</h2>
+						{{#each navigation.links}}
+							<li class="nav__list--item"><a href="{{url}}" class="nav__list--anchor">{{label}}</a></li>
+						{{/each}}
+					</ul>
+				</nav>
+
+	<div class="container-fluid">
+		<div class="row u-w-100">
+			<div class="col-8 col-sm-4 col-md-3 col-xl-2">
+				<a href="{{logo.link}}" class="brand">
+					<img src="{{logo.url}}" alt="{{logo.alt}}">
+				</a>
+			</div>
+
+			<div class="p-l-xs p-r-0 hamburger-container"><a class="hamburger wwm-icon wwm-hamburger js-mobile-open" href="#"></a></div>
+
+			<div class="flex-grow-1 d-flex p-r-0 flex-row flex-sm-row-reverse flex-xl-row">
+				<div class="col-7 col-sm-8 col-lg-9 col-xl-10 p-l-0 text-right align-self-center">
+					<nav class="nav" id="nav">
+						<ul class="nav__list list-inline">
+							{{#each navigation.links}}
+								<li class="nav__list--item"><a href="{{url}}" class="nav__list--anchor {{class}}">{{label}}</a></li>
+							{{/each}}
+						</ul>
+					</nav>
+					{{!-- <a href="#" onclick="(() => { document.getElementById('mobile-nav').className += ' visible';})()" class="hamburger-nav md"><i class="fa fa-bars"></i></a> --}}
+				</div>
+
+				<div class="aside col-5 col-sm-4 col-lg-3 col-xl-2 p-x-0 text-right d-flex align-items-center">
+					<img src="{{aside.url}}" alt="{{aside.alt}}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

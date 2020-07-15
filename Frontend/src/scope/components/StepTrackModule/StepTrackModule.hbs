@@ -1,0 +1,15 @@
+<div class="StepTrack js-tracker" tabindex="-1">
+	<div class="StepTrack__container js-tracker-aria-label" aria-label="step 1 of 3 {{items.[0].label}}">
+		<div class="StepTrack__outer js-tracker-out">
+			<div class="StepTrack__inner js-tracker-in"></div>
+		</div>
+		<ul class="StepTrack__list">
+			{{#each items}}
+				<li class="StepTrack__item js-tracker-item {{#if visited}}visited{{/if}} {{#if @first}}first{{/if}} {{#if @last}}last{{/if}}" aria-hidden="true">
+						<div class="StepTrack__circle js-tracker-circle"></div>
+						{{label}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

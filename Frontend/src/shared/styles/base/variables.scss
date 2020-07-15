@@ -1,0 +1,69 @@
+@import "breakpoints";
+
+//
+// COLOURS
+//
+// Primaries
+$white: #fff;
+$black: #000;
+$purple: #340458;
+$turquoise: #14cac9;
+$gray: #f4f0fa;
+
+// Secondaries
+$light-purple: #59029f;
+$yellow: #fed636;
+$medium-yellow: #ffe343;
+$light-yellow: #fff9df;
+$lighter-yellow: #fffbef;
+$dark-gray: #444;
+$medium-gray: #595959;
+$transparent-purple: rgba($purple, 0.7);
+$transparent-purple-solid: #ae9bbc;
+$red: #b21121;
+$success: green;
+$outline: #78aeda;
+
+//
+// CONTAINER
+//
+$container: 82.8125%;
+$container-tablet: calc(720px - 40px);
+$container-desktop: 720px;
+
+//
+// MARGINS AND PADDING
+//
+
+$sm-padding: 20px;
+$std-padding: 20px;
+$lrg-padding: $std-padding;
+$donation-wrapper: 5%;
+$wrapper-padding: 100px;
+
+@if $tablet-up {
+	$std-padding: 30px;
+	$lrg-padding: 50px;
+	$donation-wrapper: 100px;
+}
+
+@if $desktop-up {
+	$donation-wrapper: 250px;
+}
+
+//
+// FONT SIZES
+//
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically 16px
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$xsmall-font-size: ($font-size-base * 0.75) !default;
+$small-font-size: ($font-size-base * 0.875) !default;
+$large-font-size: ($font-size-base * 1.25) !default;
+$xlarge-font-size: ($font-size-base * 1.75) !default;

@@ -1,0 +1,23 @@
+@import "../../../shared/styles/base/variables";
+
+.LastReviewed {
+	background: $gray;
+	border-radius: 5px;
+	color: $purple;
+	padding: em(15px) $std-padding;
+	line-height: em(25px);
+
+	@include for-tablet-up {
+		line-height: 1em;
+		padding: $sm-padding $std-padding;
+	}
+
+	&__date {
+		font-weight: 500;
+		display: block;
+
+		@include for-tablet-up {
+			display: inline-block;
+		}
+	}
+}

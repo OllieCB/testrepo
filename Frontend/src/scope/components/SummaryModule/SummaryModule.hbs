@@ -1,0 +1,13 @@
+<section class="Summary js-summary {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	<div class="corner-decoration top-right vertical yellow"></div>
+
+	<div class="wrapper rte">
+		<h3 class="underline">{{title}}</h3>
+		<div class="Summary__text js-summary-text">
+			<p id="summary-{{id}}">{{content}}</p>
+		</div>
+		<button class="Summary__more hidden js-summary-readmore" type="button" aria-controls="summary-{{id}}" aria-expanded="false" data-less="{{lessLabel}}" data-more="{{moreLabel}}">{{moreLabel}}</button>
+		<a class="Summary__cta btn link purple" href="{{cta.url}}">{{cta.label}}</a>
+		<img class="Summary__artwork lazy" src="{{artwork.placeholder}}" data-imgs="{{artwork.url}}" alt="{{artwork.alt}}" />
+	</div>
+</section>

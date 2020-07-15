@@ -1,0 +1,21 @@
+@import "../../../shared/styles/base/variables";
+
+.PreviewPanel {
+	padding: 0 $lrg-padding;
+
+	@include for-desktop-up {
+		padding: 0 $wrapper-padding;
+	}
+
+	&__title {
+		font-size: em(25px);
+		font-weight: 500;
+		margin-bottom: em(15px);
+		position: relative;
+	}
+
+	&__text {
+		color: $dark-gray;
+		margin-bottom: $std-padding;
+	}
+}

@@ -1,0 +1,19 @@
+@import "../../../shared/styles/base/variables";
+@import "./Filter/Filter";
+
+.CampStories {
+	&__wrapper {
+		padding: 0 $lrg-padding;
+
+		@include for-desktop-up {
+			padding: 0 $wrapper-padding;
+		}
+	}
+
+	&__title {
+		font-size: em(25px);
+		font-weight: 500;
+		margin-bottom: $std-padding;
+		position: relative;
+	}
+}

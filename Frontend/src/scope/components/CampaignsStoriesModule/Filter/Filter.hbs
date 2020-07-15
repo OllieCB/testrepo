@@ -1,0 +1,17 @@
+<div class="Filter">
+	<div class="Filter--mobile__container">
+		<img class="Filter--mobile__arrow v-center" src="{{downarrow}}" alt="" />
+		<select class="Filter--mobile__list btn purple js-campStories-mobile-filter">
+			{{#each filters}}
+				<option class="Filter--mobile__item" value="{{type}}">{{label}}</option>
+			{{/each}}
+		</select>
+	</div>
+	<ul class="Filter--desktop__list js-campStories-filters">
+		{{#each filters}}
+			<li class="Filter--desktop__item {{#if (eq @index 0)}}current{{/if}}">
+				<button class="Filter--desktop__button" type="button" data-type="{{type}}" aria-pressed="{{#if (eq @index 0)}}true{{else}}false{{/if}}" aria-controls="newsListing">{{label}}</button>
+			</li>
+		{{/each}}
+	</ul>
+</div>

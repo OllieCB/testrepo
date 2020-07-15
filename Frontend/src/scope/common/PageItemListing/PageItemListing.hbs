@@ -1,0 +1,33 @@
+<div class="PageItemListing">
+	<p class="PageItemListing__matchLabel js-listing-match-label" aria-live="polite" aria-atomic="true">{{matchLabel}}</p>
+	<div class="srt js-more-count" aria-atomic="true" aria-live="polite"></div>
+
+
+	{{#if twoLevels}}
+		<div class="PageItemListing__hot js-listing-hotContainer">
+			{{#with hotCards}}
+				{{> PageItemModule/PageItemModule}}
+			{{/with}}
+		</div>
+		<div class="PageItemListing__top js-listing-topContainer">
+			<div class="PageItemListing__page">
+			{{#each topCards}}
+				{{#with this}}
+					{{> PageItemModule/PageItemModule}}
+				{{/with}}
+			{{/each}}
+			</div>
+		</div>
+	{{else}}
+		<div class="js-listing-result-container">
+			{{#each results}}
+				{{> PageItemModule/PageItemModule}}
+			{{/each}}
+		</div>
+	{{/if}}
+
+	<div class="PageItemListing__loadMore js-listing-loadMore" data-msg="{{spinner.msg}}">
+		<button class="btn transparent-purple loadMore" type="button">Load more results</button>
+		<img class="PageItemListing__spinner lazy" src="{{spinner.placeholder}}" data-imgs="{{spinner.url}}" alt=""/>
+	</div>
+</div>

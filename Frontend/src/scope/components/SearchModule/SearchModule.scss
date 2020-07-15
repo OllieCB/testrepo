@@ -1,0 +1,100 @@
+@import "../../../shared/styles/base/variables";
+
+.Search {
+	background: $purple;
+	padding-top: $std-padding;
+	padding-bottom: $std-padding;
+
+	&__title {
+		color: $white;
+		margin-bottom: $sm-padding;
+		position: relative;
+	}
+
+	&__form {
+		@include for-tablet-up {
+			position: relative;
+		}
+	}
+
+	&__combobox {
+		z-index: 3;
+	}
+
+	&__input {
+		border-radius: 1.25em;
+		height: 2.5em;
+		padding: 0.5em 2em 0.5em 1em;
+		margin-bottom: $sm-padding;
+		width: 100%;
+		position: relative;
+		z-index: 3;
+
+		&::placeholder {
+			color: $medium-gray;
+			opacity: 1;
+		}
+	}
+
+	&__typeahead {
+		position: absolute;
+		background: $white;
+		border: 1px solid $medium-gray;
+		margin-top: -1.25em;
+		padding-top: 1.25em;
+		min-width: 240px;
+		z-index: 2;
+
+		&.hidden {
+			display: none;
+		}
+
+		li {
+			cursor: pointer;
+			padding: 0.5em 2em 0.5em 1em;
+			display: block;
+			min-height: 2.5em;
+			line-height: 1.5em;
+			width: 100%;
+			overflow: hidden;
+
+			&.active {
+				background: $gray;
+			}
+		}
+	}
+
+	&__submit {
+		height: 2.5em;
+		width: 100%;
+		z-index: 2;
+		margin-top: 0;
+
+		@include for-tablet-up {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: auto;
+			z-index: 3;
+		}
+	}
+
+	&--light {
+		background: $gray;
+		color: $dark-gray;
+
+		.Search {
+			&__title {
+				color: $purple;
+			}
+
+			&__input {
+				border: 1px solid $transparent-purple;
+			}
+		}
+	}
+
+	.rte.bottom-margin {
+		margin-bottom: $sm-padding;
+	}
+}

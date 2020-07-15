@@ -1,0 +1,54 @@
+<div class="PageItem {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	{{#each this}}
+		{{#if (ne type 'shop')}}
+			<a class="PageItem__item{{#if promoted}} promoted{{/if}}" href="{{action.url}}" aria-label="{{title}} {{subtitle}}">
+		{{else}}
+			<div class="PageItem__item{{#if promoted}} promoted{{/if}}" aria-label="{{title}}" tabindex="-1">
+		{{/if}}
+			{{#if img}}
+				<div class="PageItem__visual">
+					<img class="PageItem__img h-center lazy" src="{{img.placeholder}}" data-imgs="{{img.smallUrl}},{{img.mediumUrl}},{{img.url}}" alt="" aria-hidden="true">
+					{{#if (ne type 'page')}}
+						<p class="PageItem__type PageItem__type{{#if (eq type 'story')
+							}}--story{{/if}}{{#if (eq type 'news')
+							}}--news{{/if}}{{#if (eq type 'campaign')
+							}}--campaign{{/if}}{{#if (eq type 'inside')
+							}}--inside{{/if}}{{#if (eq type 'event')
+							}}--event{{/if}}">{{label}}</p>
+					{{else}}
+						<div class="{{corners.[0]}}"></div>
+						<div class="{{corners.[1]}}"></div>
+					{{/if}}
+				</div>
+			{{/if}}
+			<div class="PageItem__content rte">
+				{{#if internal}}
+					<img class="PageItem__internal lazy" src="{{internal.placeholder}}" data-imgs="{{internal.url}}" alt="{{internal.alt}}" />
+				{{/if}}
+				<h3 class="PageItem__title{{#unless subtitle}} underline{{/unless}}">{{title}}</h3>
+				{{#if subtitle}}
+					<h4 class="PageItem__subtitle underline">{{subtitle}}</h4>
+				{{/if}}
+				<p class="PageItem__text PageItem__text--
+					{{~#if (eq type 'opportunity')}}no-hide{{/if}}">{{content}}</p>
+				{{#each items}}
+					<div class="PageItem__event-item">
+						<div class="PageItem__event-img-container">
+							<img class="lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="" />
+						</div>
+						{{#if srtLabel}}
+							<span class="srt">{{{srtLabel}}}</span>
+							<span aria-hidden="true">{{{label}}}</span>
+						{{else}}
+							{{{label}}}
+						{{/if}}
+					</div>
+				{{/each}}
+			</div>
+		{{#if (ne type 'shop')}}
+			</a>
+		{{else}}
+			</div>
+		{{/if}}
+	{{/each}}
+</div>

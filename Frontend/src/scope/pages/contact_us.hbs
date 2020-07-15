@@ -1,0 +1,14 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'ContactUsModule/data/threeContact'}}
+			{{> ContactUsModule/ContactUsModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ContactUsModule/data/twoContact'}}
+			{{> ContactUsModule/ContactUsModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

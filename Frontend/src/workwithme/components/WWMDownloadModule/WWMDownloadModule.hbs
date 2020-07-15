@@ -1,0 +1,26 @@
+<div class="download">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-sm-11">
+				<div class="row download-row">
+					<div class="col">
+						<div class="heading-block m-b-lg">
+							<div class="heading-block__title h4 m-b-md">{{heading}}</div>
+							<div class="heading-block__sub-title p dark f-w-normal">{{{subTitle}}}</div>
+						</div>
+
+						{{#if ctas}}
+							<div class="cta-list">
+								{{#each ctas}}
+									<a href="{{href}}" class="btn {{class}} p-x-xl" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+										{{label}}
+									</a>
+								{{/each}}
+							</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

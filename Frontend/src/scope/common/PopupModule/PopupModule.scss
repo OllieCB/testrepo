@@ -1,0 +1,31 @@
+@import "../../../shared/styles/base/variables";
+
+.Popup {
+	background: $transparent-purple;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+
+	&__box {
+		background: $gray;
+		border-radius: 5px;
+		left: 50%;
+		max-width: 600px;
+		overflow: hidden;
+		padding: $sm-padding;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% - (#{$donation-wrapper} * 2));
+	}
+
+	&__title {
+		.error {
+			height: 38px;
+			vertical-align: top;
+		}
+	}
+}

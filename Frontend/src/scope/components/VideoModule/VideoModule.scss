@@ -1,0 +1,121 @@
+@import "../../../shared/styles/base/variables";
+
+.Video {
+	padding-top: calc(9 / 16 * 100%);
+	position: relative;
+
+	@include for-print {
+		display: none;
+	}
+
+	@include for-tablet-up {
+		transition: padding-top 0.3s;
+	}
+
+	&__img-container {
+		position: absolute;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+		width: 100%;
+	}
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+	}
+
+	&__video-container {
+		background: rgba($turquoise, 0.6);
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		button:focus {
+			outline-color: $yellow;
+		}
+	}
+
+	&__handle {
+		background: $purple;
+		border-radius: 2em;
+		color: $white;
+		cursor: pointer;
+		font-weight: 500;
+		left: 50%;
+		padding: 1em 2em;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		.playing & {
+			display: none;
+		}
+	}
+
+	&--caption {
+		margin-bottom: 5em;
+
+		@include for-tablet-up {
+			margin: 0 auto 5em;
+		}
+	}
+
+	&__video-player {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+
+	&__caption-container {
+		bottom: -2em;
+		position: absolute;
+		width: 100%;
+	}
+
+	&__caption {
+		color: $light-purple;
+		line-height: 2em;
+		padding: 0 1em;
+
+		&::after {
+			background: $yellow;
+			border-top-right-radius: em(5px);
+			border-bottom-right-radius: em(5px);
+			content: "";
+			display: inline-block;
+			height: 2em;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: em(7px);
+		}
+	}
+}
+
+.Accordion--video {
+	@include for-print {
+		display: none;
+	}
+
+	@include for-tablet-up {
+		max-width: 40em;
+	}
+
+	.Accordion {
+		&__item {
+			list-style-type: none;
+			overflow: visible;
+
+			.wrapper {
+				max-width: 100%;
+				width: auto;
+			}
+		}
+	}
+}

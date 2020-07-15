@@ -1,0 +1,72 @@
+<div class="Thankyou wrapper rte js-thankyou" data-id="1234" data-amount="12" data-name="frequency-once | Donation cards" data-sku="SKU47" data-category="single donation">
+	<h1 class="underline">{{greeting.main}} <br><span class="Thankyou__name js-thankyou-name">{{greeting.sub}}</span></h1>
+	{{{text}}}
+	<p>{{notice}} <span class="Thankyou__email js-thankyou-email"><span></p>
+</div>
+
+{{#with contact}}
+	<div class="Thankyou__contact">
+		<div class="wrapper rte">
+			<h3 class="underline">{{title}}</h3>
+			<p>{{text}}</p>
+			<a href="tel://{{phone.value}}" class="Thankyou__contact-link">
+				<img class="Thankyou__contact-icon lazy" src="{{phone.placeholder}}" data-imgs="{{phone.icon.url}}" alt="{{icon.alt}}">
+				<div class="Thankyou__contact-wrapper">
+					<div class="Thankyou__contact-label">{{phone.label}}</div>
+					<div class="Thankyou__contact-value">{{phone.value}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="corner-decoration bottom-right horizontal yellow"></div>
+	</div>
+{{/with}}
+
+{{#with share}}
+	<div class="Thankyou__share">
+		<div class="corner-decoration bottom-left vertical turquoise"></div>
+		<div class="wrapper rte">
+			<h3 class="underline">{{title}}</h3>
+			<p>{{text}}</p>
+		</div>
+
+		<div class="Thankyou__share-container wrapper">
+			{{items.shareLabel}}
+			<ul class="Thankyou__share-list">
+				{{#each items.shares}}
+					<li class="Thankyou__share-item">
+						<img class="Thankyou__share-img lazy" src="{{placeholder}}" data-imgs="{{url}}" alt="{{alt}}" />
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+{{/with}}
+
+{{#with backHome}}
+	<div class="Thankyou__back">
+		<div class="wrapper">
+			<a class="btn purple back" href="/">{{label}}</a>
+		</div>
+	</div>
+{{/with}}
+
+<!-- THIS SCRIPT SHOULD NOT BE INCLUDED IN THE BACKEND
+     IT IS USED IN PLACE OF THE SERVER SIDE RENDERING -->
+<script charset="utf-8">
+	const last = arr => arr[arr.length - 1];
+
+	const queries = last(window.location.href.split('?'))
+		.split('&')
+		.map(i => i.split('='))
+		.reduce((a, i) => {
+			const o = {};
+			o[i[0]] = decodeURIComponent(i[1]); // eslint-disable-line
+
+			return Object.assign(a, o);
+		}, {});
+
+	const namePlace = document.querySelector('.js-thankyou-name');
+	namePlace.innerHTML = `${queries.first_name} ${namePlace.innerHTML}`;
+
+	document.querySelector('.js-thankyou-email').innerHTML = queries.payer_email;
+</script>

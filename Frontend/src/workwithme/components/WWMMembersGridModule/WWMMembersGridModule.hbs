@@ -1,0 +1,22 @@
+<div class="members js-members-grid">
+	<div class="container-fluid">
+		<div class="heading-block text-center">
+			<div class="heading-block__title h5">{{title}}</div>
+			<div class="heading-block__sub-title h3">{{subTitle}}</div>
+		</div>
+
+		{{#fetchData 'WWMLogoGridModule/data/members-grid'}}
+			{{> WWMLogoGridModule/WWMLogoGridModule}}
+		{{/fetchData}}
+
+		{{#if ctas}}
+			<div class="cta-list d-flex justify-content-center m-t-lg">
+				{{#each ctas}}
+					<a href="{{href}}" class="btn {{class}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+						{{label}}
+					</a>
+				{{/each}}
+			</div>
+		{{/if}}
+	</div>
+</div>

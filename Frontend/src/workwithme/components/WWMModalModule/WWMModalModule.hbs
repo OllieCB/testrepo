@@ -1,0 +1,32 @@
+<div class="js-modal modal modal__type-{{type}}" id="{{id}}">
+	<div class="modal__body">
+		<div class="modal__close js-modal__close-trigger" data-modal-id="{{id}}">
+			<i aria-hidden="true" class="wwm-icon wwm-close position-absolute"></i>
+		</div>
+
+		{{#if (eq type "video")}}
+			<div class="modal__video">
+				<iframe width="100%" height="600px" src="{{video.url}}" frameborder="0" class="js-modal__iframe"></iframe>
+			</div>
+
+			<div class="modal__text">
+				<div class="h5 m-b-md">{{video.transcript.heading}}</div>
+				<div class="modal__text--content">{{{video.transcript.content}}}</div>
+			</div>
+		{{/if}}
+
+		{{#if (eq type "text")}}
+			<div class="modal__text">
+				<div class="h5 m-b-md">{{text.heading}}</div>
+				<div class="modal__text--content">{{{text.content}}}</div>
+			</div>
+		{{/if}}
+
+		{{#if (eq type "question")}}
+			<div class="modal__question modal__text">
+				<div class="h5 m-b-md">{{helptitle}}</div>
+				<div class="modal__text--content">{{{helptext}}}</div>
+			</div>
+		{{/if}}
+	</div>
+</div>

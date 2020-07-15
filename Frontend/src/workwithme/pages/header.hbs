@@ -1,0 +1,7 @@
+{{#> blankLayout title="Header"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMHeaderModule/WWMHeaderData'}}
+			{{> WWMHeaderModule/WWMHeaderModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

@@ -1,0 +1,45 @@
+.TitleBanner {
+	&__content {
+		color: $white;
+		background: $purple;
+		overflow: hidden;
+		padding: $sm-padding $lrg-padding $std-padding;
+		position: relative;
+
+		&--narrow {
+			padding: $sm-padding 0 $std-padding;
+		}
+
+		&.fixed {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 2;
+
+			@include for-desktop-up {
+				margin: 0 auto;
+				max-width: em(1400px);
+			}
+		}
+	}
+
+	&__title {
+		.fixed & {
+			display: none;
+		}
+
+		@include for-desktop-up {
+			.fixed & {
+				display: block;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 1em;
+
+		.fixed & {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{{#> blankLayout title="Rich Text"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMRichTextModule/WWMRichTextData'}}
+			{{> WWMRichTextModule/WWMRichTextModule}}
+		{{/fetchData}}
+	{{/inline}}
+	{{/blankLayout}}

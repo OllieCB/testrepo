@@ -1,0 +1,36 @@
+<div class="Postcode js-postcode-lookup">
+	<div class="layout layout-flex">
+		<div class="lg-col-auto bottom-margin {{#if donation}}js-donation-item{{/if}}">
+			<label class="required" for="{{postcode.id}}">{{postcode.label}}</label>
+			<input id="{{postcode.id}}" class="js-form-postcode" type="text" data-search="{{endpoints.search}}" data-get="{{endpoints.get}}" name="postcode" placeholder="{{postcode.placeholder}}" autocomplete="postal-code" required aria-describedby="{{postcode.errId}}">
+			<p id="{{postcode.errId}}" class="{{#if donation}}Donation__error{{/if}}">{{postcode.err}}</p>
+		</div>
+		<div class="Postcode__addr-list-container lg-col-auto bottom-margin">
+			<div class="Postcode__addr-list-outer hidden-input js-form-addr-list-outer">
+				<p id="addr-list" class="Postcode__addr-list-label">{{listbox.label}}</p>
+				<div class="Postcode__addr-list-inner js-form-addr-list-inner" role="listbox" aria-activedescendant="lb-opt0" tabindex="0" aria-labelledby="addr-list">
+					<ul class="Postcode__addr-list"></ul>
+				</div>
+			</div>
+			<button class="Postcode__manual-addr btn js-form-manual {{#if donation}}js-donation-manual{{/if}}" type="button">Manual address</button>
+		</div>
+	</div>
+
+	<div class="hidden-input js-form-address {{#if donation}}js-donation-address{{/if}}">
+		<div class="layout bottom-margin {{#if donation}}js-donation-item{{/if}}">
+			<label class="required" for="{{address1.id}}">{{address1.label}}</label>
+			<input id="{{address1.id}}" class="js-form-address1" type="text" name="address1" placeholder="{{address1.placeholder}}" autocomplete="address-line1" required aria-describedby="{{address1.errId}}">
+			<p id="{{address1.errId}}" class="{{#if donation}}Donation__error{{/if}}">{{address1.err}}</p>
+		</div>
+		<div class="layout bottom-margin {{#if donation}}js-donation-item{{/if}}">
+			<label for="{{address2.id}}">{{address2.label}}</label>
+			<input id="{{address2.id}}" class="js-form-address2" type="text" name="address2" placeholder="{{address2.placeholder}}" autocomplete="address-line2" aria-describedby="{{address2.errId}}">
+			<p id="{{address2.errId}}" class="{{#if donation}}Donation__error{{/if}}">{{address2.err}}</p>
+		</div>
+		<div class="layout bottom-margin {{#if donation}}js-donation-item{{/if}}">
+			<label class="required" for="{{town.id}}">{{town.label}}</label>
+			<input id="{{town.id}}" class="js-form-town" type="text" name="town" placeholder="{{town.placeholder}}" autocomplete="address-level2" required aria-describedby="{{town.errId}}">
+			<p id="{{town.errId}}" class="{{#if donation}}Donation__error{{/if}}">{{town.err}}</p>
+		</div>
+	</div>
+</div>

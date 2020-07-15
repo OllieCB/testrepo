@@ -1,0 +1,5 @@
+dist/**/*.js
+src/**/*Data.js
+src/**/data/*.js
+src/shared/scripts/flyingFocus.js
+src/shared/scripts/typeahead.js

@@ -1,0 +1,74 @@
+@import "../../styles/config/config.variables";
+
+.statistics {
+	margin: 0 0 $global-margin-y-lg 0;
+	background: $wwm-purple-light;
+	color: $wwm-white;
+
+	@media (max-width: 768px) {
+		margin: 3rem 0;
+	}
+
+	&__illustration {
+		width: 80vw;
+		max-width: 340px;
+		margin: auto;
+		transform: translateY(-2.3rem);
+
+		@media (min-width: 768px) {
+			transform: translateY(-1.3rem);
+		}
+
+		@media (min-width: 992px) {
+			transform: scale(1.12);
+			margin-left: 15px;
+			max-width: unset;
+			width: unset;
+		}
+	}
+
+	&__list {
+		margin: 3rem 0;
+
+		@media (max-width: 576px) {
+			margin: 12vw 10vw 0;
+		}
+
+		@media (max-width: 992px) {
+			margin: 4vw 10vw 0;
+		}
+	}
+
+	&__item {
+		text-align: center;
+
+		@media (max-width: 992px) {
+			margin-bottom: 8vw;
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 12vw;
+		}
+
+		@media (max-width: 576px) {
+			margin-bottom: 14vw;
+		}
+
+		&--title {
+			font-size: calc(22px + 2vw);
+			line-height: calc(22px + 2vw);
+			margin-bottom: 2vw;
+			font-weight: $font-weight-heavy;
+
+			@media (min-width: 992px) {
+				margin-bottom: $global-margin-y-lg;
+			}
+		}
+
+		&--content {
+			font-size: 16px;
+			line-height: 22px;
+			padding: 0 $global-padding-x-md;
+		}
+	}
+}

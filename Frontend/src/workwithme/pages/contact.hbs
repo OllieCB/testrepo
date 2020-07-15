@@ -1,0 +1,17 @@
+{{#> defaultLayout title="Contact"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/contact'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#> contentColumn}}
+			{{#*inline "content"}}
+				{{#fetchData 'WWMFormModule/data/data4'}}
+					{{> WWMFormModule/WWMFormModule}}
+				{{/fetchData}}
+			{{/inline}}
+		{{/contentColumn}}
+
+	{{/inline}}
+{{/defaultLayout}}

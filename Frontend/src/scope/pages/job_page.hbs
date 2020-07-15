@@ -1,0 +1,54 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="EventDetails"}}
+	{{#*inline "content"}}
+		{{#fetchData 'TitleBannerModule/data/sticky'}}
+			{{> TitleBannerModule/TitleBannerModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'EventDetailsModule/data/richText'}}
+			{{> EventDetailsModule/EventDetailsModule}}
+		{{/fetchData}}
+
+		<div class="wrapper rte bottom-margin">
+			<h3 class="underline">Job description</h3>
+			<p>Our Area Managers provide line management, supervision and support to a team of shop managers and other staff as assigned and are expected to profitably managea number of shops, typically 15 to 20, within a designated geographical area.</p>
+			<p>You will be required to travel extensively including some overnight stays, Saturdays and other additional hours as required and ideally live in the area you are responsible for managing</p>
+			<p>You must have experience of:</p>
+			<ul>
+				<li>Substantial retailing including multi-site management.</li>
+				<li>Fashion retial.</li>
+				<li>Charity retail.</li>
+				<li>Managing staff including shop managers.</li>
+				<li>Recruiting and developing staff.</li>
+				<li>Recreuiting and retaining volunteers.</li>
+				<li>Health and safety.</li>
+			</ul>
+
+			<p>You must have the ability to:</p>
+			<ul>
+				<li>Work on your own initiative.</li>
+				<li>Identify commercial opportunities and maximise income.</li>
+				<li>Set and monitor budgets.</li>
+				<li>Build, develop and maintain a high performance team.</li>
+				<li>Plan and prioritise own work and others.</li>
+			</ul>
+
+			<p>You must also have experience of using administrative systems and procedures, databases and spreadsheets prioritising your workloads to deadlines. You must be able to communicate effectively verbally and in writing to answer and resolve queries and you must be able to deal w3ith sensitive and confidential information in the appropriate manner.</p>
+
+			<p>We are committed to equal opportunities. We particularly welcome applications from disabled people and quarantee interviews to suitably qualified disabled applicants.</p>
+
+			<h3>Different able candidates</h3>
+
+			<p>Equality and inclusion are at the heart of Scope's mission and we are committed to creating a diverse and inclusive workplace with equality of opportunity for everyone.</p>
+
+			<p>We welcome applications from disabled people and quarantee interviews to disabled applicants who meet the minimum job criteria. Please let us know in your application if you are applying under the "Guaranteed Interview Scheme".</p>
+
+			<p>If you do not have a CV and would prefer and application form or need any job information in a different format such as a Word document or braille, please call or text our recruitment message line on 0207 619 7161 with the job title and location, your name, your contact number, email address and what you need and we will send you the information.</p>
+		</div>
+
+		{{#fetchData 'ContactUsModule/data/twoContact'}}
+			{{> ContactUsModule/ContactUsModule bottomMargin=false}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

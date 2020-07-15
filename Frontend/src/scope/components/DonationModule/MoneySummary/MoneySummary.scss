@@ -1,0 +1,113 @@
+.MoneySummary {
+	margin-top: -$std-padding;
+	margin-bottom: $std-padding;
+
+	&__container {
+		padding-left: calc(#{$donation-wrapper} + #{$lrg-padding});
+
+		@include for-tablet-up {
+			padding: 0 $donation-wrapper;
+			padding-left: calc(#{$donation-wrapper} + #{$lrg-padding});
+		}
+	}
+
+	&__content {
+		display: none;
+	}
+
+	&__item {
+		border-bottom: 1px solid $transparent-purple-solid;
+		border-top: 1px solid $transparent-purple-solid;
+		cursor: pointer;
+		height: calc(#{$sm-padding} * 2 + #{em(30px)});
+		overflow: hidden;
+		padding: $sm-padding 0;
+		position: relative;
+
+		&.expanded {
+			height: auto;
+
+			.close {
+				display: block;
+			}
+
+			.open {
+				display: none;
+			}
+
+			.MoneySummary__content {
+				display: block;
+			}
+		}
+
+		&-toggle {
+			background: none;
+			cursor: pointer;
+			position: absolute;
+			top: $sm-padding;
+			left: $donation-wrapper;
+			width: em(28px);
+
+			img {
+				height: em(28px);
+			}
+
+			&.close {
+				display: none;
+			}
+		}
+	}
+
+	&__chart {
+		margin: 0 auto;
+		text-align: center;
+		vertical-align: middle;
+		width: 67%;
+
+		@include for-tablet-up {
+			display: inline-block;
+			width: 33%;
+
+			img {
+				width: 85%;
+			}
+		}
+	}
+
+	&__text-container {
+		@include for-tablet-up {
+			display: inline-block;
+			vertical-align: middle;
+			width: 66%;
+		}
+	}
+
+	.rte &__text {
+		margin-bottom: 10px;
+		overflow: hidden;
+		padding-left: 1em;
+		padding-right: 1em;
+		position: relative;
+	}
+
+	&__title {
+		margin-bottom: $sm-padding;
+		padding: 0 $donation-wrapper;
+
+		@include for-tablet-up {
+			padding: 0;
+		}
+	}
+
+	&__amount {
+		font-weight: 500;
+	}
+
+	.corner-decoration {
+		border-radius: 0 7px 7px 0;
+		height: em(30px);
+		top: 0;
+		transform: none;
+		width: em(38px);
+	}
+}

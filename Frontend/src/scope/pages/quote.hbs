@@ -1,0 +1,14 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'QuoteModule/data/default'}}
+			{{> QuoteModule/QuoteModule}}
+		{{/fetchData}}
+		<br><br><br>
+		{{#fetchData 'QuoteModule/data/purple'}}
+			{{> QuoteModule/QuoteModule}}
+		{{/fetchData}}
+		<br><br><br>
+	{{/inline}}
+{{/defaultLayout}}

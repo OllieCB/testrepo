@@ -1,0 +1,134 @@
+@import "../../styles/config/config.variables";
+
+.footer {
+	font-size: $font-md;
+	line-height: 52px;
+
+	&__main {
+		padding: $global-padding-y-xl 0;
+		background: $white;
+
+		@media (max-width: 768px) {
+			padding: 3rem 0 1rem;
+		}
+
+		&__heading {
+			font-size: 2.85vw;
+			white-space: nowrap;
+			color: $wwm-red;
+
+			@media (max-width: 768px) {
+				font-size: 5.75vw;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 6.6vw;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 34.5px;
+			}
+		}
+
+		&__subheading {
+			font-size: 1.1em;
+			color: #000;
+			line-height: normal;
+		}
+
+		.nav__list__heading {
+			line-height: $font-md;
+			margin-bottom: 12px;
+			min-height: 30px;
+
+			@media (max-width: 768px) {
+				margin-top: 1.5rem;
+			}
+		}
+
+		.nav__list {
+			line-height: 26px;
+
+			a {
+				color: $wwm-purple-light;
+			}
+		}
+
+		.nav__list--icons {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			a {
+				color: $wwm-red;
+				font-size: $font-xxl;
+			}
+
+			li {
+				@media (min-width: 768px) and (max-width: 1310px) {
+					flex: 0 0 50%;
+				}
+
+				@media (min-width: 576px) and (max-width: 652px) {
+					flex: 0 0 50%;
+				}
+			}
+		}
+
+		.logos {
+			width: 100%;
+		}
+
+		.social-icons {
+			@media (max-width: 576px) {
+				max-width: 214px;
+				flex: 0 0 100%;
+			}
+		}
+	}
+
+	&__copyright {
+		background: $wwm-purple-light;
+		color: $white;
+
+		@media (max-width: 768px) {
+			padding: 20px 0;
+		}
+
+		&__text {
+			@media (max-width: 768px) {
+				margin-top: 8px;
+			}
+		}
+
+		.nav__list {
+			&--item {
+				margin-left: $global-margin-y-lg;
+
+				@media (max-width: 768px) {
+					margin-left: 0;
+				}
+			}
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+			}
+
+			@media (max-width: 992px) {
+				text-align: center;
+			}
+		}
+
+		.nav__list--anchor {
+			display: block;
+			text-decoration: none;
+			color: $white;
+
+			@media (max-width: 768px) {
+				line-height: 1.6rem;
+			}
+		}
+	}
+}

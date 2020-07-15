@@ -1,0 +1,7 @@
+{{#> blankLayout title="Members Grid"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMMembersGridModule/WWMMembersGridData'}}
+			{{> WWMMembersGridModule/WWMMembersGridModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

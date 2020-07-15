@@ -1,0 +1,86 @@
+@import "../../../shared/styles/base/variables";
+
+.Summary {
+	background: $gray;
+	overflow: hidden;
+	padding: $std-padding 0;
+	position: relative;
+
+	&__text {
+		height: 10em;
+		margin-bottom: $sm-padding;
+		overflow: hidden;
+
+		@include for-tablet-up {
+			height: auto;
+		}
+
+		&.expanded {
+			height: auto;
+			margin-bottom: 0;
+		}
+	}
+
+	&__more {
+		background: transparent;
+		border-bottom: 1px solid $transparent-purple-solid;
+		color: $light-purple;
+		display: block;
+		font-weight: 500;
+		margin: em(-10px) auto $sm-padding 0;
+		padding: 0 0 $sm-padding em(38px);
+		position: relative;
+		line-height: em(30px);
+		width: 100%;
+
+		&::before {
+			content: url(../assets/images/plus.svg);
+			width: em(28px);
+			position: absolute;
+			top: 2px;
+			left: 0;
+
+			.Summary__text.expanded ~ & {
+				content: url(../assets/images/minus.svg);
+			}
+		}
+
+		@include for-tablet-up {
+			display: none;
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&__artwork,
+	.corner-decoration {
+		display: none;
+
+		@include for-tablet-up {
+			display: block;
+		}
+	}
+
+	&__artwork {
+		bottom: 0;
+		position: absolute;
+		left: calc(#{$lrg-padding} + #{em(720px)} + #{em(50px)});
+		width: em(150px);
+	}
+
+	.corner-decoration {
+		height: 100px;
+		top: 4em;
+		transform: none;
+	}
+
+	.wrapper {
+		@include for-tablet-up {
+			// TODO make modifier
+			margin: 0 0 0 $lrg-padding;
+			padding-left: 0;
+		}
+	}
+}

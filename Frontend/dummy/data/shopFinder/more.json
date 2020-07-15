@@ -1,0 +1,180 @@
+{
+	"success": true,
+	"query": "q=value",
+	"results": [
+		[
+			{
+				"type": "shop",
+				"title": "Attitudes towards disability",
+				"subtitle": "Furniture shop",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "55 to 57 Abington Street, Northampoton, NN1 2AW | <a href=\"https://goo.gl/maps/DTuq4kskNBJ2\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "0800 0113005",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Parking available",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			},
+			{
+				"type": "shop",
+				"title": "Coventry charity",
+				"subtitle": "Clothes, book shop",
+				"content": "The Conventry charity shop sells quality new and second-hand clothes and many other things",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "37 Hertford Street, Coventry, CV1 1LF | <a href=\"https://goo.gl/maps/k3nRnWpCVjo\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "024 76224542",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Drop-off location",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			}
+		],
+		[
+			{
+				"type": "shop",
+				"title": "Attitudes towards disability",
+				"subtitle": "Furniture shop",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "55 to 57 Abington Street, Northampoton, NN1 2AW | <a href=\"https://goo.gl/maps/DTuq4kskNBJ2\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "0800 0113005",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Parking available",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			},
+			{
+				"type": "shop",
+				"title": "Coventry charity",
+				"subtitle": "Clothes, book shop",
+				"content": "The Conventry charity shop sells quality new and second-hand clothes and many other things",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "37 Hertford Street, Coventry, CV1 1LF | <a href=\"https://goo.gl/maps/k3nRnWpCVjo\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "024 76224542",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Drop-off location",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			}
+		],
+		[
+			{
+				"type": "shop",
+				"title": "Attitudes towards disability",
+				"subtitle": "Furniture shop",
+				"content": "A lack of understanding and prejudice towards disabled people are still too common in our society. The more it happens, the more impact it has.",
+				"action": {
+					"label": "Join our campaign",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "55 to 57 Abington Street, Northampoton, NN1 2AW | <a href=\"https://goo.gl/maps/DTuq4kskNBJ2\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "0800 0113005",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Parking available",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			},
+			{
+				"type": "shop",
+				"title": "Coventry charity",
+				"subtitle": "Clothes, book shop",
+				"content": "The Conventry charity shop sells quality new and second-hand clothes and many other things",
+				"action": {
+					"label": "Read more",
+					"url": "google.com"
+				},
+				"items": [
+					{
+						"label": "Mon-Sat: 9am-5.30pm, Sun 10am-4pm",
+						"icon": "imgs/clock-dark.svg"
+					},
+					{
+						"label": "37 Hertford Street, Coventry, CV1 1LF | <a href=\"https://goo.gl/maps/k3nRnWpCVjo\">View map</a>",
+						"icon": "imgs/location.svg"
+					},
+					{
+						"label": "024 76224542",
+						"icon": "imgs/phone-dark.svg"
+					},
+					{
+						"label": "Drop-off location",
+						"icon": "imgs/dark-placeholder.svg"
+					}
+				]
+			}
+		]
+	]
+}

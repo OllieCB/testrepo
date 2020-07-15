@@ -1,0 +1,29 @@
+{{#> defaultLayout title="Members"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMHeroModule/data/members'}}
+			{{> WWMHeroModule/WWMHeroModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserThreeData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMMembersGridModule/WWMMembersGridData'}}
+			{{> WWMMembersGridModule/WWMMembersGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMMemberStoriesLargeGrid'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserFourData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMCTAModule/WWMCTAData'}}
+			{{> WWMCTAModule/WWMCTAModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

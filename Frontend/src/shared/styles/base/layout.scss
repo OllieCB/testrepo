@@ -1,0 +1,209 @@
+@import 'variables';
+
+#main {
+	position: relative;
+}
+
+.wrapper {
+	max-width: $container;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include for-tablet-up {
+		width: $container-tablet;
+	}
+
+	@include for-desktop-up {
+		width: $container-desktop;
+	}
+
+	&--wide {
+		max-width: calc(100% - 2 * #{$lrg-padding});
+		width: auto;
+
+		@include for-desktop-up {
+			max-width: calc(100% - 2 * #{$wrapper-padding});
+		}
+	}
+}
+
+.content-container {
+	@include for-tablet-up {
+		display: flex;
+		border-top: 1px solid $transparent-purple-solid;
+
+		.content {
+			flex-grow: 1;
+			padding-top: $std-padding;
+
+			@include for-desktop-up {
+				padding-top: $lrg-padding;
+			}
+		}
+
+		.wrapper {
+			width: auto;
+
+			@include for-desktop-up {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: $container;
+				width: $container-desktop;
+			}
+		}
+	}
+}
+
+.fixed-container {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	transform: translateZ(0);
+
+	&-aside {
+		@include for-tablet-up {
+			width: 396px;
+		}
+	}
+}
+
+.layout {
+	padding: 0 $donation-wrapper;
+	position: relative;
+
+	&.bottom-margin,
+	.bottom-margin {
+		margin-bottom: $std-padding;
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+
+	input[type=submit],
+	button[type=submit] {
+		&.right {
+			float: right;
+		}
+	}
+
+	&.actions {
+		padding-bottom: $std-padding;
+		padding-top: $std-padding;
+
+		.or,
+		input[type=submit],
+		button {
+			width: 100%;
+
+			@include for-tablet-up {
+				width: 33%;
+			}
+		}
+
+		.cards {
+			margin-bottom: $std-padding * 2;
+		}
+
+		.or {
+			display: block;
+			margin-bottom: $sm-padding;
+			margin-top: $sm-padding;
+			text-align: center;
+
+			@include for-tablet-up {
+				text-align: center;
+				display: inline-block;
+				line-height: 2.5em;
+				margin: 0;
+				padding-left: 15%;
+				vertical-align: top;
+				width: auto;
+			}
+		}
+
+		.cards-container {
+			bottom: -50px;
+			position: absolute;
+			left: 0;
+			text-align: center;
+			width: 100%;
+
+			img {
+				margin-right: 40px;
+				vertical-align: middle;
+				width: em(40px);
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&-flex {
+		@include for-tablet-up {
+			display: flex;
+
+			.lg-col-auto {
+				flex-grow: 1;
+				flex-basis: 0;
+				margin-right: $std-padding;
+				position: relative;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			.lg-col-fixed {
+				flex-grow: 0;
+				position: relative;
+			}
+
+			.bottom {
+				align-self: flex-end;
+			}
+
+			.center {
+				align-self: center;
+			}
+		}
+	}
+
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+
+.Page {
+	@include for-tablet-up {
+		&__row {
+			&-flex {
+				display: flex;
+				border-top: 1px solid $transparent-purple-solid;
+			}
+		}
+
+		&__column {
+			&-aside {
+				width: 33.3333%;
+				min-width: 300px;
+				background-color: $gray;
+				border-right: 1px solid $transparent-purple-solid;
+			}
+
+			&-expand {
+				flex-grow: 1;
+			}
+
+			&-content {
+				padding-top: $lrg-padding;
+			}
+		}
+	}
+}

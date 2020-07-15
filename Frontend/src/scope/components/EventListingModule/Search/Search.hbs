@@ -1,0 +1,23 @@
+<form class="Event-Search form js-events-form" method="{{method}}" action="{{endpoint}}">
+	<div class="layout layout-flex">
+		<div class="lg-col-auto bottom-margin">
+			<label class="Event-Search__label" for="event-keyword">{{keyword.label}}</label>
+			<input class="Event-Search__field" id="event-keyword" type="text" name="keyword" placeholder="{{keyword.placeholder}}">
+		</div>
+
+		<div class="lg-col-auto bottom-margin">
+			<label class="Event-Search__label" for="filter">{{filter.label}}</label>
+			<select id="filter" name="filter">
+				{{#each filter.filters}}
+					<option value="{{value}}">{{label}}</option>
+				{{/each}}
+			</select>
+		</div>
+	</div>
+
+	<div class="Event-Search__button-container layout">
+		<button class="js-events-submit btn purple search" type="submit">{{submit.label}}</button>
+	</div>
+
+	<div class="corner-decoration bottom-left vertical yellow"></div>
+</form>

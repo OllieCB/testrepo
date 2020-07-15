@@ -1,0 +1,31 @@
+{{#if single}}
+	<div class="Accordion__item js-accordion-toggle">
+{{else}}
+	<li class="Accordion__item js-accordion-toggle">
+{{/if}}
+	<div class="corner-decoration top-left vertical turquoise"></div>
+	<div class="wrapper rte">
+		<button class="Accordion__item-toggle open" type="button" aria-label="{{title}}" aria-controls="{{pid}}" aria-expanded="false">
+			<img class="lazy" src="{{placeholder}}" data-imgs="{{more}}" alt="" />
+		</button>
+		<button class="Accordion__item-toggle close" type="button" aria-label="{{title}}" aria-controls="{{pid}}" aria-expanded="true">
+			<img class="lazy" src="{{placeholder}}" data-imgs="{{less}}" alt="" />
+		</button>
+		<div class="">
+			{{#if (eq titleLevel 'h2')}}
+				<h2 class="Accordion__item-title">{{title}}</h2>
+			{{else}}
+				{{#if (eq titleLevel 'h3')}}
+					<h3 class="Accordion__item-title">{{title}}</h3>
+				{{else}}
+					<h4 class="Accordion__item-title">{{title}}</h4>
+				{{/if}}
+			{{/if}}
+			<div id="{{pid}}" class="Accordion__item-text js-accordion-text" aria-hidden tabindex="-1">{{{text}}}</div>
+		</div>
+	</div>
+{{#if single}}
+	</div>
+{{else}}
+	</li>
+{{/if}}

@@ -1,0 +1,9 @@
+{{#> blankLayout title="Resources Grid"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'WWMContentGridModule/data/WWMResourcesGridData1'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/blankLayout}}

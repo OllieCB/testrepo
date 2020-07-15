@@ -1,0 +1,91 @@
+@import "../../../shared/styles/base/variables";
+
+.StepTrack {
+	background: $gray;
+	padding: $std-padding $donation-wrapper;
+	margin-bottom: $std-padding;
+
+	&__container {
+		padding-top: 5px;
+		position: relative;
+	}
+
+	&__outer {
+		background: #aaa;
+		height: em(3px);
+		width: calc(100% - 10px);
+		margin: 0 auto;
+	}
+
+	&__inner {
+		background: $light-purple;
+		height: 100%;
+		transition: width 0.3s linear;
+		width: 0;
+	}
+
+	&__list {
+		display: flex;
+		position: relative;
+		text-align: justify;
+		top: em(-13px);
+	}
+
+	&__circle {
+		background: $gray;
+		border: 3px solid #aaa;
+		border-radius: 50%;
+		height: em(22px);
+		margin: 0 auto;
+		margin-bottom: $sm-padding;
+		position: relative;
+		width: em(22px);
+	}
+
+	&__item {
+		color: $dark-gray;
+		display: inline-block;
+		text-align: center;
+		flex-grow: 1;
+		vertical-align: top;
+
+		&.first {
+			text-align: left;
+
+			.StepTrack__circle {
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+
+		&.last {
+			text-align: right;
+
+			.StepTrack__circle {
+				margin-right: 0;
+				margin-left: auto;
+			}
+		}
+
+		&.visited {
+			color: $light-purple;
+
+			.StepTrack__circle {
+				border-color: $light-purple;
+
+				&::after {
+					background: $light-purple;
+					border-radius: 50%;
+					content: "";
+					display: block;
+					height: 10px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 10px;
+				}
+			}
+		}
+	}
+}

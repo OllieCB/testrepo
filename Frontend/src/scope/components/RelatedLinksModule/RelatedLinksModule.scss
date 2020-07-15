@@ -1,0 +1,44 @@
+@import "../../../shared/styles/base/variables";
+
+.RelatedLinks {
+	&__link {
+		display: block;
+		margin-bottom: $sm-padding;
+
+		&:first-of-type {
+			margin-top: $sm-padding;
+		}
+	}
+
+	&__cta {
+		border: 1px solid $light-purple;
+	}
+
+	@include for-print {
+		display: none;
+	}
+
+	&--internal {
+		background: $gray;
+		border-left: 5px solid $light-purple;
+		border-radius: 5px;
+		padding: $sm-padding $std-padding;
+
+		.RelatedLinks__title {
+			font-size: em(25px);
+			position: relative;
+
+			&::before {
+				content: "";
+				background: url(../assets/images/star.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				display: inline-block;
+				float: left;
+				margin-right: $sm-padding;
+				width: em(40px, 25px);
+				height: em(40px, 25px);
+			}
+		}
+	}
+}

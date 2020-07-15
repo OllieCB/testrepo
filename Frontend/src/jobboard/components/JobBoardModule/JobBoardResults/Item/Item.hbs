@@ -1,0 +1,53 @@
+<div class="JobBoardResultsItem {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+	{{#each this}}
+        <div class="JobBoardResultsItem__item {{#if recommended}}recommended{{/if}}" aria-label="{{title}}" tabindex="-1">
+            {{#if logo}}
+                <div class="JobBoardResultsItem__logo">
+                    <img class="lazy" src="{{placeholder}}" data-imgs="{{logo}}" alt=""></img>
+                </div>
+            {{/if}}
+            <h3 class="JobBoardResultsItem__title{{#unless (or company recommended)}} underline{{/unless}}">{{title}}</h3>
+            {{#if (or company recommended)}}
+            <div class="JobBoardResultsItem__company underline">
+                {{#if company}}
+                    <h4>{{company}}</h4>
+                {{/if}}
+                {{#if recommended}}
+                <span class="JobBoardResultsItem__recommended">Recommended</span>
+                {{/if}}
+            </div>
+            {{/if}}
+            {{#if location}}
+            <p class="JobBoardResultsItem__location">{{location}}</p>
+            {{/if}}
+            {{#each items}}
+                <div class="JobBoardResultsItem__icon-item">
+                    <div class="JobBoardResultsItem__icon-item-img">
+                        <img class="lazy" src="{{placeholder}}" data-imgs="{{icon}}" alt="" />
+                    </div>
+                    {{{label}}}
+                </div>
+            {{/each}}
+            <button class="JobBoardResultsItem__showButton btn transparent-purple js-show-information-button" type="button">
+                <span class="JobBoardResultsItem__showButton-show" aria-hidden="false">Show information</span>
+                <span class="JobBoardResultsItem__showButton-hide" aria-hidden="true">Hide information</span>
+            </button>
+            <div class="JobBoardResultsItem__information js-show-information-container hidden">
+                <div class="JobBoardResultsItem__information-column rte">
+                    <h4>{{description.primarytitle}}</h4>
+                    {{{description.primarybody}}}
+                </div>
+                <div class="JobBoardResultsItem__information-column rte">
+                    <h4>{{description.secondarytitle}}</h4>
+                    {{{description.secondarybody}}}
+                    {{#if closing}}
+                        <p><strong>{{closing}}</strong></p>
+                    {{/if}}
+                    <div class="JobBoardResultsItem__information-button">
+                        <a class="btn turquoise long" href="{{action.url}}">{{action.label}}</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+	{{/each}}
+</div>

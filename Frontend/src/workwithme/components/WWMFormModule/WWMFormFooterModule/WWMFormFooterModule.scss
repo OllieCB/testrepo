@@ -1,0 +1,27 @@
+@import "../../../styles/config/config.variables";
+
+.form__footer {
+	.btn {
+		cursor: pointer;
+	}
+
+	.form-submit {
+		padding: 30px 40px;
+		background: $wwm-bg-light;
+		margin-top: 30px;
+		border-radius: 10px;
+	}
+
+	.disclaimer {
+		p {
+			margin-top: 20px;
+			line-height: 25px;
+			color: $wwm-grey-darker;
+			font-size: 0.9em;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<div class="teaser teaser__{{style}} {{#if alignImagesRight}}teaser__right{{else}}teaser__left{{/if}}">
+	<div class="container-fluid">
+		<div class="row {{#if alignImagesRight}}flex-row-reverse{{/if}}">
+			<div class="col-lg-6">
+				<div class="teaser__images u-h-100">
+					{{#each images}}
+						<div class="teaser__image {{class}}">
+							<img src="{{placeholder}}" alt="{{alt}}" class="lazy" data-imgs="{{small}},{{medium}},{{large}}">
+						</div>
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="teaser__content p-y-xl">
+					<div class="intro m-b-sm">How it works</div>
+					<h2 class="h2 m-b-lg">Together we can drive social change</h2>
+
+					<div class="p m-b-md">
+						Did you know that 1 million disabled people in the UK want to work but aren’t given the opportunity?
+						<br/><br/>
+						That’s where we come in. #WorkWithMe is a growing community of businesses committed to thinking and acting differently about disability. The community is set up to allow members to share information, advice and insights in a safe, open and honest environment.
+					</div>
+
+					{{#if ctas}}
+						<div class="cta-list d-flex justify-content-between">
+							{{#each ctas}}
+								<a href="{{href}}" class="btn {{#if (eq style "light")}}{{lightClass}}{{else}}{{darkClass}}{{/if}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+									{{label}}
+								</a>
+							{{/each}}
+						</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

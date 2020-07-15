@@ -1,0 +1,14 @@
+<div class="JobBoardResults">
+	<p class="JobBoardResults__matchLabel js-job-board-match-label" aria-live="polite" aria-atomic="true">{{matchLabel}}</p>
+	<div class="srt js-job-board-more-count" aria-atomic="true" aria-live="polite"></div>
+    <div class="js-job-board-result-container">
+        {{#each results}}
+            {{> Item/Item}}
+        {{/each}}
+    </div>
+
+	<div class="JobBoardResults__loadMore js-job-board-loadMore" data-msg="{{spinner.msg}}">
+		<button class="btn transparent-purple loadMore" type="button">Load more results</button>
+		<img class="JobBoardResults__spinner lazy" src="{{spinner.placeholder}}" data-imgs="{{spinner.url}}" alt=""/>
+	</div>
+</div>

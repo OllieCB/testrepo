@@ -1,0 +1,42 @@
+.TitleBanner {
+	color: $white;
+	background: $purple;
+	position: relative;
+	display: flex;
+
+	&__title {
+		flex: 1;
+		padding: $sm-padding $lrg-padding $std-padding;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+	}
+
+	&__aside {
+		width: 6.66666667em;
+		text-align: center;
+		padding: $sm-padding $lrg-padding $std-padding;
+
+		@include for-tablet-up {
+			width: 13.33333334em;
+		}
+
+		&-text {
+			font-size: 0.833333335em;
+			line-height: 1.2em;
+
+			@include for-tablet-up {
+				font-size: 1em;
+			}
+		}
+
+		&-img {
+			padding-top: 10px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}

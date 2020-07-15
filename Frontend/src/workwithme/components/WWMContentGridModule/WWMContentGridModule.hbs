@@ -1,0 +1,102 @@
+<div
+	class="content-grid {{type}} {{#if (eq type "member-stories-large")}}pattern-bg{{else if (eq type "member-stories")}}pattern-bg{{else if (eq type "events-module")}}pattern-bg{{else if (eq type "quotes")}}with-controls{{else if (eq type "resources")}}resources__{{variant}}{{/if}} js-content-grid">
+	<div class="container-fluid">
+		<div class="heading-block text-center p-x-md">
+			{{#if subTitle}}
+				<div class="heading-block__title h5 m-b-sm">{{title}}</div>
+				<div class="heading-block__sub-title h3 m-b-md">{{subTitle}}</div>
+			{{else}}
+				<div class="text-left h2 m-b-sm">{{title}}</div>
+			{{/if}}
+			{{#if copy}}
+				<div class="row justify-content-center m-b-xl">
+					<div class="col-12 col-sm-10 col-md-6 text-center">
+						<p class="heading-block__copy">{{copy}}</p>
+					</div>
+				</div>
+			{{/if}}
+		</div>
+
+		<div class="content-grid__grid slick-slider">
+			{{#each cards}}
+				{{#if image}}
+					<div class="content-grid__grid--item">
+						<a href="{{link}}" title="{{title}}" class="card">
+							<div class="card__top p-x-0 p-y-0">
+
+								<img src="{{image.placeholder}}" alt="{{image.alt}}" class="lazy card__image"
+									data-imgs="{{image.small}},{{image.medium}},{{image.large}}">
+
+							</div>
+
+							<div class="card__bottom">
+								<div class="card__sub-title">{{subTitle}}</div>
+								<div class="card__title">{{title}}</div>
+								<div class="card__copy m-t-sm">{{copy}}</div>
+							</div>
+						</a>
+					</div>
+
+				{{else if author}}
+					<div class="content-grid__grid--item">
+						<div class="card__bottom">
+							<div class="card__copy m-t-sm">{{copy}}</div>
+							<div class="card__author m-t-sm">{{{author}}}</div>
+						</div>
+					</div>
+				{{else}}
+					<div class="content-grid__grid--item">
+						<a href="{{link}}" title="{{title}}" class="card">
+							<div class="card__top p-x-md p-y-md">
+								<div class="card__sub-title">{{subTitle}}</div>
+								<div class="card__title">{{title}}</div>
+							</div>
+
+							<div class="card__bottom">
+								<div class="card__copy m-t-sm">{{copy}}</div>
+								<div class="card__votes m-t-sm">{{votes}} people found this useful</div>
+							</div>
+						</a>
+					</div>
+				{{/if}}
+			{{/each}}
+		</div>
+
+		{{#if ctas}}
+			{{#if ctasWithHeadings}}
+				<div class="cta-list m-t-lg">
+					<div class="row">
+						{{#each ctas}}
+							<div class="col-12 col-sm-6 text-center">
+								<div class="heading-block p-x-md">
+									<div class="heading-block__sub-title heading-block__sub-title--sm h4 m-b-md">{{subTitle}}</div>
+									{{#if copy}}
+										<div class="row justify-content-center m-b-xl">
+											<div class="col-12 col-sm-9 text-center">
+												<p class="heading-block__copy heading-block__copy--no-bold">{{copy}}</p>
+											</div>
+										</div>
+									{{/if}}
+								</div>
+								
+								<a href="{{href}}" class="btn {{class}} m-x-sm" {{#if title}}title="{{title}}" {{/if}}
+									{{#if target}}target="{{target}}" {{/if}}>
+									{{label}}
+								</a>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+			{{else}}
+				<div class="cta-list d-flex justify-content-center m-t-lg">
+					{{#each ctas}}
+						<a href="{{href}}" class="btn {{class}} m-x-sm" {{#if title}}title="{{title}}" {{/if}}
+							{{#if target}}target="{{target}}" {{/if}}>
+							{{label}}
+						</a>
+					{{/each}}
+				</div>
+			{{/if}}
+		{{/if}}
+	</div>
+</div>

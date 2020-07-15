@@ -1,0 +1,194 @@
+@import "../../../../../shared/styles/base/variables";
+
+.JobBoardResultsItem {
+	@include for-tablet-up {
+		display: block;
+	}
+
+	&__item {
+		position: relative;
+		padding: $sm-padding $sm-padding;
+		background: $gray;
+		border-radius: 5px;
+		display: block;
+		margin: 0 0 em(30px);
+		overflow: hidden;
+		transition: box-shadow 0.2s linear;
+		margin-bottom: em(30px);
+
+		&.recommended {
+			background: #f4f0fa;
+			border: 2px solid #59029f;
+		}
+	}
+
+	&__logo {
+		position: relative;
+		width: em(120px);
+		max-height: em(60px);
+		margin-bottom: $sm-padding;
+
+		img {
+			max-width: em(120px);
+			height: em(60px);
+
+			@include for-tablet-up {
+				position: absolute;
+				right: 0;
+				max-width: em(180px);
+				height: em(90px);
+			}
+		}
+
+		@include for-tablet-up {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 20px;
+			width: em(180px);
+			max-height: em(90px);
+		}
+	}
+
+	&__title {
+		margin-bottom: em(10px);
+	}
+
+	&__company {
+		h4 {
+			display: inline-block;
+			margin-right: em(10px);
+			margin-bottom: em(12px);
+		}
+
+		&.underline {
+			@include underline-4();
+
+			padding-bottom: 0;
+
+			@include for-tablet-up {
+				margin-bottom: em(20px);
+			}
+		}
+	}
+
+	&__recommended {
+		display: inline-block;
+		background: #fed636;
+		border-radius: 25px;
+		padding: 6px 10px;
+		font-size: 0.7em;
+		font-weight: 500;
+		color: #340458;
+		margin-bottom: em(20px);
+	}
+
+	&__location {
+		font-weight: 500;
+		line-height: em(22px);
+		font-size: em(18px);
+		margin-bottom: em(20px);
+	}
+
+	&__icon-item {
+		line-height: em(30px);
+		margin-bottom: $sm-padding;
+		padding-left: em(40px);
+		position: relative;
+	}
+
+	&__icon-item-img {
+		display: inline-block;
+		vertical-align: top;
+
+		img {
+			left: 0;
+			position: absolute;
+			width: 1.8em;
+		}
+	}
+
+	&__information {
+		transition: 0.4s;
+
+		&.hidden {
+			visibility: hidden;
+			max-height: 0;
+			overflow: hidden;
+		}
+
+		@include for-desktop-up {
+			display: flex;
+			column-gap: em(20px);
+		}
+
+		&-column {
+			margin-top: $sm-padding;
+			margin-right: 10px;
+
+			@include for-desktop-up {
+				flex: 1 1 0px; // stylelint-disable-line
+			}
+
+			&:last-child {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+
+		&-button {
+			margin-bottom: em(50px);
+
+			a {
+				display: block;
+				width: 100%;
+				text-align: center;
+
+				@include for-tablet-up {
+					width: auto;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	&__showButton {
+		padding-right: 40px;
+		width: 100%;
+		text-align: center;
+
+		&::before {
+			font-size: 1em;
+			line-height: 1.5em;
+			background: url(/imgs/arrow.svg) right 0.1em center/0.85em no-repeat transparent !important;
+			display: block;
+			content: "";
+			width: 18px;
+			height: 26px;
+			position: absolute;
+			right: 15px;
+		}
+
+		&-show {
+			display: block;
+
+			.active & {
+				display: none;
+			}
+		}
+
+		&-hide {
+			display: none;
+
+			.active & {
+				display: block;
+			}
+		}
+
+		&.active {
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"sections": [
+		{
+			"title": "Employment advice and support",
+			"internal": {
+				"url": "/imgs/ribbon-star.svg",
+				"urlLight": "/imgs/ribbon-star-light.svg",
+				"placeholder": "/imgs/transparent1px.png",
+				"alt": "Internal content"
+			},
+			"items": [
+				{
+					"type": "dir",
+					"label": "Permitted work",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/permitted-work"
+				},
+				{
+					"type": "dir",
+					"label": "Applying and interviewing for a job",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/applying-and-interviewing"
+				},
+				{
+					"type": "dir",
+					"label": "Developing your career",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/developing-your-career"
+				},
+				{
+					"type": "dir",
+					"label": "Self-employment",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/self-employment"
+				},
+				{
+					"type": "dir",
+					"label": "Access to work",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/access-to-work"
+				},
+				{
+					"type": "dir",
+					"label": "Support for disabled employees",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/support-for-disabled-employees"
+				},
+				{
+					"internal": true,
+					"type": "dir",
+					"label": "Disability discrimination",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/disability-discrimination"
+				},
+				{
+					"type": "dir",
+					"label": "Get help from employment on Scope's",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/get-help-from-employment"
+				},
+				{
+					"type": "dir",
+					"label": "Help from employers",
+					"text": null,
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/help-from-employers"
+				}
+			]
+		},
+		{
+			"title": "Employment free Scope support",
+			"items": [
+				{
+					"type": "dir",
+					"label": "Support to work",
+					"text": "We provide telephone and online support to disabled people applying for jobs in England and Wales.",
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/support-to-work"
+				},
+				{
+					"type": "dir",
+					"label": "Starting Line employment programme",
+					"text": "Starting Line supports disabled people of working age living in Calderdale and London to find, apply for and keep a job.",
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/starting-line-employment"
+				},
+				{
+					"type": "dir",
+					"label": "Kickstart employment programme",
+					"text": "Kickstart support disabled people of working age into work in London and Leeds",
+					"endpoint": "/core/links",
+					"url": "/content_core.html/emotional-support-well-being/kickstart-employment-programme"
+				}
+			]
+		}
+	]
+}

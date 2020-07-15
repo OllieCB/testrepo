@@ -1,0 +1,10 @@
+<div class="Quote {{#if bottomMargin}}bottom-margin{{/if}}{{#if topMargin}}top-margin{{/if}}{{#if purple}}purple{{/if}}">
+	{{#if purple}}
+		<div class="corner-decoration top-right turquoise horizontal"></div>
+		<div class="corner-decoration bottom-left yellow vertical"></div>
+	{{/if}}
+	<blockquote class="Quote__block">
+		<p class="Quote__quote">{{quote}}</p>
+	</blockquote>
+	<cite class="Quote__cite">{{cite}}</cite>
+</div>

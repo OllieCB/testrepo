@@ -1,0 +1,85 @@
+@import "../../../shared/styles/base/variables";
+
+.Hero {
+	position: relative;
+	background: $gray;
+
+	&__img {
+		transition: filter 0.5s;
+		width: 100%;
+		object-fit: cover;
+		max-height: 400px;
+
+		@include for-tablet-up {
+			height: auto;
+			width: 100%;
+		}
+
+		&.thumb {
+			filter: blur(20px);
+		}
+	}
+
+	&__tab {
+		border-radius: 5px;
+		margin: em(-40px) auto 0;
+		padding: $std-padding $std-padding $lrg-padding;
+		position: relative;
+		width: calc(100% - #{$std-padding});
+		z-index: 3;
+
+		h2 {
+			font-size: em(25px);
+		}
+
+		@include for-tablet-up {
+			border-radius: 0 0 50% 53% / 0 0 52% 9%;
+			margin-top: 0;
+			position: absolute;
+			display: block;
+			top: 0;
+			width: em(400px);
+
+			h2 {
+				font-size: em(35px);
+			}
+
+			&--left {
+				left: $lrg-padding;
+				right: auto;
+			}
+
+			&--right {
+				left: auto;
+				right: $lrg-padding;
+			}
+		}
+
+		&.yellow {
+			background-color: $yellow;
+
+			.underline::after {
+				background: $purple;
+			}
+		}
+
+		&.purple {
+			background-color: $purple;
+			color: $white;
+		}
+
+		&-text {
+			@include for-tablet-up {
+				display: block;
+				margin-bottom: $sm-padding;
+				max-height: calc(6 * #{em(30px)});
+				min-height: calc(3 * #{em(30px)});
+				overflow: hidden;
+			}
+		}
+	}
+
+	@include for-print {
+		display: none;
+	}
+}

@@ -1,0 +1,30 @@
+@import "../../styles/base/variables";
+
+.AccessNav {
+	background: $white;
+	display: none;
+	position: absolute;
+	top: -20em;
+	z-index: 8;
+	width: 100%;
+
+	@include for-tablet-up {
+		display: block;
+	}
+
+	&__item {
+		background: $purple;
+		color: $yellow;
+		font-weight: 500;
+		padding: calc((60px - 1em) / 2) 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+
+		&:focus {
+			top: 20em;
+			text-decoration: none;
+		}
+	}
+}

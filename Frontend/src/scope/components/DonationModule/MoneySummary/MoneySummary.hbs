@@ -1,0 +1,27 @@
+<section class="MoneySummary">
+	<div class="MoneySummary__item js-moneySummary-toggle">
+		<button class="MoneySummary__item-toggle open" type="button" aria-label="{{title}}" aria-controls="{{id}}" aria-expanded="false">
+			<img class="lazy" src="{{placeholder}}" data-imgs="{{more}}" alt="" />
+		</button>
+		<button class="MoneySummary__item-toggle close" type="button" aria-label="{{title}}" aria-controls="{{id}}" aria-expanded="true">
+			<img class="lazy" src="{{placeholder}}" data-imgs="{{less}}" alt="" />
+		</button>
+		<div class="MoneySummary__container rte">
+			<h4 class="MoneySummary__title">{{title}}</h4>
+			<div id="{{id}}" class="MoneySummary__content js-moneySummary-content" tabindex="-1">
+				<p class="MoneySummary__chart">
+					<img class="lazy" src="{{graph.placeholder}}" data-imgs="{{graph.url}}" alt="{{graph.alt}}" />
+				</p>
+				<div class="MoneySummary__text-container">
+					{{#each items}}
+						<p class="MoneySummary__text">
+							<span class="corner-decoration top-left vertical {{#if @first}}light-purple{{/if}} {{#if (eq @index 1)}}turquoise{{/if}} {{#if (eq @index 2)}}purple{{/if}} {{#if @last}}yellow{{/if}}"></span>
+							<span class="MoneySummary__amount">{{amount}}</span>
+							{{text}}
+						</p>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

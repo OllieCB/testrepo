@@ -1,0 +1,14 @@
+@mixin flying-outline($outlineColor: $outline) {
+	outline-width: 3px;
+	outline-color: $outlineColor;
+	outline-style: solid;
+}
+
+.fixed-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	transform: translateZ(0);
+}

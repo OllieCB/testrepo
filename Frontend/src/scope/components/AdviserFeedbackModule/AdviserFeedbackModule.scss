@@ -1,0 +1,100 @@
+@import "../../../shared/styles/base/variables";
+
+.AdviserFeedback {
+	background: $gray;
+	border-left: 5px solid $light-purple;
+	border-radius: 5px;
+	padding: $sm-padding $std-padding;
+
+	&__title {
+		font-size: em(25px);
+		margin-bottom: $sm-padding;
+		position: relative;
+		color: $light-purple;
+
+		&::before {
+			content: "";
+			background: url(../assets/images/star.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			float: left;
+			margin-right: $sm-padding;
+			width: em(40px, 25px);
+			height: em(40px, 25px);
+		}
+	}
+
+	&__description {
+		margin-top: 10px;
+	}
+
+	&__label {
+		font-weight: 500;
+
+		.error & {
+			color: $red;
+			position: relative;
+
+			&::after {
+				content: url(/imgs/error.svg);
+				height: 1em;
+				width: 1em;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+
+	&__field {
+		height: 120px;
+		width: 100%;
+
+		.error & {
+			border-color: $red;
+		}
+
+		&-container {
+			position: relative;
+		}
+	}
+
+	&__submit {
+		text-align: right;
+	}
+
+	&__error {
+		color: $red;
+		display: none;
+		font-size: em(16px);
+		left: 0;
+		line-height: 1em;
+		margin-top: 5px;
+		bottom: calc(-1em - 5px);
+		position: absolute;
+
+		.error & {
+			display: block;
+		}
+	}
+
+	&.message {
+		border: 1px solid $success;
+	}
+
+	&__form {
+		.message & {
+			display: none;
+		}
+	}
+
+	&__message {
+		color: $purple;
+		display: none;
+
+		.message & {
+			display: block;
+		}
+	}
+}

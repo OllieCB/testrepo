@@ -1,0 +1,192 @@
+@import 'variables';
+
+.rte {
+	color: $dark-gray;
+
+	@include for-desktop-up {
+		font-size: em(19px);
+	}
+
+	@include for-print {
+		font-size: em(18px);
+	}
+
+	p {
+		line-height: 1.75em;
+		margin-bottom: em(20px);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		color: $light-purple;
+		font-weight: 500;
+		text-decoration: underline;
+
+		&.btn {
+			text-decoration: none;
+		}
+	}
+
+	img {
+		max-width: 100%;
+
+		@include for-print {
+			display: none;
+		}
+	}
+
+	ol,
+	ul {
+		line-height: em(30px);
+
+		li {
+			padding-left: em(30px);
+			position: relative;
+			margin-bottom: $sm-padding;
+
+			&::before {
+				content: "\2022";
+				color: $light-purple;
+				font-size: 2.5rem;
+				position: absolute;
+				left: 0;
+			}
+		}
+
+		ul li::before {
+			content: "\25E6";
+		}
+	}
+
+	ol {
+		counter-reset: olist;
+
+		li {
+			padding-left: em(40px);
+		}
+
+		li::before { // stylelint-disable-line
+			border: 2px solid $light-purple;
+			border-radius: 50%;
+			color: $light-purple;
+			counter-increment: olist;
+			content: counter(olist);
+			font-size: rem(12px);
+			font-weight: 500;
+			line-height: 1.1em;
+			padding: rem(3px, 12px) 0;
+			top: 3px;
+			text-align: center;
+			height: rem(17px, 12px);
+			width: rem(17px, 12px);
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $purple;
+		font-weight: 500;
+		line-height: em(22px);
+	}
+
+	h1,
+	h2,
+	h3 {
+		position: relative;
+	}
+
+	h1 {
+		font-size: em(35px);
+		margin-bottom: em(10px, 35px);
+	}
+
+	h2 {
+		font-size: em(30px);
+		margin-bottom: em(10px, 30px);
+	}
+
+	h3 {
+		font-size: em(25px);
+		margin-bottom: em(10px, 25px);
+	}
+
+	h4 {
+		line-height: em(30px);
+	}
+
+	table {
+		width: 100%;
+		max-width: 100%;
+		border-collapse: collapse;
+
+		td,
+		th {
+			border: 4px solid $white;
+			line-height: em(30px);
+			padding: 15px $sm-padding;
+			text-align: left;
+		}
+
+		td {
+			background: $gray;
+			overflow: hidden;
+		}
+
+		th {
+			background: rgba($purple, 0.15);
+			color: $purple;
+			font-weight: 500;
+		}
+	}
+
+	.rTable {
+		padding: 0;
+		margin-bottom: $std-padding;
+		line-height: em(30px);
+
+		@include for-tablet-up {
+			display: flex;
+			flex-wrap: wrap;
+
+			&--2cols {
+				.rTable__cell {
+					width: 50%;
+				}
+
+				&.horizontal {
+					.rTable__cell {
+						width: 75%;
+					}
+
+					.rTable__cell--head {
+						width: 25%;
+					}
+				}
+			}
+		}
+
+		&__cell {
+			background: $gray;
+			border-bottom: 2px solid $white;
+			border-top: 2px solid $white;
+			overflow: hidden;
+			padding: 15px $sm-padding;
+
+			&--head {
+				background: rgba($purple, 0.15);
+				color: $purple;
+				font-weight: 500;
+			}
+
+			@include for-tablet-up {
+				border: 2px solid $white;
+				flex-grow: 1;
+			}
+		}
+	}
+}

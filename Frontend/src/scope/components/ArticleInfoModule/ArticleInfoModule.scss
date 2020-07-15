@@ -1,0 +1,73 @@
+@import "../../../shared/styles/base/variables";
+
+.ArticleInfo {
+	background: $gray;
+
+	@include for-tablet-up {
+		padding: em(20px) 0;
+	}
+
+	&__field {
+		border-bottom: 1px solid $transparent-purple;
+		padding: em(20px) 0;
+
+		&.author {
+			font-weight: 500;
+
+			a {
+				color: $light-purple;
+				text-decoration: underline;
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: 0;
+		}
+
+		@include for-tablet-up {
+			border-left: 1px solid $dark-gray;
+			display: inline-block;
+			padding-bottom: 0;
+			padding-top: 0;
+			padding-left: 1em;
+			vertical-align: top;
+			margin-right: 1em;
+			border-bottom: 0;
+
+			&:first-of-type {
+				border-left: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
+	&__share-list,
+	&__share-item {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__share-item {
+		height: 1em;
+		margin-left: 1em;
+		width: em(35px);
+		position: relative;
+	}
+
+	&__share-link {
+		display: block;
+		line-height: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
+	&__share-icon {
+		height: 100%;
+	}
+
+	.wrapper {
+		overflow: visible;
+	}
+}

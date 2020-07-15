@@ -1,0 +1,71 @@
+{{!-- pages/heroes.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+
+		{{#fetchData 'HeroModule/data/pageNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/donationNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/articleNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/campaignNoVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/pageVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/donationVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/articleVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/campaignVideo'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/sidedLeft'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/sidedRight'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+		{{#fetchData 'HeroModule/data/homepage'}}
+			{{> HeroModule/HeroModule}}
+		{{/fetchData}}
+
+	{{/inline}}
+{{/defaultLayout}}

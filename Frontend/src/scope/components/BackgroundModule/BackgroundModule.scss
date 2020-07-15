@@ -1,0 +1,31 @@
+@import "../../../shared/styles/base/variables";
+
+.Background {
+	display: block;
+	height: $std-padding;
+	overflow: visible;
+
+	&__container {
+		height: 175px;
+		overflow: hidden;
+		position: relative;
+
+		@include for-tablet-up {
+			height: 275px;
+		}
+
+		&.purple {
+			background: $purple;
+		}
+
+		&.gray {
+			background: $gray;
+		}
+	}
+
+	@include for-mobile-only {
+		.corner-decoration.bottom-right {
+			display: none;
+		}
+	}
+}

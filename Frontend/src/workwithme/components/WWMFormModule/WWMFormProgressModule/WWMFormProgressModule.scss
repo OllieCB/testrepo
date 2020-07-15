@@ -1,0 +1,26 @@
+@import "../../../styles/config/config.variables";
+
+.form__progress {
+	&--sub-title {
+		margin: 10px 0 30px 0;
+	}
+
+	&--bar {
+		display: block;
+		position: relative;
+		height: 17px;
+		background: $wwm-grey-dark;
+		border-radius: 10px;
+		overflow: hidden;
+
+		&-in {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 25%;
+			background: $wwm-purple-light;
+			border-radius: 10px;
+		}
+	}
+}

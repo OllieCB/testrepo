@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-gb">
+	<head>
+		{{> includes/headBlock}}
+
+		<!-- Set title -->
+		<title>{{#if title}}{{title}}{{/if}}</title>
+	</head>
+	<body>
+		<div class="fixed-container">
+			{{#fetchSharedData 'CookieBannerModule/CookieBannerData'}}
+				{{> CookieBannerModule/CookieBannerModule}}
+			{{/fetchSharedData}}
+		</div>
+
+		{{#fetchSharedData 'AccessNavModule/AccessNavData'}}
+			{{> AccessNavModule/AccessNavModule}}
+		{{/fetchSharedData}}
+
+		{{#fetchData 'AnnouncementModule/data/banner1'}}
+			{{> AnnouncementModule/AnnouncementModule}}
+		{{/fetchData}}
+
+		<div class="container">
+			{{#> header}}
+				{{#fetchSharedData 'HeaderModule/HeaderData'}}
+					{{> HeaderModule/HeaderModule}}
+				{{/fetchSharedData}}
+
+				{{#fetchData 'BreadcrumbModule/BreadcrumbData'}}
+					{{> BreadcrumbModule/BreadcrumbModule}}
+				{{/fetchData}}
+			{{/header}}
+
+			<main id="main" tabindex="-1">
+				<div class="js-generic-form">
+					{{#> content}}
+						Optional default content
+					{{/content}}
+				</div>
+			</main>
+
+			{{#> footer}}
+				{{#fetchSharedData 'FooterModule/FooterData'}}
+					{{> FooterModule/FooterModule}}
+				{{/fetchSharedData}}
+			{{/footer}}
+		</div>
+
+		{{> includes/anchorDescribedby}}
+
+		<script src="/js/main.js"></script>
+	</body>
+</html>

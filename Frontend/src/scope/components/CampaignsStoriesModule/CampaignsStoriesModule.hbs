@@ -1,0 +1,11 @@
+<section class="CampStories js-campStories {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-base-url="{{baseUrl}}" data-match-count="{{matchCount}}">
+	<div class="CampStories__wrapper">
+		{{#with filter}}
+			{{> ./Filter/Filter}}
+		{{/with}}
+
+		<h2 class="CampStories__title underline">{{title}}</h2>
+	</div>
+
+	{{> PageItemListing/PageItemListing twoLevels="true"}}
+</section>

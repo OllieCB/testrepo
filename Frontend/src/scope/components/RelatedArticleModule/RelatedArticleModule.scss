@@ -1,0 +1,102 @@
+@import "../../../shared/styles/base/variables";
+
+.RelatedArticle {
+	padding: 0 $lrg-padding;
+
+	@include for-desktop-up {
+		padding: 0 $wrapper-padding;
+	}
+
+	.content-container & {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $container;
+		padding: 0;
+
+		@include for-desktop-up {
+			width: $container-desktop;
+		}
+	}
+
+	&__title {
+		font-size: em(25px);
+		font-weight: 500;
+		margin-bottom: em(15px);
+		position: relative;
+
+		&.white {
+			color: $white;
+		}
+	}
+
+	&__list {
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	&__item {
+		background: $gray;
+		margin: 0 0 em(30px);
+		position: relative;
+
+		@include for-tablet-up {
+			margin: 0 em(30px) 0 0;
+			width: calc(100% / 3 - #{em(30px)});
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__visual {
+		overflow: hidden;
+		padding-top: 56.25%;
+		position: relative;
+	}
+
+	&__img {
+		height: 100%;
+	}
+
+	&__type {
+		border-top-right-radius: 2.25em;
+		bottom: 0;
+		font-weight: 500;
+		left: 0;
+		padding: em(15px);
+		padding-right: 1.5em;
+		position: absolute;
+
+		&--story {
+			color: $white;
+			background: $purple;
+		}
+
+		&--inside {
+			background: $yellow;
+		}
+
+		&--campaign {
+			background: $turquoise;
+		}
+
+		&--news {
+			background: $white;
+		}
+	}
+
+	&__content {
+		padding: $sm-padding $sm-padding 50px;
+	}
+
+	&__link {
+		position: absolute;
+		bottom: $sm-padding;
+	}
+
+	@include for-print {
+		display: none;
+	}
+}

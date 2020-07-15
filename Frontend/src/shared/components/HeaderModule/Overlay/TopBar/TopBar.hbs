@@ -1,0 +1,34 @@
+<div class="TopBar">
+	<div class="TopBar__links">
+		{{#each links}}
+			<a href="{{url}}">{{label}}</a>
+		{{/each}}
+	</div>
+
+	<div class="TopBar__user-container js-dropdown-parent">
+		{{#if isLoggedIn}}
+			<form class="TopBar__user" action="" method="post">
+				<button type="submit">
+					<span class="icon-container-tall">
+						<img class="dark-icon v-center lazy" src="{{placeholder}}" data-imgs="{{userIconDark}}" alt="">
+						<img class="light-icon v-center lazy" src="{{placeholder}}" data-imgs="{{userIcon}}" alt="">
+					</span>
+					Logout
+				</button>
+			</form>
+		{{/if}}
+	</div>
+	<button class="TopBar__close-handle js-nav-close" aria-label="Close menu">
+		Close
+		<span class="icon-container-long">
+			<img class="v-center lazy" src="{{placeholder}}" data-imgs="{{closeIcon}}" alt="">
+		</span>
+	</button>
+	<form class="TopBar__search js-searchbar" method="get" action="https://search.scope.org.uk/s/search.html" tabindex="0"  data-search="dev-scope-local-as2" data-index="site-search-master-index-110" data-search-key="C91B987C79F105995DE5C80F6A121AE8">
+		<div class="TopBar__search--combobox" role="combobox" aria-expanded="false" aria-owns="topBarSuggestions" aria-haspopup="listbox">
+			<input id="query" class="TopBar__search--search" type="text" name="query" autocomplete="off" aria-autocomplete="list" aria-controls="topBarSuggestions" aria-activedescendant required tabindex="-1" />
+			<label id="topbar-search-label" for="query" class="TopBar__search-label v-center">Search</label>
+		</div>
+		<button class="TopBar__search-submit" type="submit" aria-label="submit search" tabindex="-1"><img class="v-center lazy" src="{{placeholder}}" data-imgs="{{searchIcon}}" alt=""></button>
+	</form>
+</div>

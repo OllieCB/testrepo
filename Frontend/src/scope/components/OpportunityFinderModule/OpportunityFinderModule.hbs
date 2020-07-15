@@ -1,0 +1,51 @@
+<section class="OpportunityFinder js-opportunity-finder {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-match-count="{{matchCount}}">
+	{{#with title}}
+		{{> TitleBannerModule/TitleBannerModule}}
+	{{/with}}
+	<form class="OpportunityFinder__form js-opportunity-form form" action="{{submit.endpoint}}" method="post">
+		<div class="layout layout-flex">
+			{{#each textSearch ~}}
+				<div class="lg-col-auto bottom-margin">
+					<label for="{{id}}">{{label}}</label>
+					<input id="{{id}}" type="text" name="{{name}}" placeholder="{{placeholder}}" />
+				</div>
+			{{~/each}}
+		</div>
+
+		<div class="OpportunityFinder__fields js-opportunity-fields">
+			<button class="OpportunityFinder__overlay-back js-opportunity-back" type="button">
+				<img class="lazy" src="{{backButton.placeholder}}" data-imgs="{{backButton.url}}" alt="" />
+				{{backButton.label}}
+			</button>
+
+			{{#each checkboxFields}}
+				<fieldset class="OpportunityFinder__field">
+					<legend class="OpportunityFinder__legend">{{title}}</legend>
+					<div class="layout layout-flex">
+						{{#each options ~}}
+							<label class="label-checkbox lg-col-auto">
+								<input type="checkbox" name="{{name}}" />
+								<span class="custom"></span>
+								{{label}}
+							</label>
+						{{~/each}}
+					</div>
+				</fieldset>
+			{{/each}}
+
+			<div class="OpportunityFinder__overlay-submit clearfix">
+				<button class="btn purple search right js-opportunities-submit" type="submit">{{submit.label}}</button>
+			</div>
+		</div>
+
+		<div class="OpportunityFinder__bottom layout">
+			<button class="OpportunityFinder__more js-opportunity-more" type="button">Show more</button>
+			<button class="OpportunityFinder__less js-opportunity-less" type="button">Show less</button>
+			<button class="btn purple search right js-opportunity-submit" type="submit">{{submit.label}}</button>
+		</div>
+	</form>
+
+	{{#with data}}
+		{{> PageItemListing/PageItemListing}}
+	{{/with}}
+</section>

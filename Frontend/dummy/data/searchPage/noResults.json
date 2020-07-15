@@ -1,0 +1,25 @@
+{
+	"matchLabel": "No match found",
+	"noResults": {
+		"content": "Sorry we couldn't find any matches for your query",
+		"searchForLabel": "Other people often search for:",
+		"searchTerms": [
+			{
+				"url": "google.com",
+				"label": "Education"
+			},
+			{
+				"url": "google.com",
+				"label": "Work"
+			},
+			{
+				"url": "google.com",
+				"label": "Equipment"
+			},
+			{
+				"url": "google.com",
+				"label": "Benefits"
+			}
+		]
+	}
+}

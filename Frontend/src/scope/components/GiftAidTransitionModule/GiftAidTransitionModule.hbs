@@ -1,0 +1,61 @@
+<div class="GiftAidTransition {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}} js-giftaid">
+	<form class="form" action="{{endpoint}}" method="post">
+		{{#with legacy}}
+			{{> Legacy/Legacy}}
+		{{/with}}
+				
+		{{#with giftAid}}
+			{{> GiftAid/GiftAid}}
+		{{/with}}
+
+		{{#with fundraising}}
+			{{> Fundraising/Fundraising}}
+		{{/with}}
+
+		{{#with contacts}}
+			{{> InTouch/InTouch}}
+		{{/with}}
+
+		<div class="GiftAidTransition__next-container layout">
+			<button class="btn link purple right" type="submit">Next</button>
+		</div>
+	</form>
+</div>
+
+
+<!-- THIS SCRIPT SHOULD NOT BE INCLUDED IN THE BACKEND
+     IT IS USED IN PLACE OF THE SERVER SIDE RENDERING -->
+<script charset="utf-8">
+	const last = arr => arr[arr.length - 1];
+
+	const queries = last(window.location.href.split('?'))
+		.split('&')
+		.map(i => i.split('='))
+		.reduce((a, i) => {
+			const o = {};
+			o[i[0]] = decodeURIComponent(i[1]); // eslint-disable-line
+
+			return Object.assign(a, o);
+		}, {});
+
+	const submit = document.querySelector('.GiftAidTransition__next-container');
+	const hiddens = [
+		document.createElement('input'),
+		document.createElement('input'),
+	].map((h, i) => {
+		h.type = 'hidden';
+		h.name = Object.keys(queries)[i + 1];
+		h.value = queries[i === 0 ? 'first_name' : 'payer_email'];
+
+		return h;
+	});
+
+	hiddens.forEach(h => {
+		document.querySelector('.form').insertBefore(h, submit)
+	});
+
+	// const temp = Math.round(amount * 125) / 100;
+   //
+	// document.querySelector('.js-giftAid-amount').innerHTML = `£${amount % 1 === 0 ? amount : amount.toFixed(2)}`;
+	// document.querySelector('.js-giftAid-result').innerHTML = `£${temp % 1 === 0 ? temp : temp.toFixed(2)}`;
+</script>

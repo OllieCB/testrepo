@@ -1,0 +1,22 @@
+{{#> blankLayout title="Content Grid"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMContentGridModule/data/WWMContentGridData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+		{{#fetchData 'WWMContentGridModule/data/WWMMemberStoriesGrid'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+		{{#fetchData 'WWMContentGridModule/data/WWMQuotesCarouselData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+		{{#fetchData 'WWMContentGridModule/data/WWMMemberStoriesLargeGrid'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+		{{#fetchData 'WWMContentGridModule/data/WWMResourcesGridData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+		{{#fetchData 'WWMContentGridModule/data/WWMEventsModuleData'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+	{{/inline}}
+	{{/blankLayout}}

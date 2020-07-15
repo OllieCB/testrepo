@@ -1,0 +1,19 @@
+{{#> blankLayout title="Teaser"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMTeaserModule/data/teaserOneData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserTwoData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserThreeData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'WWMTeaserModule/data/teaserFourData'}}
+			{{> WWMTeaserModule/WWMTeaserModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

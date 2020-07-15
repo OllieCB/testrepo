@@ -1,0 +1,29 @@
+<div id="{{id}}" class="Gallery">
+	<div class="Gallery__slides-container js-gallery-slider" aria-live="polite" id="galleryContainer1">
+		{{#each images}}
+			<div class="Gallery__slide js-gallery-slide" aria-hidden="{{#if @first}}false{{else}}true{{/if}}" aria-describedby="{{id}}">
+				<img class="Gallery__img lazy" src="{{placeholder}}" data-imgs="{{smallUrl}},{{mediumUrl}},{{url}}" alt="{{alt}}">
+			</div>
+		{{/each}}
+	</div>
+	<div class="wrapper">
+		<div class="Gallery__caption-container" aria-live="polite">
+			{{#each images}}
+				<p id="{{id}}" class="Gallery__caption v-center js-gallery-captions" aria-hidden="{{#if @first}}false{{else}}true{{/if}}">{{caption}}</p>
+			{{/each}}
+		</div>
+	</div>
+	<div class="Gallery__counter-container" aria-live="polite">
+		<div class="Gallery__counter js-gallery-counter" aria-label="1 of {{images.length}}">
+			<p class="Gallery__counter-wrapper" aria-hidden="true">
+				<span class="Gallery__count">1</span>/{{images.length}}
+			</p>
+		</div>
+	</div>
+	<button class="Gallery__action js-prev hidden" aria-label="previous slide" aria-controls="galleryContainer1">
+		<img src="{{handlesIcon}}" alt="">
+	</button>
+	<button class="Gallery__action Gallery__action--next js-next" aria-label="next slide" aria-controls="galleryContainer1">
+		<img src="{{handlesIcon}}" alt="">
+	</button>
+</div>

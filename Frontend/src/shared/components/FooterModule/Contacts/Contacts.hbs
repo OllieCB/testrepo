@@ -1,0 +1,20 @@
+<section class="FContacts">
+	<div class="FContacts__header">
+		<h2 class="FContacts__title title">{{title}}</h2>
+		<p class="FContacts__sub">{{sub}}</p>
+	</div><!--
+	--><ul class="FContacts__list">
+		{{~#each contacts}}
+			<li class="FContacts__item">
+				<img class="FContacts__icon lazy" src="{{icon.placeholder}}" data-imgs="{{icon.url}}" alt="" aria-hidden="true">
+				<div class="FContacts__wrapper">
+					<div class="FContacts__ltitle title">{{label}}</div>
+					<div class="FContacts__lvalue">
+						{{#if srtValue}}<span class="srt">{{srtValue}}</span>{{/if}}
+						<a href="{{type}}:{{value}}" {{#if srtValue}}aria-hidden="true"{{/if}}>{{value}}</a>
+					</div>
+				</div>
+			</li>
+		{{~/each~}}
+	</ul>
+</section>

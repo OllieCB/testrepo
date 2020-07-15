@@ -1,0 +1,19 @@
+<div class="wrapper rte">
+	<div class="RelatedLinks {{#if internal}}RelatedLinks--internal{{/if}} {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+		{{#if internal}}
+			<h4 class="RelatedLinks__title">
+				<span class="srt">{{internal}}</span>
+				{{title}}
+			</h4>
+		{{else}}
+			<h2 class="RelatedLinks__title underline">{{title}}</h2>
+		{{/if}}
+		{{#each links}}
+			<a class="RelatedLinks__link" href="{{url}}">{{label}}</a>
+		{{/each}}
+
+		{{#if cta}}
+			<a class="RelatedLinks__cta btn" href="{{cta.url}}">{{cta.label}}</a>
+		{{/if}}
+	</div>
+</div>

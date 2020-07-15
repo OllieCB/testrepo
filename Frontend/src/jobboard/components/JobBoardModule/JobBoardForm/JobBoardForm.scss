@@ -1,0 +1,32 @@
+.JobBoardForm {
+	background: $gray;
+	padding: $std-padding 0;
+	margin-bottom: $std-padding;
+
+	&__current-location {
+		cursor: pointer;
+		font-weight: 500;
+		margin-top: 10px;
+		padding-right: 1.5em;
+		position: relative;
+		text-decoration: underline;
+	}
+
+	&__current-icon {
+		height: 1.3em;
+		margin-top: 1px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1.3em;
+	}
+
+	&__top {
+		margin-bottom: $sm-padding;
+	}
+
+	.layout {
+		padding: 0 $lrg-padding;
+	}
+}

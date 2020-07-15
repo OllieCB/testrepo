@@ -1,0 +1,27 @@
+<div class="wrapper">
+	<div class="Video js-video {{#if caption}}Video--caption{{/if}} {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}" data-id="{{video}}">
+		<div class="Video__img-container">
+			<img class="Video__img lazy" src="{{placeholder}}" data-imgs="{{smallBg}},{{mediumBg}},{{background}}" alt="" aria-hidden="true" />
+		</div>
+		<div class="Video__video-container">
+			<button class="Video__handle js-video-handle" aria-label="play video">
+				<span class="icon-container-tall">
+					<img class="v-center lazy" src="{{handle.placeholder}}" data-imgs="{{handle.icon}}" alt="">
+				</span>{{handle.label}}
+			</button>
+			<div class="Video__video-player js-video-container"></div>
+		</div>
+		{{#if caption}}
+			<div class="Video__caption-container">
+				<p class="Video__caption v-center">{{caption}}</p>
+			</div>
+		{{/if}}
+	</div>
+	{{#if transcript}}
+		<div class="Accordion--video js-accordion bottom-margin">
+			{{#with transcript}}
+				{{> AccordionModule/Accordion single="true"}}
+			{{/with}}
+		</div>
+	{{/if}}
+</div>

@@ -1,0 +1,22 @@
+@import "../../../shared/styles/base/variables";
+
+.GiftAidTransition {
+	&__next-container {
+		padding: $std-padding $donation-wrapper;
+		padding-bottom: 0;
+
+		&::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.btn {
+		width: 33%;
+	}
+}

@@ -1,0 +1,156 @@
+@import "../../styles/config/config.variables";
+
+.form__search {
+	&--top {
+		height: 90px;
+		background: $wwm-purple-light;
+		padding: 20px 0;
+
+		@media (max-width: 767px) {
+			height: 175px;
+		}
+	}
+
+	&--input {
+		display: flex;
+		position: relative;
+		background: $wwm-white;
+		border-radius: 10px;
+		height: 60px;
+		padding: 10px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&--field {
+		flex: 1;
+		border: none;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		font-size: 16px;
+		font-weight: $font-weight-bold;
+	}
+
+	&--submit.btn {
+		display: flex;
+		position: absolute;
+		right: 15px;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		padding: 0 40px;
+
+		@media (max-width: 767px) {
+			padding: 0 20px;
+		}
+
+		&::before {
+			content: "\e909";
+			font-family: 'icomoon', sans-serif;
+			margin-right: $margin-xs;
+		}
+	}
+
+	&--filters {
+		display: flex;
+		margin: 0 -5px;
+	}
+
+	&--filter {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		margin: 0 5px;
+		height: 60px;
+		line-height: 60px;
+		background: $wwm-purple-dark;
+		color: $wwm-white;
+		border-radius: 10px;
+		cursor: pointer;
+
+		@include transition;
+
+		&.active {
+			height: 80px;
+			border-radius: 10px 10px 0 0;
+			background: $wwm-bg-light;
+			color: $wwm-purple-light;
+		}
+	}
+
+	&--bottom {
+		position: relative;
+		background: $wwm-bg-light;
+		margin-bottom: 30px;
+	}
+
+	&--toggle-list {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 20;
+		padding: 15px 0;
+		opacity: 0;
+		display: none;
+
+		@include transition;
+
+		&.active {
+			opacity: 1;
+			display: block;
+		}
+	}
+
+	&--toggle {
+		position: relative;
+		display: inline-block;
+		height: 60px;
+		line-height: 60px;
+		padding: 0 30px;
+		border-radius: 60px;
+		background: $wwm-white;
+		margin: $margin-xs 5px;
+		cursor: pointer;
+
+		@include transition;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			border-bottom: 2px solid $wwm-white;
+			border-left: 2px solid $wwm-white;
+			transform: translateY(-2px) rotate(-45deg);
+			transform-origin: 0 8px;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			transition: height 0.3s 0.3s, width 0.3s 0s, opacity 0.3s 0.3s;
+		}
+
+		&:hover {
+			@media (hover: hover) and (pointer: fine) {
+				background: $wwm-purple-light;
+				color: $wwm-white;
+			}
+		}
+
+		&.active {
+			padding-left: 40px;
+			padding-right: 20px;
+			background: $wwm-purple-light;
+			color: $wwm-white;
+
+			&::before {
+				opacity: 1;
+				width: 15px;
+				height: 8px;
+				transition: height 0.3s 0s, width 0.3s 0.3s, opacity 0.3s 0s;
+			}
+		}
+	}
+}

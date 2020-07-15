@@ -1,0 +1,21 @@
+{{!-- pages/article.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{> BackgroundModule/BackgroundModule}}
+
+		{{#fetchData 'VideoModule/data/noCaption'}}
+			{{> VideoModule/VideoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'ThankyouModule/ThankyouData'}}
+			{{> ThankyouModule/ThankyouModule}}
+		{{/fetchData}}
+	{{/inline}}
+
+	{{#*inline "footer"}}
+		{{#fetchData 'NeedHelpFooter/NeedHelpData'}}
+			{{> NeedHelpFooter/NeedHelpFooter}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

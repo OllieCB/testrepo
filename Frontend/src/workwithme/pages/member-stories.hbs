@@ -1,0 +1,13 @@
+{{#> blankLayout title="Member Stories Grid"}}
+	{{#*inline "content"}}
+		{{#fetchData 'WWMContentGridModule/data/WWMMemberStoriesGrid'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+
+		<div style="height: 150px;"></div>
+
+		{{#fetchData 'WWMContentGridModule/data/WWMMemberStoriesLargeGrid'}}
+			{{> WWMContentGridModule/WWMContentGridModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/blankLayout}}

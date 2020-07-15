@@ -1,0 +1,9 @@
+{{!-- pages/donation.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'OpportunityFinderModule/OpportunityFinderData'}}
+			{{> OpportunityFinderModule/OpportunityFinderModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

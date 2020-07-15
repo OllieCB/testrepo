@@ -1,0 +1,20 @@
+@import "../../../shared/styles/base/variables";
+
+.MoneyAdvice {
+	h2 {
+		@include underline-2();
+	}
+
+	h2,
+	h3 {
+		margin-top: $std-padding;
+	}
+
+	h2 + h3 {
+		margin-top: 0;
+	}
+
+	.add-action {
+		line-height: 1.75em;
+	}
+}

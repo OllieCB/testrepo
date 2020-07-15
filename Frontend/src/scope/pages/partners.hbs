@@ -1,0 +1,9 @@
+{{!-- pages/quote.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'PartnersModule/PartnersData'}}
+			{{> PartnersModule/PartnersModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

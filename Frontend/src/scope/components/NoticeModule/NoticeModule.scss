@@ -1,0 +1,47 @@
+@import "../../../shared/styles/base/variables";
+
+.Notice {
+	border-radius: 5px;
+	padding: $sm-padding;
+
+	&--note {
+		background: $gray;
+		border-left: 5px solid $light-purple;
+	}
+
+	&--warning {
+		background: $light-yellow;
+		border-left: 5px solid $yellow;
+	}
+
+	&__title {
+		font-size: em(25px);
+		margin-bottom: $sm-padding;
+		position: relative;
+
+		.Notice--note &,
+		.Notice--warning & {
+			color: $light-purple;
+
+			&::before {
+				content: "";
+				background: url(../assets/images/star.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				display: inline-block;
+				float: left;
+				margin-right: $sm-padding;
+				width: em(40px, 25px);
+				height: em(40px, 25px);
+			}
+		}
+
+		.Notice--warning & {
+			color: $purple;
+
+			&::before {
+				background: url(../assets/images/warning.svg);
+			}
+		}
+	}
+}

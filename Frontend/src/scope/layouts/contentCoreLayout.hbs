@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-gb">
+	<head>
+		{{> includes/headBlock}}
+
+		<!-- Set title -->
+		<title>{{#if title}}{{title}}{{/if}}</title>
+	</head>
+	<body>
+		<div class="fixed-container fixed-container-aside">
+			<div aria-live="polite" class="js-helpful-content"></div>
+		</div>
+		<div class="fixed-container">
+			{{#fetchSharedData 'CookieBannerModule/CookieBannerData'}}
+				{{> CookieBannerModule/CookieBannerModule}}
+			{{/fetchSharedData}}
+		</div>
+
+		<div class="container">
+			{{#> header}}
+				{{#fetchSharedData 'AccessNavModule/AccessNavData'}}
+					{{> AccessNavModule/AccessNavModule}}
+				{{/fetchSharedData}}
+
+				{{#fetchSharedData 'HeaderModule/HeaderData'}}
+					{{> HeaderModule/HeaderModule}}
+				{{/fetchSharedData}}
+
+				{{#fetchData 'BreadcrumbModule/BreadcrumbData'}}
+					{{> BreadcrumbModule/BreadcrumbModule}}
+				{{/fetchData}}
+			{{/header}}
+
+			<main id="main">
+				<img class="article-ribbon lazy" src="/imgs/transparent1px.png" data-imgs="/imgs/ribbon-star.svg" alt="">
+
+				<div class="content-container">
+					{{#> aside}}
+					{{/aside}}
+
+					<div class="content">
+						{{#> content}}
+							Optional default content
+						{{/content}}
+					</div>
+				</div>
+			</main>
+
+			{{#> footer}}
+				{{#fetchSharedData 'FooterModule/FooterData'}}
+					{{> FooterModule/FooterModule}}
+				{{/fetchSharedData}}
+			{{/footer}}
+		</div>
+
+		{{> includes/anchorDescribedby}}
+
+		<!-- <script type="text/javascript" charset="utf&#45;8"> -->
+		<!-- 	if ('serviceWorker' in navigator) { -->
+		<!-- 		navigator.serviceWorker.register('/service&#45;worker.js') -->
+		<!-- 			.then((reg) => { -->
+		<!-- 				console.log('SW registered with scope: ', reg.scope); -->
+		<!-- 			}).catch((err) => { -->
+		<!-- 				console.log('Could not register service worker: ', err); -->
+		<!-- 			}); -->
+		<!-- 	} -->
+		<!-- </script> -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

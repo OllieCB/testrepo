@@ -1,0 +1,17 @@
+<div class="TitleBanner {{#if sticky}}js-title-sticky{{/if}}">
+	{{#if sticky}}<div class="TitleBanner__placeholder js-title-placeholder"></div>{{/if}}
+	<div class="TitleBanner__content {{#if narrow}}TitleBanner__content--narrow{{/if}} js-title-content">
+		{{#if narrow}}
+			<div class="wrapper">
+		{{/if}}
+			<div class="corner-decoration top-right horizontal yellow"></div>
+			<h1 class="TitleBanner__title underline">{{title}}</h1>
+			{{#if location}}<p class="TitleBanner__text js-title-text">{{location}}</p>{{/if}}
+			{{#if cta}}
+				<a class="btn turquoise long" href="{{cta.url}}" accesskey="a">{{cta.label}}</a>
+			{{/if}}
+		{{#if narrow}}
+			</div>
+		{{/if}}
+	</div>
+</div>

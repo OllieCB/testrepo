@@ -1,0 +1,99 @@
+{
+	"query": "q=value",
+	"results": [
+		{
+			"url": "http://google.com",
+			"title": "Celebrals palsy advice",
+			"content": "Cerebral palsy or CP is a condition that affects muscle control and movement.",
+			"category": "Advice and support",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Ageing and disability",
+			"content": "The effects of ageing on disabled people with spina bifida, multiple sclerosis, cerebral palsy",
+			"category": "Advice and support",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Steem cell therapy and CP",
+			"content": "The potential for stem cell therapies to have an impact on cerebral palsy",
+			"category": "News",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Young person\"s guide to cerebral palsy",
+			"content": "Young people with cerebral palsy answer common questions about CP.",
+			"category": "Campaigns",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Selective dorsal rhizotomy (SDR) to be funded on the NHS",
+			"content": "Thousands of patients are to benefit from new innovative treatments that are to be made routinely available on the NHS, including one that will improve the mobility of children with cerebral palsy",
+			"featuring": {
+				"img": {
+					"url": "https://us.v-cdn.net/6027153/uploads/userpics/437/nK3EDJ27XQACD.jpg",
+					"alt": "Richard scope"
+				},
+				"text": "Discussion in Cerebral palsy - 9 July 2018"
+			},
+			"category": "Scope community",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Celebrals palsy advice",
+			"content": "Cerebral palsy or CP is a condition that affects muscle control and movement.",
+			"category": "Advice and support",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Ageing and disability",
+			"content": "The effects of ageing on disabled people with spina bifida, multiple sclerosis, cerebral palsy",
+			"category": "Advice and support",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Steem cell therapy and CP",
+			"content": "The potential for stem cell therapies to have an impact on cerebral palsy",
+			"category": "News",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Young person\"s guide to cerebral palsy",
+			"content": "Young people with cerebral palsy answer common questions about CP.",
+			"category": "Campaigns",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		},
+		{
+			"url": "http://google.com",
+			"title": "Selective dorsal rhizotomy (SDR) to be funded on the NHS",
+			"content": "Thousands of patients are to benefit from new innovative treatments that are to be made routinely available on the NHS, including one that will improve the mobility of children with cerebral palsy",
+			"featuring": {
+				"img": {
+					"url": "https://us.v-cdn.net/6027153/uploads/userpics/437/nK3EDJ27XQACD.jpg",
+					"alt": "Richard scope"
+				},
+				"text": "Discussion in Cerebral palsy - 9 July 2018"
+			},
+			"category": "Scope community",
+			"searchId": "<searchId>",
+			"azureUniqueId": "<azureUniqueId>"
+		}
+	]
+}

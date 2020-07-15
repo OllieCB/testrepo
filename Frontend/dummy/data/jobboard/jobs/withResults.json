@@ -1,0 +1,251 @@
+{
+	"success": true,
+	"hasMatches":true,
+	"matchCount":7,
+	"pageIndex":0,
+	"matchLabel":"7 matches found",
+	"filters":{
+		"hasRecommended":false,
+		"companies":[
+			{
+				"name": "All",
+				"id": ""
+			},
+			{
+				"name": "Harwich Haven Authority",
+				"id": "1"
+			},
+			{
+				"name": "Company 2",
+				"id": "2"
+			}
+		],
+		"employmentTypes": [
+			{
+				"name": "All",
+				"id": ""
+			},
+			{
+				"name": "Full time",
+				"id": "1"
+			},
+			{
+				"name": "Temporary",
+				"id": "2"
+			}
+		]
+	},
+	"results":[
+		[
+			{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"closing": "Applications close on 25 May 2020.",
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			},{
+				"title":"Assistant shop manager",
+				"company":"Harwich Haven Authority",
+				"location": "Harwich",
+				"recommended": false,
+				"logo": "imgs/harwich.png",
+				"items":[
+					{
+						"label":"£15,075 per year",
+						"icon":"/imgs/money.svg"
+					},
+					{
+						"label":"Full time, temporary",
+						"icon":"/imgs/document.svg"
+					},
+					{
+						"label":"35 hours per week (Monday to Sunday)",
+						"icon":"/imgs/clock-dark.svg"
+					}
+				],
+				"action":{
+					"label":"Find out more",
+					"url":"/jobs/jobs-at-scope/events-coordinator-london"
+				},
+				"description":{
+					"primarytitle":"About the role",
+					"primarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+
+					"secondarybody":"<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"					}
+			}
+		]
+	]
+}

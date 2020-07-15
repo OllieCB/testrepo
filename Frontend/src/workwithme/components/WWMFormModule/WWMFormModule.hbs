@@ -1,0 +1,18 @@
+<div class="form-module">
+	
+	{{#with progress}}
+		{{> ./WWMFormProgressModule/WWMFormProgressModule}}
+	{{/with}}
+
+	<form class="form" action="/" method="post">
+
+		{{#with fields}}
+			{{> ./WWMFormFieldsModule/WWMFormFieldsModule}}
+		{{/with}}
+
+		{{#with footer}}
+			{{> ./WWMFormFooterModule/WWMFormFooterModule}}
+		{{/with}}
+
+	</form>
+</div>

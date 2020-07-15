@@ -1,0 +1,79 @@
+{{!-- pages/content_core.hbs --}}
+
+{{#> contentCoreLayout title="Content Core"}}
+	{{#*inline "aside"}}
+		{{#fetchData 'AsideLinksModule/AsideLinksData'}}
+			{{> AsideLinksModule/AsideLinksModule}}
+		{{/fetchData}}
+	{{/inline}}
+
+	{{#*inline "content"}}
+		<div class="wrapper rte">
+			<h1 id="someId1" class="underline">Pay rises and benefits</h1>
+			<p>You should be better off by 37p for every pound you earn above your ‘work allowance’. Your work allowance is how much you can earn before your Universal Credit is reduced.</p>
+			<ul>
+				<li>If your pay rise means that you no longer qualify for Universal Credit, you don’t need to sign off.</li>
+				<li>If your earnings reduce within 6 months, your claim will still be live you will start receiving Universal Credit again.</li>
+			</ul>
+		</div>
+
+			{{#fetchData 'NoticeModule/data/Note'}}
+				{{> NoticeModule/NoticeModule}}
+			{{/fetchData}}
+
+		<div class="wrapper rte">
+			<h2 id="someId2" class="underline">Benefits</h2>
+			<p>Personal Independence Payment (PIP) and Disability Living Allowance (DLA) cover the extra cost of being disabled. They aren’t affected by your income, and you can claim them even when you earn more. If your increase in income (for example, if you were working more hours) suggests that you can do things that you couldn’t when you were assessed for PIP, this might lead to a re-assessment. This could reduce or stop your PIP payments.</p>
+		</div>
+
+		{{#fetchData 'NoticeModule/data/Warning'}}
+			{{> NoticeModule/NoticeModule}}
+		{{/fetchData}}
+
+		<div class="wrapper rte">
+			<h2 id="someId3" class="underline">Universal credit</h2>
+			<p>If your increase in income (for example, if you were working more hours) suggests that you can do things that you couldn’t when you were assessed for PIP, this might lead to a re-assessment. This could reduce or stop your PIP payments.</p>
+
+			<ul>
+				<li>If your pay rise means that you no longer qualify for Universal Credit, you don’t need to sign off.</li>
+				<li>If your earnings reduce within 6 months, your claim will still be live you will start receiving Universal Credit again.</li>
+			</ul>
+		</div>
+
+		{{#fetchData 'StatisticModule/data/Statistic'}}
+			{{> StatisticModule/StatisticModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'EmphasisModule/EmphasisData'}}
+			{{> EmphasisModule/EmphasisModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'LastReviewedModule/LastReviewedData'}}
+			{{> LastReviewedModule/LastReviewedModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'HelpfulContentModule/HelpfulContentData'}}
+			{{> HelpfulContentModule/HelpfulContentModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'AdviserFeedbackModule/AdviserFeedbackData'}}
+			{{> AdviserFeedbackModule/AdviserFeedbackModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedLinksModule/data/default'}}
+			{{> RelatedLinksModule/RelatedLinksModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedLinksModule/data/internal'}}
+			{{> RelatedLinksModule/RelatedLinksModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedArticleModule/data/contentCoreArticle'}}
+			{{> RelatedArticleModule/RelatedArticleModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'RelatedDiscussionModule/RelatedDiscussionData'}}
+			{{> RelatedDiscussionModule/RelatedDiscussionModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/contentCoreLayout}}

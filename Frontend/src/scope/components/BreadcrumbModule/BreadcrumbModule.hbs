@@ -1,0 +1,10 @@
+<div class="Breadcrumb">
+	<ul class="Breadcrumb__list js-breadcrumb">
+		{{#each path}}
+			<li class="Breadcrumb__item">
+				<a class="Breadcrumb__anchor" href="{{url}}">{{label}}</a>
+			</li>
+		{{/each}}
+		<li class="Breadcrumb__item">{{current}}</li>
+	</ul>
+</div>

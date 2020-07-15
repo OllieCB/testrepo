@@ -1,0 +1,22 @@
+<div class="wrapper">
+	<section class="RelatedDiscussion {{#if bottomMargin}}bottom-margin{{/if}} {{#if topMargin}}top-margin{{/if}}">
+		<h2 class="RelatedDiscussion__title underline">{{title}}</h2>
+		{{#each items}}
+			<a	class="RelatedDiscussion__item" href="{{url}}" aria-label="{{title}}">
+				<div class="rte">
+					<h3 class="RelatedDiscussion__item-title underline">{{title}}</h3>
+					<p class="RelatedDiscussion__text">{{text}}</p>
+					{{#if featuring}}
+						<p class="RelatedDiscussion__item-featuring">
+							<span class="RelatedDiscussion__item-img-container">
+								<img class="lazy" src="{{featuring.img.placeholder}}" data-imgs="{{featuring.img.url}}" alt="{{featuring.img.alt}}" />
+							</span>
+							{{featuring.text}}
+						</p>
+					{{/if}}
+				</div>
+			</a>
+		{{/each}}
+		<a class="btn transparent-purple link" href="{{link.url}}">{{link.label}}</a>
+	</section>
+</div>

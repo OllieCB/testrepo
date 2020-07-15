@@ -1,0 +1,77 @@
+@import 'variables';
+@import 'breakpoints';
+@import 'reset';
+@import 'fonts';
+@import 'utils';
+@import 'layout';
+@import 'forms';
+@import 'rte';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	@include flying-outline();
+}
+
+html {
+	font-size: 1.125em;
+}
+
+body {
+	background: $white;
+	color: $purple;
+	font-family: 'Hargreaves', sans-serif;
+
+	@include for-tablet-up {
+		background: #f6f3fa;
+	}
+}
+
+.container {
+	background: $white;
+	margin: 0 auto;
+	max-width: em(1400px);
+	position: relative;
+}
+
+a,
+button,
+input,
+select {
+	border: 0;
+	color: inherit;
+	font-family: inherit;
+	line-height: 1em;
+	margin: 0; // Safari fix
+	padding: 0; // Safari fix
+	text-align: inherit;
+	text-decoration: inherit;
+}
+
+button,
+input {
+	font-size: 1em;
+}
+
+button {
+	background: transparent;
+}
+
+input::placeholder {
+	line-height: normal !important;
+}
+
+.noscroll {
+	position: fixed;
+	width: 100%;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}

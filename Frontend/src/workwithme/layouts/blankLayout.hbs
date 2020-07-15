@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-gb">
+    <head>
+        <!-- Set title -->
+		<title>{{#if title}}{{title}}{{/if}}</title>
+
+        <!-- Set the viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set character encoding -->
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
+        {{!-- <link rel="stylesheet" type="text/css" media="screen and (min-width: 56.25em)" href="/css/styles-tablet.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 75em)" href="/css/styles-desktop.css"/>
+        <link rel="stylesheet" type="text/css" media="print" href="/css/print.css"/> --}}
+</head>
+<body class="bg-white u-h-100vh">
+    <main id="main" tabindex="-1" class="u-h-100vh">
+        {{#> content}}
+            Optional default content
+        {{/content}}
+    </main>
+
+    <div class="modals-container"></div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

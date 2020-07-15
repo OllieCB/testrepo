@@ -1,0 +1,17 @@
+{{!-- pages/gallery.hbs --}}
+
+{{#> defaultLayout title="Index"}}
+	{{#*inline "content"}}
+		{{#fetchData 'VideoModule/data/withCaption'}}
+			{{> VideoModule/VideoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'VideoModule/data/noCaption'}}
+			{{> VideoModule/VideoModule}}
+		{{/fetchData}}
+
+		{{#fetchData 'VideoModule/data/transcript'}}
+			{{> VideoModule/VideoModule}}
+		{{/fetchData}}
+	{{/inline}}
+{{/defaultLayout}}

@@ -1,0 +1,101 @@
+@import "../../../shared/styles/base/variables";
+
+.GenericPayment {
+	&__col {
+		position: relative;
+	}
+
+	&__next {
+		border: 1px solid $purple;
+		line-height: em(30px);
+
+		&:not(.Donation__cards) {
+			float: right;
+		}
+
+		&[type=submit] {
+			text-align: center;
+
+			&::before {
+				content: url('../../scope/assets/images/padlock.svg');
+				display: inline-block;
+				margin-right: 8px;
+				width: 0.5em;
+			}
+
+			&.loading {
+				color: $purple;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		@include for-tablet-up {
+			float: right;
+			width: 33%;
+		}
+
+		&--spinner {
+			display: none;
+			height: em(30px);
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: em(30px);
+
+			.loading & {
+				display: block;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__cvv {
+		position: relative;
+
+		&::after {
+			content: '';
+			background: url('../../scope/assets/images/cvv.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 1.5em;
+			width: 2em;
+			position: absolute;
+			right: $sm-padding;
+			top: calc(1.25em + 28px);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__secure {
+		font-size: em(14px);
+		margin-bottom: $std-padding;
+		position: relative;
+		text-align: center;
+
+		&::before {
+			content: url('../../scope/assets/images/padlock-dark.svg');
+			display: inline-block;
+			margin-right: 8px;
+			vertical-align: text-top;
+			width: 0.75em;
+			height: 1em;
+		}
+	}
+
+	&__error {
+		display: none;
+
+		.error & {
+			color: $red;
+			display: block;
+			font-size: em(16px);
+		}
+	}
+}
